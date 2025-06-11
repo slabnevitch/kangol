@@ -67,6 +67,11 @@ export const mobFooterMenu = () => {
 	        }
 	    });
 
+	     $(".modal-cart__close").click(function(e){
+	     	$(".modal-cart").hide();
+	     	$(".footer-icon-cart").removeClass("active");
+	     });
+
 	    $(".mob-search").click(function(e){
 	        e.stopPropagation();
 

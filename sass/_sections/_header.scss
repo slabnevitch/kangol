@@ -1,5 +1,61 @@
 /*--------------------header----------------------*/
+@import "../_source/mob_header";
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 900;
 
+    &__wrapper{
+    	height: 58px;
+    	display: flex;
+    	align-items: center;
+    	// justify-content: space-between;
+    }
+    &__logo{
+    	width: 118px;
+    	img{
+    		display: block;
+    	}
+    }
+}
+.mob-menu-trigger{
+	margin-left: auto;
+
+	@include min-screen($md){
+		display: none;
+	}
+}
+.header-nav{
+	display: none;
+	margin-left: rem(40);
+	@include min-screen($md){
+		display: block;
+	}
+}
+.header-nav__list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: rem(32);
+	row-gap: rem(8);
+}
+.header-nav__item {
+	list-style-type: none;
+}
+.header-nav__link {
+	font-size: rem(14);
+	line-height: math.div(19,14);
+	font-family: $tildaMed;
+	transition: color 0.2s ease;
+	text-decoration: none;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: $accent;
+			}
+		}
 }
 /*--------------------END header----------------------*/ 

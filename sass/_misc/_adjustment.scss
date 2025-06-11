@@ -1,4 +1,5 @@
 /*--------------------adjustment----------------------*/
+@import "_source/mob_style";
 *,
 *::before,
 *::after{
@@ -157,7 +158,9 @@ textarea{
 	padding-right: rem(math.div($containerPaddings, 2));
 	max-width: rem($maxContainerWidth);
 	// outline: 1px solid;
-
+	@include min-screen($md){
+		padding-inline: rem(24);
+	}
 }
 // classes for smartgrid(c) structure
 // .wrapper-smart{
@@ -252,7 +255,7 @@ padding-bottom: 52.25%;
 // @import "_misc/font-rating";//подключить, если для звез рейтинга исп-я. icomoon
 // @import "_misc/_rating";
 // @import "_misc/_noUiSlider-base";
-// @import "_misc/_counter";
+@import "_misc/_counter";
 // @import "_misc/multilevel-dropdown.scss";
 
 // исправление бага отсутствия прозрачности при fade--переходах с/у слайдами

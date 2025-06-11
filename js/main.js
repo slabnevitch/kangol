@@ -203,7 +203,7 @@
 // var baguetteBox = require('~/app/libs-vanilla/baguetteBox/dist/baguetteBox.min.js')
 
 //- counter--------------------------
-// require('./vendor/libs-vanilla/counter/counter.js')
+require('~/app/libs-vanilla/counter/counter.js')
 	
 //- end VANILLA JS===================================
 

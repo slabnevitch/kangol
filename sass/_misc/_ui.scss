@@ -3,21 +3,21 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 48px;
+  min-height: rem(48);
   border: none;
   color: #fff;
   text-decoration: none;
   background-color: $accent;
-  padding: 5px 15px;
-  font-size: 13px;
+  padding: rem(5px) rem(15px);
+  font-size:  rem(13px);
   font-family: $tildaSemi;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: rem(8);
   text-align: center;
   position: relative;
   outline: none;
-  transition: background-color .1s ease;
-  border: 1px solid transparent;
+  transition: background-color .1s ease, border-color .1s ease, color .1s ease;
+  border: rem(1) solid transparent;
   
    @media (any-hover: hover) { //только для устройств с ховером
        cursor: pointer;
@@ -32,18 +32,35 @@
  }
  &-secondary{
     background-color: #fff;
-    border: 1px solid $grayBg;
+    border: rem(1) solid $grayBg;
     color: $text;
+
+    @media (any-hover: hover) { //только для устройств с ховером
+       &:hover{
+         border-color: $accent;
+         color: $accent;
+         background-color: #fff;
+     }
+ } 
 }
     &[disabled]{
         background-color: $grayBg;
         color: #878788;
-    }
-    &-secondary{
-        background-color: #fff;
+
+        @media (any-hover: hover) { //только для устройств с ховером
+             &:hover{
+               background-color: darken($grayBg, 5%);
+           }
+       }
     }
     &-danger{
         background-color: $danger;
+
+        @media (any-hover: hover) { //только для устройств с ховером
+             &:hover{
+               background-color: lighten($danger, 5%);
+           }
+       }   
     }
     &-fw{
        width: 100%;

@@ -136,11 +136,6 @@
     <div class="mob-modal modal-menu">
       <div class="modal-bg"></div>
       <div class="mob-modal-box">
-        <button type="button" class="modal-menu__close">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.8697 3.48792C17.0709 3.28672 17.0996 2.97056 16.8984 2.76936L15.2599 1.13081C15.0587 0.929616 14.7138 0.929614 14.5126 1.13081L8.99344 6.64993L3.44558 1.10207C3.24438 0.900872 2.95695 0.900872 2.75575 1.10207L1.11721 2.74062C0.916011 2.94181 0.887268 3.25798 1.08847 3.45918L6.63633 9.00704L1.11721 14.5262C0.916011 14.7274 0.916012 15.0723 1.11721 15.2735L2.75575 16.912C2.95695 17.1132 3.27312 17.0845 3.47432 16.8833L8.99344 11.3642L14.5408 16.9115C14.742 17.1127 15.0581 17.0839 15.2593 16.8828C15.2593 16.8828 16.6967 15.4454 16.8979 15.2442C17.0991 15.043 17.0991 14.7556 16.8979 14.5544C16.6967 14.3532 11.3505 9.00704 11.3505 9.00704L16.8697 3.48792Z" fill="#1C1C1E"></path>
-          </svg>
-        </button>
         <nav class="modal-menu__nav">
               <ul class="header-mob-menu__list">
                 <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Кепки</a></li>
@@ -151,10 +146,14 @@
                 <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Шляпы</a></li>
                 <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Одежда</a></li>
                 <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Сумки</a></li>
-                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Распродажа</a></li>
               </ul><a href="#" class="modal-menu__sale">Распродажа</a>
         </nav>
       </div>
+      <button type="button" class="modal-close modal-menu__close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.8697 3.48792C17.0709 3.28672 17.0996 2.97056 16.8984 2.76936L15.2599 1.13081C15.0587 0.929616 14.7138 0.929614 14.5126 1.13081L8.99344 6.64993L3.44558 1.10207C3.24438 0.900872 2.95695 0.900872 2.75575 1.10207L1.11721 2.74062C0.916011 2.94181 0.887268 3.25798 1.08847 3.45918L6.63633 9.00704L1.11721 14.5262C0.916011 14.7274 0.916012 15.0723 1.11721 15.2735L2.75575 16.912C2.95695 17.1132 3.27312 17.0845 3.47432 16.8833L8.99344 11.3642L14.5408 16.9115C14.742 17.1127 15.0581 17.0839 15.2593 16.8828C15.2593 16.8828 16.6967 15.4454 16.8979 15.2442C17.0991 15.043 17.0991 14.7556 16.8979 14.5544C16.6967 14.3532 11.3505 9.00704 11.3505 9.00704L16.8697 3.48792Z" fill="#1C1C1E"></path>
+        </svg>
+      </button>
     </div>
     <div class="mob-modal modal-search">
       <div class="modal-bg"></div>
@@ -222,51 +221,89 @@
     </div>
     <div class="mob-modal modal-cart">
       <div class="modal-bg"></div>
+      <button type="button" class="modal-close modal-cart__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1.5L12.5 12.5M12.5 1.5L1.5 12.5" stroke="#1C1C1E" stroke-width="2"></path>
+        </svg>
+      </button>
       <div class="mob-modal-box">
         <div class="modal-cart-title">&Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;</div>
         <div class="modal-cart-list">
-          <div class="modal-cart-block"><a href="#" class="link"></a>
-            <div class="img"><img src="./img/temp/p-3.jpg" alt="" class="img-fluid"></div>
-            <div class="content">
-              <div class="t-right">
-                <div class="remove"></div>
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img"><img src="img/cart/1.jpg" alt="alt"></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">Tropic Wide Brim Stripe Casual</div>
+              <div class="cart-product__price">3 200 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Old Gold</div>
               </div>
-              <div class="title">Tropic Wide Brim Stripe Casual Tropic Wide Brim Stripe Casual</div>
-              <div class="attr-val">
-                <div class="line">&TScy;&vcy;&iecy;&tcy;: <span>Electric Pink Electric Pink </span></div>
-                <div class="line">&Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: <span>Medium</span></div>
-                <div class="line">&TScy;&iecy;&ncy;&acy;: <span>3 200 &rcy;&ucy;&bcy;.</span></div>
-                <div class="line">&Kcy;&ocy;&lcy;-&vcy;&ocy;: <span>1 &shcy;&tcy;.</span></div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">Medium</div>
               </div>
-            </div>
-          </div>
-          <div class="modal-cart-block"><a href="#" class="link"></a>
-            <div class="img"><img src="./img/temp/p-3.jpg" alt="" class="img-fluid"></div>
-            <div class="content">
-              <div class="t-right">
-                <div class="remove"></div>
-              </div>
-              <div class="title">Tropic Wide Brim Stripe Casual</div>
-              <div class="attr-val">
-                <div class="line">&TScy;&vcy;&iecy;&tcy;: <span>Electric Pink</span></div>
-                <div class="line">&Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: <span>Medium</span></div>
-                <div class="line">&TScy;&iecy;&ncy;&acy;: <span>3 200 &rcy;&ucy;&bcy;.</span></div>
-                <div class="line">&Kcy;&ocy;&lcy;-&vcy;&ocy;: <span>1 &shcy;&tcy;.</span></div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Кол-во:</div>
+                <div class="cart-product__value">
+                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">-</span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="1">
+                      <div class="counter__count">1</div>
+                    </div><span class="counter__button counter-plus">+</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="modal-cart-block"><a href="#" class="link"></a>
-            <div class="img"><img src="./img/temp/p-3.jpg" alt="" class="img-fluid"></div>
-            <div class="content">
-              <div class="t-right">
-                <div class="remove"></div>
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img"><img src="img/cart/1.jpg" alt="alt"></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">504 Kangol Cap</div>
+              <div class="cart-product__price">15 200 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Electric Pink/Off White</div>
               </div>
-              <div class="title">Tropic Wide Brim Stripe Casual</div>
-              <div class="attr-val">
-                <div class="line">&TScy;&vcy;&iecy;&tcy;: <span>Electric Pink</span></div>
-                <div class="line">&Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: <span>Medium</span></div>
-                <div class="line">&TScy;&iecy;&ncy;&acy;: <span>3 200 &rcy;&ucy;&bcy;.</span></div>
-                <div class="line">&Kcy;&ocy;&lcy;-&vcy;&ocy;: <span>1 &shcy;&tcy;.</span></div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">X-Large</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Кол-во:</div>
+                <div class="cart-product__value">
+                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">-</span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="1">
+                      <div class="counter__count">1</div>
+                    </div><span class="counter__button counter-plus">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img"><img src="img/cart/1.jpg" alt="alt"></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">Wool Jax Beret</div>
+              <div class="cart-product__price">5 670 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Dark Blue</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">Small</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Кол-во:</div>
+                <div class="cart-product__value">
+                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">-</span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="1">
+                      <div class="counter__count">1</div>
+                    </div><span class="counter__button counter-plus">+</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,71 +1,33 @@
 .mob-modal.modal-cart
 	.modal-bg
+	button(type="button").modal-close.modal-cart__close
+		svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+			path(d='M1.5 1.5L12.5 12.5M12.5 1.5L1.5 12.5', stroke='#1C1C1E', stroke-width='2')
 	.mob-modal-box
 		.modal-cart-title &Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;
 		.modal-cart-list
-			.modal-cart-block
-				a.link(href='#')
-				.img
-					img.img-fluid(src='./img/temp/p-3.jpg', alt='')
-				.content
-					.t-right
-						.remove
-					.title
-						| Tropic Wide Brim Stripe Casual Tropic Wide Brim Stripe Casual
-					.attr-val
-						.line
-							| &TScy;&vcy;&iecy;&tcy;: 
-							span Electric Pink Electric Pink 
-						.line
-							| &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: 
-							span Medium
-						.line
-							| &TScy;&iecy;&ncy;&acy;: 
-							span 3 200 &rcy;&ucy;&bcy;.
-						.line
-							| &Kcy;&ocy;&lcy;-&vcy;&ocy;: 
-							span 1 &shcy;&tcy;.
-			.modal-cart-block
-				a.link(href='#')
-				.img
-					img.img-fluid(src='./img/temp/p-3.jpg', alt='')
-				.content
-					.t-right
-						.remove
-					.title Tropic Wide Brim Stripe Casual
-					.attr-val
-						.line
-							| &TScy;&vcy;&iecy;&tcy;: 
-							span Electric Pink
-						.line
-							| &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: 
-							span Medium
-						.line
-							| &TScy;&iecy;&ncy;&acy;: 
-							span 3 200 &rcy;&ucy;&bcy;.
-						.line
-							| &Kcy;&ocy;&lcy;-&vcy;&ocy;: 
-							span 1 &shcy;&tcy;.
-			.modal-cart-block
-				a.link(href='#')
-				.img
-					img.img-fluid(src='./img/temp/p-3.jpg', alt='')
-				.content
-					.t-right
-						.remove
-					.title Tropic Wide Brim Stripe Casual
-					.attr-val
-						.line
-							| &TScy;&vcy;&iecy;&tcy;: 
-							span Electric Pink
-						.line
-							| &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;: 
-							span Medium
-						.line
-							| &TScy;&iecy;&ncy;&acy;: 
-							span 3 200 &rcy;&ucy;&bcy;.
-						.line
-							| &Kcy;&ocy;&lcy;-&vcy;&ocy;: 
-							span 1 &shcy;&tcy;.
+			- var products = [{name:'Tropic Wide Brim Stripe Casual', price: '3 200 ₽', color: 'Old Gold', size:'Medium'}, {name:'504 Kangol Cap', price: '15 200 ₽', color: 'Electric Pink/Off White', size:'X-Large'}, {name:'Wool Jax Beret', price: '5 670 ₽', color: 'Dark Blue', size:'Small'}];
+			each prod, i in products
+				.modal-cart__product.cart-product
+					.cart-product__img
+						img(src="img/cart/1.jpg" alt="alt")
+					.cart-product__info
+						.cart-product__title= prod.name
+						.cart-product__price= prod.price
+						.cart-product__row
+							.cart-product__key Цвет:
+							.cart-product__value= prod.color
+						.cart-product__row
+							.cart-product__key Размер:
+							.cart-product__value= prod.size
+						.cart-product__row
+							.cart-product__key Кол-во:
+							.cart-product__value
+								.counter(data-min="0" data-max="100")
+									span.counter__button.counter-minus -
+									.counter__block
+										input(autocomplete="off" type="hidden" name="name" value="1" )
+										.counter__count 1
+									span.counter__button.counter-plus +
 		.block-btn
 			a.btn(href='#') &ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&softcy; &zcy;&acy;&kcy;&acy;&zcy;
