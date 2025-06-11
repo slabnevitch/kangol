@@ -56,4 +56,21 @@
 	top:0;
 	right: 0;
 }
+.modal-cart__box{
+	height: 100svh;
+	display: flex;
+	flex-direction: column;
+
+	.modal-cart-title{
+		flex: 0 0 auto;
+		margin-bottom: rem(59);
+	}
+	.modal-cart-list{
+		flex: 1 1 auto;
+		overflow-y: auto;
+	}
+	.block-btn{
+		flex: 0 0 auto;
+	}
+}
 /*--------------------END cart-modal----------------------*/ 

@@ -2366,5 +2366,27 @@ textarea {
   right: 0;
 }
 
+.modal-cart__box {
+  height: 100svh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.modal-cart__box .modal-cart-title {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-bottom: 3.6875rem;
+}
+.modal-cart__box .modal-cart-list {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+.modal-cart__box .block-btn {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 /*--------------------END cart-modal----------------------*/
 /*# sourceMappingURL=maps/main.css.map */
