@@ -1,0 +1,47 @@
+$maxWidth: 1920;//ширина макета в граф. редакторе
+$maxWidthContainer: 1920;//ширина ограничивающего контейнера без паддингов
+$containerPaddings: 32;//сумма левого и правого паддингов ограничивающего контейнера
+$maxContainerWidth: $maxWidthContainer + $containerPaddings;// итоговая ширина ограничивающего контейнера
+
+// colors
+$accent: #003468;
+$grayBg: #DADCDD;
+$danger: #D45151;
+$text: #1C1C1E;
+$textLight: #636366;
+
+// paths
+	// use: background-image: url($icos + 'arrow-right.svg');
+$img: '../img/';
+$icos: '../img/icons/';
+$svg: '../img/icons-svg/';
+
+
+// media
+$lg: em(1439.98);
+$md: em(1023.98);
+$sm: em(767.98);
+$xs: em(576);
+$xss: em(480.98);
+$xsss: em(375);
+$min: em(359.98);
+$mins: em(320);
+
+// point for multilevel-pnel | размер, на котором multilevel-dropdown превращается в multilevel-panel и наоборот
+$multilevelPoint: 1100px;
+
+//fonts
+$tildaL: "Tilda-Sans-Light", sans-serif;
+$tildaReg: "Tilda-Sans-Regular", sans-serif;
+$tildaMed: "Tilda-Sans-Medium", sans-serif;
+$tildaSemi: "Tilda-Sans-Semibold", sans-serif;
+$tildaBold: "Tilda-Sans-Bold", sans-serif;
+$tildaExtBold: "Tilda-Sans-Extra-Bold", sans-serif;
+
+$houschkaMed: "HouschkaPro-Medium", sans-serif;
+$houschkaDemi: "HouschkaPro-DemiBoldItalic", sans-serif;
+
+$baseFontSize: 16;// основной размер шрифта в макете
+
+
+

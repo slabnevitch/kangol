@@ -1,0 +1,89 @@
+@use "sass:math";
+
+@import "fonts";
+
+@import "_source/mob_modal";
+@import "_misc/_vars";
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// @import "../../node_modules/bootstrap/scss/_functions";
+
+/*=====================Bootstrap vars customization=========================*/
+/*--------------------grid----------------------*/
+// $container-padding-x: 2rem;
+// $grid-gutter-width: 2rem;
+/*--------------------END grid----------------------*/ 
+
+/*--------------------colors----------------------*/
+// $primary: #003468;
+// $secondary: #fff;
+// $danger: #D45151;
+/*--------------------END colors----------------------*/
+// $btn-border-radius: 0.5rem; 
+// $btn-font-size: 0.8125rem;
+// $btn-padding-y: 1.21875rem;
+
+// $btn-font-family: $tildaSemi;
+// $btn-padding-y: 0.875rem;
+// $btn-padding-y-sm: 0.875rem;
+// $btn-padding-y-lg: 0.875rem;
+
+/*===================== end Bootstrap vars customization======================*/ 
+
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+// @import "../../node_modules/bootstrap/scss/_variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+// @import "../../node_modules/bootstrap/scss/_maps";
+// @import "../../node_modules/bootstrap/scss/_mixins";
+// @import "../../node_modules/bootstrap/scss/_root";
+
+// 6. Optionally include any other parts as needed
+// @import "../../node_modules/bootstrap/scss/_utilities";
+// @import "../../node_modules/bootstrap/scss/_reboot";
+// @import "../../node_modules/bootstrap/scss/_type";
+// // @import "../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/_containers";
+// @import "../../node_modules/bootstrap/scss/_grid";
+// @import "../../node_modules/bootstrap/scss/_helpers";
+// @import "../../node_modules/bootstrap/scss/_buttons";
+
+
+@import "_misc/_functions";
+@import "_misc/_mixins";
+@import "fonts-auto";
+
+// основные стили икомун
+// @import "../fonts/icomoon/style";
+// измеенен путь до файлов. Архив, полученный с сайта icomoon, распоковывать в fonts
+@import "_misc/_icomoon-custom";
+
+// svg-sprite
+// @import "_misc/_sprite-svg.scss";
+
+@import "_misc/_media-mixins";
+@import "libs";
+
+
+// @import "_misc/smart-grid";
+// @import "_misc/_counter";
+// @import "_misc/multilevel-panel"; //только multilevel-panel, без разворачивания на десктоп. Требует подключения multilevel-panel/multilevel-panel.js
+// @import "_misc/multilevel-dropdown-panel"; //multilevel-panel совместно с multilevel-dropdown. Требует подключения multilevel-panel/multilevel-panel.js + /multilevel-dropdown/multidropdown.js
+// @import "_misc/multilevel-dropdown";//простое многоуровневое меню/ Требует подключения libs-vanilla/multilevel-dropdown/multidropdown.js, mobileDetect.js + siblings.js + removeClass
+// @import "_misc/single-dropdown";//один или несколько дропдаунов в составе обычного меню. Требует подключения service-functions/dropdown-toggle.js, mobileDetect.js + siblings.js + removeClass
+
+// @import "_source/settings";
+@import "_source/mob_style";
+
+
+@import "_misc/_adjustment";
+@import "_misc/_ui";
+
+@import "_sections/**/*";
+
+// @import "_media";

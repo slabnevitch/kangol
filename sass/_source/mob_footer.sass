@@ -1,0 +1,295 @@
+@import "settings"
+.footer-mob
+  background: #fff
+  padding: 0 0 47px 0
+
+  .select-size
+    margin-bottom: 30px
+    .title
+      text-transform: uppercase
+      font-weight: 600
+      font-size: 10px
+      line-height: 10px
+      color: #6c757d
+      margin-bottom: 15px
+      text-align: center
+    a
+      display: inline-block
+      margin: 0 10px
+      width: 30px
+      height: 30px
+      +border-radius(50%)
+      img
+        width: 100%
+        height: 100%
+        display: block
+  .scroll-up
+    color: #6c757d
+    text-transform: uppercase
+    font-size: 10px
+    line-height: 10px
+    font-weight: 600
+    text-align: center
+.mob-social-footer
+  padding: 15px 0 10px 0
+  border-bottom: 1px solid #E5E5EA
+  //text-align: center
+  margin: 0 0 15px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  .img
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 18px
+  a
+    display: inline-block
+    //vertical-align: top
+    margin: 0 8.3%
+
+.form-feedback
+  margin: 0 0 25px 3px
+  .form-title
+    color: #1C1C1E
+    // @include fonts(14px, 0.6, 600)
+    margin: 0 0 24px 0
+    letter-spacing: -0.2px
+  .reset
+    background-position: right center
+  .form-group
+    margin: 0 0 16px 0
+    &:last-of-type
+      margin: 0 0 24px 0
+    .field
+      height: 18px
+      //margin-top: -7px
+    .reset
+      right: 15px
+      width: 14px
+      height: 14px
+  .form-control
+    display: block
+    height: 19px
+    padding: 0 30px 5px 0
+    border: none
+    border-bottom: 1px solid #636366
+    color: #8E8E93
+    font-size: 14px
+    font-family: $tildaMed
+    letter-spacing: -0.2px
+
+  .btn
+    width: 100%
+    input
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: 600
+
+.mob-footer-title
+  color: #636366
+  margin-bottom: 24px
+  &.arrow
+    padding: 0 20px 0 3px
+    background: url(../img/source/arrow.svg) 99% 1px no-repeat
+  a
+    padding: 0 0
+    color: #636366
+    display: block
+    text-decoration: none !important
+    line-height: .8
+    letter-spacing: -0.2px
+.mob-footer-title-20
+  margin-bottom: 20px
+.mob-footer-title-32
+  margin-bottom: 32px
+.mob-footer-text
+  font-size: 14px
+  line-height: 0.6
+  font-weight: 500
+  color: #636366
+  margin-bottom: 20px
+  &.pl
+    padding-left: 25px
+  a
+    text-decoration: none !important
+    color: #636366 !important
+    font-size: 14px
+    line-height: 0.6
+    font-weight: 500
+
+.mob-footer-address
+  padding: 0 0 0 25px
+  margin-bottom: 19px
+  background: url(../img/source/address.svg) 4px 0 no-repeat
+.mb-20
+  margin-bottom: 20px
+.mob-footer-tell
+  margin-bottom: 20px
+
+  a
+    color: #013F7D
+    font-family: $tildaMed
+    
+.mob-footer-mail
+  margin-bottom: 32px
+.mob-footer-payment
+  padding: 10px 30px
+  background: #212121
+  text-align: center
+  margin: 0 -15px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .img
+    height: 16px
+    display: flex
+    align-items: center
+  img
+    max-width: 56px
+    max-height: 16px
+
+.footer-acc
+  margin-bottom: 24px
+  .accordion-item
+    border-bottom: 1px solid #E5E5EA
+    padding: 16px 0
+    &:first-child
+      border-top: 1px solid #E5E5EA
+  .accordion-sub-block
+    display: none
+  .accordion-menu-title
+    color: #636366
+    display: block
+    text-decoration: none !important
+    position: relative
+    padding-left: 2px
+    letter-spacing: -0.1px
+    &.active
+      &:after
+        transform: rotate(45deg)
+    &:after
+      content: ""
+      background: url(../img/source/plus-acc.svg) no-repeat
+      width: 10px
+      height: 10px
+      position: absolute
+      top: -1px
+      right: 3px
+  .list-link
+    padding: 20px 0 0 20px
+  .link
+    margin-bottom: 10px
+    line-height: 0
+    &:last-child
+      margin-bottom: 0
+    a
+      text-decoration: none !important
+      color: #636366 !important
+      @include fonts(14px, 16px, 500)
+.copyright
+  color: #636366
+  @include fonts(12px, .8, 500)
+  font-style: italic
+  margin-bottom: 16px
+  padding-left: 3px
+.footer-link
+  font-size: 0
+  margin: -4px 0 30px 0
+  padding-left: 3px
+  .link
+    line-height: 0
+    display: inline-block
+    vertical-align: top
+    padding: 0 10px 0 0
+    margin: 0 12px 8px 0
+    border-right: 1px solid #E5E5EA
+    &:last-child
+      border-right: none
+      margin-bottom: 0
+    &:first-child
+      padding-left: 0
+
+  a
+    color: #1C1C1E !important
+    text-decoration: none !important
+    @include fonts(14px, 0.8, 500)
+    letter-spacing: -0.2px
+.footer-menu
+  border-top: 1px solid #E5E5EA
+  height: 48px
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  background: #fff
+  padding: 0 0 0 0
+  z-index: 900
+  .icon-list
+    -ms-flex-pack: justify
+    justify-content: space-between
+    display: -ms-flexbox
+    display: flex
+  .modal-icon-block
+    height: 47px
+    padding: 8px 10px 0 10px
+    width: 20%
+    position: relative
+    text-align: center
+    &.selected
+      .icon
+        &:after
+          content: ""
+          width: 6px
+          height: 6px
+          background: #013F7D
+          +border-radius(50%)
+          position: absolute
+          top: 0
+          right: -15px
+    &.active
+      background: #003468
+      .icon
+        &:after
+          opacity: 0
+      .title
+        color: #fff
+      svg
+        path
+          fill: #fff
+    &.footer-icon-fav
+      &.active
+        svg
+          path
+            stroke: #fff
+            fill: #003468
+  .footer-icon-account
+    padding: 8px 10px 0 0px
+  .footer-icon-fav
+    padding: 8px 10px 0 4px
+  .footer-icon-filter
+    padding: 8px 10px 0 13px
+  .footer-icon-support
+    padding: 8px 7px 0 16px
+  .icon
+    position: relative
+    height: 16px
+    text-align: center
+    margin-bottom: 7px
+    display: inline-block
+    vertical-align: top
+    //display: -ms-flexbox
+    //display: flex
+    //-ms-flex-align: end
+    //align-items: flex-end
+    //-ms-flex-pack: center
+    //justify-content: center
+  .title
+    width: 100%
+    @include fonts(11px, 11px, 500)
+    text-align: center
+    color: #1C1C1E
+@media (max-width: 400px)
+  .footer-menu
+    .icon-block
+      padding: 7px 5px 0 5px
