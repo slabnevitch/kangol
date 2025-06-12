@@ -684,6 +684,15 @@ textarea {
     background-color: #d96565;
   }
 }
+.btn-gray {
+  background-color: #F2F2F5;
+  color: #1C1C1E;
+}
+@media (any-hover: hover) {
+  .btn-gray:hover {
+    background-color: #e4e4ea;
+  }
+}
 .btn-fw {
   width: 100%;
 }
@@ -699,7 +708,7 @@ textarea {
 
 .footer-mob {
   background: #fff;
-  padding: 0 0 47px 0;
+  padding: 0 0 1.5rem 0;
 }
 .footer-mob .select-size {
   margin-bottom: 30px;
@@ -737,13 +746,12 @@ textarea {
 .mob-social-footer {
   padding: 15px 0 10px 0;
   border-bottom: 1px solid #E5E5EA;
-  margin: 0 0 15px 0;
+  margin: 0 0 34px 0;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
   -ms-flex-align: center;
   align-items: center;
+  column-gap: 1.625rem;
 }
 .mob-social-footer .img {
   display: -ms-flexbox;
@@ -755,12 +763,23 @@ textarea {
   height: 18px;
 }
 .mob-social-footer a {
-  display: inline-block;
-  margin: 0 8.3%;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .form-feedback {
   margin: 0 0 25px 3px;
+}
+@media only screen and (min-width: 63.99875em) {
+  .form-feedback {
+    display: none;
+  }
 }
 .form-feedback .form-title {
   color: #1C1C1E;
@@ -776,17 +795,14 @@ textarea {
 .form-feedback .form-group:last-of-type {
   margin: 0 0 24px 0;
 }
-.form-feedback .form-group .field {
-  height: 18px;
-}
 .form-feedback .form-group .reset {
   right: 15px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 .form-feedback .form-control {
   display: block;
-  height: 19px;
+  height: 44px;
   padding: 0 30px 5px 0;
   border: none;
   border-bottom: 1px solid #636366;
@@ -894,7 +910,12 @@ textarea {
 }
 
 .footer-acc {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
+}
+@media only screen and (min-width: 63.99875em) {
+  .footer-acc {
+    display: none;
+  }
 }
 .footer-acc .accordion-item {
   border-bottom: 1px solid #E5E5EA;
@@ -947,12 +968,9 @@ textarea {
 
 .copyright {
   color: #636366;
-  font-size: 12px;
-  line-height: 0.8;
-  font-weight: 500;
-  font-style: italic;
-  margin-bottom: 16px;
-  padding-left: 3px;
+  font-family: "Tilda-Sans-Light", sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.8333333333;
 }
 
 .footer-link {
@@ -962,9 +980,8 @@ textarea {
 }
 .footer-link .link {
   line-height: 0;
-  display: inline-block;
+  display: inline;
   vertical-align: top;
-  padding: 0 10px 0 0;
   margin: 0 12px 8px 0;
   border-right: 1px solid #E5E5EA;
 }
@@ -976,12 +993,13 @@ textarea {
   padding-left: 0;
 }
 .footer-link a {
+  position: relative;
+  padding-right: 0.875rem;
   color: #1C1C1E !important;
-  text-decoration: none !important;
-  font-size: 14px;
-  line-height: 0.8;
-  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 2.1428571429;
   letter-spacing: -0.2px;
+  border-right: 1px solid #E5E5EA;
 }
 
 .footer-menu {
@@ -1068,6 +1086,25 @@ textarea {
     padding: 7px 5px 0 5px;
   }
 }
+.footer-mob {
+  padding-top: 3.75rem;
+}
+
+.footer-mob__subscribe {
+  display: none;
+}
+@media only screen and (min-width: 63.99875em) {
+  .footer-mob__subscribe {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .footer-mob__links-arrows {
+    display: none;
+  }
+}
+
 /*--------------------END footer----------------------*/
 /*--------------------header----------------------*/
 .form-auth-path .text:after, .modal-auth-content .btn-list-auth:after, .color-search:after, .product-search:after, .modal-size .text-img:after, .mob-modal-view .view:after, .mob-modal-view .view-box:after, .mob-modal-view .view-list:after, .modal-cart-block .attr-val .line:after, .modal-cart-block:after {
@@ -1937,11 +1974,14 @@ textarea {
 
 .reset {
   width: 30px;
-  background: url(../img/reset2.svg) center no-repeat;
+  background: url(../img/source/reset2.svg) center no-repeat;
+  background-size: contain;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
   bottom: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 input.form-control {

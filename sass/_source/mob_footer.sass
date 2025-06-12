@@ -1,7 +1,7 @@
 @import "settings"
 .footer-mob
   background: #fff
-  padding: 0 0 47px 0
+  padding: 0 0 rem(24px) 0
 
   .select-size
     margin-bottom: 30px
@@ -34,22 +34,30 @@
   padding: 15px 0 10px 0
   border-bottom: 1px solid #E5E5EA
   //text-align: center
-  margin: 0 0 15px 0
+  margin: 0 0 34px 0
   display: flex
-  justify-content: center
+  // justify-content: center
   align-items: center
+  column-gap: rem(26)
   .img
     display: flex
     align-items: center
     justify-content: center
     height: 18px
   a
-    display: inline-block
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: rem(40)
+    height: rem(40)
     //vertical-align: top
-    margin: 0 8.3%
+    // margin: 0 8.3%
 
 .form-feedback
   margin: 0 0 25px 3px
+
+  +min-screen($md)
+    display: none
   .form-title
     color: #1C1C1E
     // @include fonts(14px, 0.6, 600)
@@ -62,15 +70,15 @@
     &:last-of-type
       margin: 0 0 24px 0
     .field
-      height: 18px
+      // height: 18px
       //margin-top: -7px
     .reset
       right: 15px
-      width: 14px
-      height: 14px
+      width: 12px
+      height: 12px
   .form-control
     display: block
-    height: 19px
+    height: 44px
     padding: 0 30px 5px 0
     border: none
     border-bottom: 1px solid #636366
@@ -150,7 +158,10 @@
     max-height: 16px
 
 .footer-acc
-  margin-bottom: 24px
+  margin-bottom: 36px
+  +min-screen($md)
+    display: none
+  
   .accordion-item
     border-bottom: 1px solid #E5E5EA
     padding: 16px 0
@@ -189,19 +200,22 @@
       @include fonts(14px, 16px, 500)
 .copyright
   color: #636366
-  @include fonts(12px, .8, 500)
-  font-style: italic
-  margin-bottom: 16px
-  padding-left: 3px
+  font-family: $tildaL
+  font-size: rem(12)
+  line-height: math.div(10,12)
 .footer-link
+  // display: flex
+  // flex-wrap: wrap
+  // align-items: center
   font-size: 0
   margin: -4px 0 30px 0
   padding-left: 3px
   .link
+    
     line-height: 0
-    display: inline-block
+    display: inline
     vertical-align: top
-    padding: 0 10px 0 0
+    // padding: 0 10px 0 0
     margin: 0 12px 8px 0
     border-right: 1px solid #E5E5EA
     &:last-child
@@ -210,11 +224,27 @@
     &:first-child
       padding-left: 0
 
+
   a
+    position: relative
+    // display: inline-block
+    padding-right: rem(14px)
     color: #1C1C1E !important
-    text-decoration: none !important
-    @include fonts(14px, 0.8, 500)
+    font-size: rem(14)
+    line-height: math.div(30,14)
     letter-spacing: -0.2px
+    border-right: 1px solid #E5E5EA
+
+    // &::after
+    //   content: ''
+    //   position: absolute
+    //   top: 50%
+    //   right: -8px
+    //   transform: translateY(-50)
+    //   height: rem(14px)
+    //   width: 1px
+    //   background-color: #E5E5EA
+
 .footer-menu
   border-top: 1px solid #E5E5EA
   height: 48px

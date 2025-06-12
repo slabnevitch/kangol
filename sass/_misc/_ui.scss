@@ -62,6 +62,15 @@
            }
        }   
     }
+    &-gray{
+        background-color: #F2F2F5;
+        color: $text;
+        @media (any-hover: hover) { //только для устройств с ховером
+             &:hover{
+               background-color: darken(#F2F2F5, 5%);
+           }
+       }   
+    }
     &-fw{
        width: 100%;
     }

@@ -1,7 +1,19 @@
 /*--------------------footer----------------------*/
 @import "../_source/mob_footer";
 
-.footer{
-	
+.footer-mob{
+	padding-top: rem(60);
+}
+.footer-mob__subscribe{
+	display: none;
+
+	@include min-screen($md){
+		display: block;
+	}
+}
+.footer-mob__links-arrows{
+	@include min-screen($md){
+		display: none;
+	}
 }
 /*--------------------END footer----------------------*/ 
