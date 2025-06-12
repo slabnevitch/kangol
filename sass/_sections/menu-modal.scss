@@ -1,4 +1,7 @@
+/*=====================modals=========================*/
+@import "_source/mob_modal";
 /*--------------------menu-modal----------------------*/
+
 .modal-menu{
 
 }
@@ -11,6 +14,7 @@
 .modal-close{
 	@include but-null();
 	position: absolute;
+	left: auto;
 	width: rem(56px);
 	height: rem(56);
 	display: flex;
@@ -227,4 +231,83 @@
 	font-size: rem(13px);
 	line-height: math.div(16,13);
 }
-/*--------------------END cart-modal----------------------*/ 
+/*--------------------END cart-modal----------------------*/
+
+/*--------------------modal-search----------------------*/
+.modal-search{
+}
+.mob-modal .modal-search__box{
+	max-width: rem(360);
+	width: 100%;
+	left: auto;
+	right: 0;
+
+}
+.modal-search__close{
+	position: static;
+	flex-shrink: 0;
+	// top: rem(24px);
+	// right: rem(17px);
+
+	border-left: rem(1) solid #F2F2F5;
+	border-bottom: rem(1) solid #F2F2F5;
+}
+.modal-search__top {
+	display: flex;
+
+}
+.modal-search__input {
+	padding-inline: rem(16);
+	font-size: rem(14px);
+	line-height: 1;
+	font-family: $houschkaMed;
+	text-transform: uppercase;
+	border-bottom: rem(1) solid #F2F2F5;
+
+	@include placecolor(#8E8E93);
+
+	&::placeholder{
+		font-family: $houschkaDemi;
+	}
+}
+.modal-search__results {
+	margin-top: rem(38);
+}
+.modal-search__category {
+	margin-bottom: rem(20px);
+	font-family: $tildaSemi;
+	line-height: math.div(13,16);
+	color: #8E8E93;
+}
+.modal-search__list {
+	margin-bottom: rem(24px);
+}
+.modal-search__item {
+	list-style-type: none;
+	line-height: 1;
+	transition: color .2s;
+
+	&:not(:last-child){
+		margin-bottom: rem(16);
+	}
+
+
+	span{
+		font-family: $tildaSemi;
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+				color: $textLight;
+			}
+		}
+}
+.modal-search__more {
+	font-family: $tildaMed;
+	color: $textLight;
+	line-height: math.div(13,16);
+	text-decoration: none;
+}
+/*--------------------END modal-search----------------------*/ 
+/*===================== end modals======================*/ 

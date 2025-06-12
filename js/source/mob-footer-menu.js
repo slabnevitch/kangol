@@ -96,6 +96,12 @@ export const mobFooterMenu = () => {
 	        }
 	    });
 
+	    $(".modal-search__close").click(function(e){
+	        e.stopPropagation();
+	        $(".modal-search").hide();
+	         $(".mob-search").removeClass("active");
+	    });
+
 	    $(".footer-icon-fav").click(function(e){
 	        e.stopPropagation();
 
