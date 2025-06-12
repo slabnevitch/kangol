@@ -52,18 +52,36 @@
 /*--------------------END menu-modal----------------------*/
 
 /*--------------------cart-modal----------------------*/
+.modal-cart{}
 .modal-cart__close{
 	top:0;
 	right: 0;
 }
+.mob-modal .modal-cart__box{
+	right:0;
+	left: auto;
+}
 .modal-cart__box{
+	max-width: rem(360);
 	height: 100svh;
 	display: flex;
 	flex-direction: column;
 
 	.modal-cart-title{
 		flex: 0 0 auto;
-		margin-bottom: rem(59);
+		padding-top: rem(6);
+		padding-bottom: rem(24px);
+		position: relative;
+
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: rem(-16px);
+			right: rem(-16px);
+			height: rem(1px);
+			background-color: #F2F2F5;
+		}
 	}
 	.modal-cart-list{
 		flex: 1 1 auto;
@@ -73,4 +91,99 @@
 		flex: 0 0 auto;
 	}
 }
+.modal-cart__product {
+	padding-top: rem(16);
+	padding-bottom: rem(36);
+	display: flex;
+	align-items: flex-start;
+	column-gap: rem(8);
+	border-bottom: rem(1px) solid rgb(229, 229, 234);
+}
+.cart-product {}
+.cart-product__img {
+	flex: 0 0 prc(126,329);
+	aspect-ratio: 126 / 170;
+}
+.cart-product__info {
+	padding-top: rem(20);
+}
+.cart-product__title {
+	margin-bottom: rem(16);
+	font-size: rem(16);
+	line-height:1;
+}
+.cart-product__price {
+	margin-bottom: rem(8px);
+	font-size: rem(14);
+	font-weight: $tildaMed;
+	line-height: math.div(12,14);
+	letter-spacing: 0.25px;
+	color: #8E8E93;
+}
+.cart-product__row {
+	display: flex;
+	align-items: center;
+	column-gap: rem(4px);
+
+	&:not(:last-child){
+		margin-bottom: rem(8px);
+		
+	}
+
+	&--counter{
+		// margin-block: rem(17px);
+	}
+
+}
+.cart-product__key,
+.cart-product__value {
+	font-size: rem(14);
+	line-height: math.div(12,14);
+}
+.cart-product__key {
+	flex: 0 0 auto;
+}
+.cart-product__value {
+	flex: 1 1 auto;
+}
+.cart-product__remove{
+	@include but-null();
+	font-size: rem(14px);
+	font-family: $tildaMed;
+	line-height: math.div(12,14);
+	letter-spacing: 0.25px;
+	text-decoration: underline;
+}
+.modal-cart__footer {
+	margin-inline: rem(-16);
+	padding-top: rem(40);
+	padding-bottom: rem(24);
+	border-top: rem(1px) solid rgb(229, 229, 234);
+}
+.footer-modal-cart {
+	&__inner{
+		padding-inline: rem(16);
+	}
+}
+.footer-modal-cart__header {
+	margin-bottom: rem(16);
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	column-gap: rem(8);
+}
+.footer-modal-cart__label {
+
+}
+.footer-modal-cart__price {
+	font-family: $tildaBold;
+}
+.footer-modal-cart__text {
+	margin-bottom: rem(24);
+	font-size: rem(14px);
+	line-height: math.div(15,14);
+	color: #8E8E93;
+}
+.block-btn {}
+.btn {}
 /*--------------------END cart-modal----------------------*/ 

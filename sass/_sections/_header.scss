@@ -58,4 +58,14 @@
 			}
 		}
 }
+.mob-cart{
+	@include min-screen($md){
+		right: 20px;
+	}
+}
+.mob-search{
+	@include min-screen($md){
+		right:64px;
+	}
+}
 /*--------------------END header----------------------*/ 

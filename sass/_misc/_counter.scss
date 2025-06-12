@@ -2,9 +2,9 @@
 	display: inline-flex;
 	align-items: center;
 	flex-shrink: 0;
-	width: rem(200);
-	height: rem(60);
-	border: rem(1) solid #EFEFEF;
+	// width: rem(200);
+	height: rem(43);
+	// border: rem(1) solid #EFEFEF;
 }
 .counter__button,
 .counter__count{
@@ -14,11 +14,14 @@
 	flex-shrink: 0;
 	text-align: center;
 	// outline: 1px solid;
-	font-size: em(30);
+	font-size: rem(14px);
+	font-family: $tildaMed;
+	line-height: math.div(20,14);
 }
 .counter__button {
-	flex: 1 0 30%;
-	max-width: 30%;
+	flex: 1 0 rem(44);
+	max-width: rem(44);
+	height: rem(43);
 	cursor: pointer;
 	color: gray;
 	outline: none;
@@ -38,7 +41,8 @@
 }
 
 .counter__block{
-	flex: 1 1 auto;
+	flex: 1 0 rem(46);
+	// min-width: rem(46);
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
