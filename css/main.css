@@ -2384,6 +2384,7 @@ textarea {
 }
 
 .modal-cart__box {
+  width: 100%;
   max-width: 22.5rem;
   height: 100svh;
   display: -ms-flexbox;
@@ -2527,6 +2528,51 @@ textarea {
   font-size: 0.875rem;
   line-height: 1.0714285714;
   color: #8E8E93;
+}
+
+.modal-cart__empty-message {
+  padding-top: 4.5rem;
+  padding-bottom: 9.5625rem;
+}
+.modal-cart__empty-message p {
+  margin-inline: auto;
+  max-width: 12.5rem;
+  font-size: 1.125rem;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  line-height: 1.2222222222;
+  text-align: center;
+  color: #9A8084;
+}
+
+.modal-cart__similar {
+  padding-bottom: 4.9375rem;
+}
+
+.modal-cart__similar-title {
+  margin-bottom: 1.5rem;
+}
+
+.modal-cart__similar-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 1rem;
+}
+
+.modal-cart__similar-item {
+  text-decoration: none;
+}
+
+.similar-item__img {
+  aspect-ratio: 104/88;
+  margin-bottom: 0.25rem;
+}
+
+.similar-item__title {
+  font-size: 0.8125rem;
+  line-height: 1.2307692308;
 }
 
 /*--------------------END cart-modal----------------------*/
