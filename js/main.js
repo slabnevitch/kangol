@@ -102,7 +102,7 @@
 // const magnificPopup = require('~/app/libs/magnific-popup/dist/jquery.magnific-popup.min.js')
 	
 //- slick--------------------------
-// require('~/app/libs/slick/slick.min.js')
+require('./vendor/slick/slick.min.js')
 	
 //- slick-master (без лишних контейнеров)--------------------------
 // require('~/app/libs/slick-master/slick.js')
@@ -203,7 +203,10 @@
 // var baguetteBox = require('~/app/libs-vanilla/baguetteBox/dist/baguetteBox.min.js')
 
 //- counter--------------------------
-require('~/app/libs-vanilla/counter/counter.js')
+require('./vendor/counter/counter.js')
+
+//- jquery.lazy-------------------------
+require('~/app/js/source/lazy_load/jquery.lazy.min.js')
 	
 //- end VANILLA JS===================================
 
@@ -213,8 +216,10 @@ require('~/app/libs-vanilla/counter/counter.js')
 // });
 
 import {mobFooterMenu} from '~/app/js/source/mob-footer-menu.js';
+import {mobCommon} from '~/app/js/source/mob-common.js';
 
 mobFooterMenu();
+mobCommon();
 
 document.addEventListener('DOMContentLoaded', () => {
 

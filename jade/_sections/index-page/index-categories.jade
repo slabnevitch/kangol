@@ -1,0 +1,10 @@
+.index-categories
+	- var cats = ['Головные уборы', 'Одежда', 'Сумки'];
+	.index-categories__wrapper
+		.index-categories__grid
+			each item, i in cats
+				a(href="#").index-category
+					.index-category__img._fit
+						img._fit-img(src="img/index-cats/"+(i+1)+".jpeg" alt="alt")
+					
+					.index-category__title= item

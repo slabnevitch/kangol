@@ -6,21 +6,11 @@ block title
 
 block content
 	main.main
-		.main-slider
-			.main-slider__wrapper
-				.slider.home-slider
-					.home-slider__slide
-						img(src='./img/source/temp/img-home-slider-1.png', alt='')
-					.home-slider__slide
-						img(src='./img/source/temp/img-home-slider-2.png', alt='')
-					.home-slider__slide
-						img(src='./img/source/temp/img-home-slider-3.png', alt='')
-					.home-slider__slide
-						img(src='./img/source/temp/img-home-slider-4.png', alt='')
-
-		include _sections/index-page/index-categories
-		include _sections/index-page/newitems
-		include _sections/index-page/bestsellers
+		.container
+			button.btn.btn-primary.w-100(type="button") Primary
+			button.btn.btn-secondary(type="button") Secondary
+			button.btn(type="button" disabled) disabled
+			button.btn.btn-danger(type="button") danger
 
 	include _sections/example-sections
 block page-scripts

@@ -1,0 +1,13 @@
+section.bestsellers
+	.bestsellers__wrapper
+		h2.sect-title.bestsellers__title бестселлеры
+		.bestsellers__content
+			- var bestsellers = ['Cardinal 2 Way Beanie', 'Massive Trapper'];
+			
+			.bestsellers__items
+				- for (var n=0; n < 5; n++)
+					each item, i in bestsellers
+						a(href="#").bestsellers__item.item-bestsellers
+							.item-bestsellers__img._fit
+								img._fit-img(src="img/bestsellers/"+(i+1)+".jpg" alt="alt")
+							.item-bestsellers__title= item
