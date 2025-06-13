@@ -39,6 +39,10 @@
   // justify-content: center
   align-items: center
   column-gap: rem(26)
+  
+  +min-screen($md)
+    border: none 
+  
   .img
     display: flex
     align-items: center
@@ -67,8 +71,13 @@
     background-position: right center
   .form-group
     margin: 0 0 16px 0
+
+
     &:last-of-type
       margin: 0 0 24px 0
+      +min-screen($md)
+        margin-bottom: rem(16)
+
     .field
       // height: 18px
       //margin-top: -7px
@@ -78,7 +87,7 @@
       height: 12px
   .form-control
     display: block
-    height: 44px
+    height: rem(44px)
     padding: 0 30px 5px 0
     border: none
     border-bottom: 1px solid #636366
@@ -87,6 +96,8 @@
     font-family: $tildaMed
     letter-spacing: -0.2px
 
+    +min-screen($md)
+      height: rem(28)
   .btn
     width: 100%
     input
@@ -100,6 +111,9 @@
   &.arrow
     padding: 0 20px 0 3px
     background: url(../img/source/arrow.svg) right -2px no-repeat
+
+    +min-screen($md)
+      display: none
   a
     padding: 0 0
     color: #636366
@@ -119,6 +133,8 @@
   margin-bottom: 20px
   &.pl
     padding-left: 25px
+    +min-screen($md)
+      padding-left: rem(5)
   a
     text-decoration: none !important
     color: #636366 !important
@@ -135,9 +151,15 @@
 .mob-footer-tell
   margin-bottom: 20px
 
+  +min-screen($md)
+    margin-top: rem(38.5)
+
   a
-    color: #013F7D
+    color: #013F7D !important
     font-family: $tildaMed
+
+    +min-screen($md)
+      font-size: 1rem
     
 .mob-footer-mail
   margin-bottom: 32px
@@ -182,8 +204,8 @@
     &:after
       content: ""
       background: url(../img/source/plus-acc.svg) no-repeat
-      width: 10px
-      height: 10px
+      width: 13px
+      height: 13px
       position: absolute
       top: -1px
       right: 3px
@@ -203,6 +225,18 @@
   font-family: $tildaL
   font-size: rem(12)
   line-height: math.div(10,12)
+  
+  +min-screen($md)
+    line-height: math.div(14,12)
+  
+  &__desc
+   +max-screen($md)
+    display: none
+  
+  &__mob
+   +min-screen($md)
+    display: none
+
 .footer-link
   // display: flex
   // flex-wrap: wrap
@@ -210,6 +244,11 @@
   font-size: 0
   margin: -4px 0 30px 0
   padding-left: 3px
+
+  +min-screen($md)
+    margin-bottom: 0
+    margin-top: 0
+
   .link
     
     line-height: 0
@@ -221,9 +260,12 @@
     &:last-child
       border-right: none
       margin-bottom: 0
+
+      a
+        border-right: none
+
     &:first-child
       padding-left: 0
-
 
   a
     position: relative
@@ -235,15 +277,10 @@
     letter-spacing: -0.2px
     border-right: 1px solid #E5E5EA
 
-    // &::after
-    //   content: ''
-    //   position: absolute
-    //   top: 50%
-    //   right: -8px
-    //   transform: translateY(-50)
-    //   height: rem(14px)
-    //   width: 1px
-    //   background-color: #E5E5EA
+    +min-screen($md)
+      padding-right: rem(5) 
+      color: $textLight !important
+      border-right: none
 
 .footer-menu
   border-top: 1px solid #E5E5EA

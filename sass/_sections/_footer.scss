@@ -3,6 +3,37 @@
 
 .footer-mob{
 	padding-top: rem(60);
+
+	@include min-screen($md){
+		padding-bottom: rem(17);	
+	}
+
+	&__top{
+		max-width: rem(976);
+		margin-inline: auto;
+
+		@include min-screen($md){
+			display: flex;
+			column-gap: prc(95.33, 976);
+		}
+	}
+
+	&__bottom{
+		max-width: rem(976);
+		margin-inline: auto;
+
+		@include min-screen($md){
+			display: flex;
+			flex-direction: column-reverse;
+			margin-top: rem(10px);
+		}
+	}
+}
+.footer-mob__column{
+	flex: 1 0 auto;
+}
+.footer-mob__left{
+	flex-basis: rem(238);
 }
 .footer-mob__subscribe{
 	display: none;
@@ -10,10 +41,52 @@
 	@include min-screen($md){
 		display: block;
 	}
+
+	.form-feedback{
+		@include min-screen($md){
+			display: block;
+			margin-bottom: rem(11);
+		}
+
+		.form-title{
+			@include min-screen($md){
+				display: none;
+			}
+		}
+	}
 }
 .footer-mob__links-arrows{
 	@include min-screen($md){
 		display: none;
 	}
+}
+.footer-mob__label{
+	margin-bottom: rem(32px);
+	font-family: $tildaMed;
+	@include max-screen($md){
+		display: none;
+	}
+}
+.footer-mob__list{
+	@include max-screen($md){
+		display: none;
+	}
+}
+.footer-mob__item{
+	list-style-type: none;
+
+	&:not(:last-child){
+		margin-bottom: rem(17px);	
+	}
+
+}
+.footer-mob__link{
+	font-size: rem(14px);
+	line-height: math.div(19,14);
+	text-decoration: none;
+}
+.footer-mob__submit{
+	height: rem(38);
+	min-height: auto;
 }
 /*--------------------END footer----------------------*/ 
