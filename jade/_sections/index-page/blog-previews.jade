@@ -1,0 +1,13 @@
+section.blog-previews
+	.blog-previews__wrapper
+		h2.sect-title блоговые записи
+		- var blogs = ['Как носить кепки задом наперед', 'Обзор коллекции Весна / Лето 2021', 'Коллаборация KANGOL x STAPLE'];
+		
+		.blog-previews__grid
+			each item, i in blogs
+				.blog-preview
+					.blog-preview__img._fit
+						img._fit-img(src="img/blog-previews/"+(i+1)+".jpg" alt="alt")
+					.blog-preview__title= item
+
+		a(href="#").btn.btn-fw архив статей

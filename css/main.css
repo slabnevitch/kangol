@@ -929,7 +929,7 @@ h2 {
 }
 
 .sect-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .product-cards {
@@ -1899,6 +1899,8 @@ h2 {
 }
 
 /*--------------------END bestsellers----------------------*/
+/*--------------------blog-previews----------------------*/
+/*--------------------END blog-previews----------------------*/
 /*--------------------index-categories----------------------*/
 .index-category {
   margin-bottom: 5rem;
