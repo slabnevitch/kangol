@@ -194,7 +194,7 @@ require('./vendor/slick/slick.min.js')
 
 //- simplebar--------------------------
 //- USE: new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
-// var SimpleBar = require('~/app/libs-vanilla/simplebar/simplebar.min.js')
+var SimpleBar = require('~/app/js/vendor/simplebar/simplebar.min.js')
 	
 //- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
 // require('~/app/libs-vanilla/fstdropdown/fstdropdown.min.js')
@@ -222,5 +222,9 @@ mobFooterMenu();
 mobCommon();
 
 document.addEventListener('DOMContentLoaded', () => {
-
+	new SimpleBar(document.querySelector('.bestsellers__content'), { 
+		autoHide: false,
+		clickOnTrack: false
+		 // scrollbarMinSize: 300
+	});
 }); //DOMContentLoaded

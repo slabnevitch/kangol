@@ -12,20 +12,41 @@
 	margin-inline: rem(-16);
 	padding-left: rem(16px);
 	background-color: #F2F2F5;
+
+	.simplebar-track.simplebar-horizontal .simplebar-scrollbar,
+	.simplebar-track.simplebar-horizontal{
+		height: rem(2px);
+	}
+	.simplebar-track.simplebar-horizontal{
+		margin-left: rem(16);
+		background-color: rgb(242, 242, 245);
+	}
+	.simplebar-track.simplebar-horizontal .simplebar-scrollbar{
+		top: 0;
+	}
+	.simplebar-scrollbar:before{
+		opacity: 1;
+		background-color: #C1C5C8;
+	}
+	.simplebar-track{
+		bottom: -8px;
+	}
+	
 }
 .bestsellers__items {
 	display: flex;
 	column-gap: rem(8px);
-	overflow-x: auto;
+	// overflow-x: scroll;
 }
 .bestsellers__item {
 	width: rem(200);
-	padding-bottom: rem(16px);
+	padding-bottom: rem(18px);
 	flex: 0 0 rem(200);
 	text-decoration: none;
 }
 .item-bestsellers {}
 .item-bestsellers__img {
+	padding-bottom: 0;
 	aspect-ratio: 1 / 1;
 	margin-bottom: rem(16px);
 	border-radius: rem(8);
