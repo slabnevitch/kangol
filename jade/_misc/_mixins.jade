@@ -14,9 +14,11 @@ mixin crumbs(className = 'breadcrumbs', items, schema = false)
 	ul(class=className itemscope=schema ? true : false itemtype=schema ? "https://schema.org/BreadcrumbList" : false)
 		each item, i in items
 			li(class=className + '__item' itemprop=schema?"itemListElement":false itemscope=schema?true:false itemtype=schema?"https://schema.org/ListItem":false)
-				a(itemprop=schema?"item":false href=schema?"https://example.com/dresses":"#" class=className + '__link')
+				if i < items.length - 1
+					a(itemprop=schema?"item":false href=schema?"https://example.com/dresses":"#" class=className + '__link')= item
+				else
 					span(itemprop=schema?"name":false)= item
-				meta(itemprop=schema?'position':false content=schema?(i+1):false)
+				//- meta(itemprop=schema?'position':false content=schema?(i+1):false)
 
 //- вызов, например: +swiper('my-swiper', true, false, true)
 mixin swiper(classname, pagination, scrollbar, navigation)

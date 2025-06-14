@@ -139,6 +139,61 @@ h2{
     line-height: math.div(10,13);
     color: #8E8E93;
 }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar,
+.simplebar-track.simplebar-horizontal{
+    height: rem(2px);
+}
+.simplebar-track.simplebar-horizontal{
+    margin-left: rem(16);
+    background-color: rgb(242, 242, 245);
+}
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar{
+    top: 0;
+}
+.simplebar-scrollbar:before{
+    opacity: 1;
+    background-color: #C1C5C8;
+}
+.simplebar-track{
+    bottom: -8px;
+}
+
+.breadcrumbs {
+    padding-top: rem(24px);
+    margin-bottom: rem(16);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(6px);
+}
+.breadcrumbs__link,
+.breadcrumbs__item span {
+    font-size: rem(12px);
+    font-family: $tildaMed;
+    line-height: math.div(16,12);
+    text-decoration: none;
+    color: #8E8E93;
+}
+.breadcrumbs__item {
+    position: relative;
+    list-style-type: none;
+
+    &:not(:last-child){
+        &:after{
+            content: '/';
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: rem(4);
+            color: #8E8E93;
+        }  
+    }
+   
+   span{
+        color: $text;
+   }
+}
+
 // .toggle-mnu{
 // 	position: fixed;
 // 	right: 30px;

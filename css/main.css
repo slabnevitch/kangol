@@ -995,6 +995,65 @@ h2 {
   color: #8E8E93;
 }
 
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar,
+.simplebar-track.simplebar-horizontal {
+  height: 0.125rem;
+}
+
+.simplebar-track.simplebar-horizontal {
+  margin-left: 1rem;
+  background-color: rgb(242, 242, 245);
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  top: 0;
+}
+
+.simplebar-scrollbar:before {
+  opacity: 1;
+  background-color: #C1C5C8;
+}
+
+.simplebar-track {
+  bottom: -8px;
+}
+
+.breadcrumbs {
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.breadcrumbs__link,
+.breadcrumbs__item span {
+  font-size: 0.75rem;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  line-height: 1.3333333333;
+  text-decoration: none;
+  color: #8E8E93;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  list-style-type: none;
+}
+.breadcrumbs__item:not(:last-child):after {
+  content: "/";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.25rem;
+  color: #8E8E93;
+}
+.breadcrumbs__item span {
+  color: #1C1C1E;
+}
+
 /*--------------------END ui----------------------*/
 /*--------------------footer----------------------*/
 .form-auth-path .text:after, .modal-auth-content .btn-list-auth:after, .color-search:after, .product-search:after, .modal-size .text-img:after, .mob-modal-view .view:after, .mob-modal-view .view-box:after, .mob-modal-view .view-list:after, .modal-cart-block .attr-val .line:after, .modal-cart-block:after {
@@ -1861,24 +1920,6 @@ h2 {
   padding-left: 1rem;
   background-color: #F2F2F5;
 }
-.bestsellers__content .simplebar-track.simplebar-horizontal .simplebar-scrollbar,
-.bestsellers__content .simplebar-track.simplebar-horizontal {
-  height: 0.125rem;
-}
-.bestsellers__content .simplebar-track.simplebar-horizontal {
-  margin-left: 1rem;
-  background-color: rgb(242, 242, 245);
-}
-.bestsellers__content .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-  top: 0;
-}
-.bestsellers__content .simplebar-scrollbar:before {
-  opacity: 1;
-  background-color: #C1C5C8;
-}
-.bestsellers__content .simplebar-track {
-  bottom: -8px;
-}
 
 .bestsellers__items {
   display: -ms-flexbox;
@@ -1915,7 +1956,7 @@ h2 {
   padding-top: 5rem;
 }
 
-.blog-previews__grid {
+.blog-previews-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(18.125rem, 1fr))[auto-fit];

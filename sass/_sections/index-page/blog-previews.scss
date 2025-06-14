@@ -4,7 +4,7 @@
 }
 .blog-previews__wrapper {}
 .sect-title {}
-.blog-previews__grid {
+.blog-previews-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
 	column-gap: rem(16px);
