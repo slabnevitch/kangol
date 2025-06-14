@@ -5,9 +5,11 @@ section.blog-previews
 		
 		.blog-previews__grid
 			each item, i in blogs
-				.blog-preview
+				a(href="#").blog-preview
 					.blog-preview__img._fit
 						img._fit-img(src="img/blog-previews/"+(i+1)+".jpg" alt="alt")
-					.blog-preview__title= item
+					.blog-preview__content
+						.blog-preview__title= item
 
-		a(href="#").btn.btn-fw архив статей
+
+		a(href="#").btn.btn-centered архив статей
