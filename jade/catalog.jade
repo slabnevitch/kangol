@@ -24,7 +24,7 @@ block content
 
 				.catatalog__content
 					.product-cards
-						- for (var i=0; i <9 ; i++)
+						- for (var i=0; i <10 ; i++)
 							.product-card
 								.img
 									.slider.slider-product
@@ -45,24 +45,22 @@ block content
 									.price
 										| 4 800 
 										span &rcy;&ucy;&bcy;
-								.product-color-list
-									.color
-										img.img-fluid.lazy(src='./img/source/c-1.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source/c-2.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source//c-3.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source/c-4.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source/c-5.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source/c-6.png', alt='')
-									.color
-										img.img-fluid.lazy(src='./img/source/c-7.png', alt='')
-									.color.num +5
-					
-					a(href="#").btn.btn-centered загрузить ещё
+								
+								.product__colors
+									if i % 2
+										.product-color-list
+											- for (var n=0;  n< 5; n++)
+												.product__color.color
+													img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+										.product__color-num +25
+									else
+										.product-color-list
+											- for (var n=0;  n< 3; n++)
+												.product__color.color
+													img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+					.btn-wrap
+						a(href="#").btn.btn-centered загрузить ещё
+
 	//- include _sections/example-sections
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

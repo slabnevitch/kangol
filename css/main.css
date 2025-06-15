@@ -1158,14 +1158,33 @@ textarea {
   width: 100%;
 }
 .btn-centered {
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   margin-inline: auto;
 }
-@media only screen and (min-width: 63.99875em) {
+@media only screen and (min-width: 47.99875em) {
   .btn-centered {
     max-width: 27.375rem;
+  }
+}
+@media only screen and (min-width: 63.99875em) {
+  .btn-centered {
+    margin-right: 0;
+    width: auto;
+    max-width: none;
+    padding-inline: 3.5rem;
+  }
+}
+
+.btn-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 63.99875em) {
+  .btn-wrap {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 }
 
@@ -1191,7 +1210,7 @@ h2 {
 .product-cards {
   display: -ms-grid;
   display: grid;
-  column-gap: 0.625rem;
+  column-gap: 0.5rem;
   row-gap: 1rem;
 }
 @media only screen and (min-width: 30.06125em) {
@@ -1367,25 +1386,39 @@ h2 {
   font-family: "Tilda-Sans-Semibold", sans-serif;
 }
 .product-card .product-color-list {
-  font-size: 0;
-  text-align: center;
-  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  column-gap: 0.625rem;
   overflow: hidden;
   overflow-x: auto;
-  margin: 0 -15px 0 0;
-  padding: 0 0 10px 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
-@media only screen and (min-width: 63.99875em) {
+@media only screen and (min-width: 30.06125em) {
   .product-card .product-color-list {
-    display: none;
+    column-gap: 0;
   }
 }
 .product-card .product-color-list .color {
-  margin: 0 3px;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  vertical-align: top;
+  width: 2.75rem;
+  height: 2.75rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 47.99875em) {
+  .product-card .product-color-list .color {
+    margin-inline: -0.25rem;
+  }
 }
 .product-card .product-color-list .color.num {
   background: #F2F2F5;
@@ -1395,14 +1428,35 @@ h2 {
   line-height: 24px;
   font-weight: 600;
   width: auto;
+  height: auto;
   padding: 0 10px;
   font-style: italic;
 }
 .product-card .product-color-list .color img {
-  width: 100%;
-  height: 100%;
+  width: 1.25rem;
+  height: 1.25rem;
   display: block;
   border-radius: 50%;
+}
+
+.product__color-num {
+  background: #F2F2F5;
+  border-radius: 20px;
+  color: #013F7D;
+  width: auto;
+  height: 1.25rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 0 0.625rem;
+  margin-left: 0.6875rem;
+  font-size: 0.875rem;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  line-height: 1.25rem;
+}
+@media only screen and (min-width: 30.06125em) {
+  .product__color-num {
+    margin-left: 0rem;
+  }
 }
 
 .product-card {
@@ -1427,6 +1481,20 @@ h2 {
   font-family: "Tilda-Sans-Semibold", sans-serif;
   line-height: 0.7692307692;
   color: #8E8E93;
+}
+
+.product__colors {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 63.99875em) {
+  .product__colors {
+    display: none;
+  }
 }
 
 [data-simplebar-hor] {
