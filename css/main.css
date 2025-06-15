@@ -1191,26 +1191,38 @@ h2 {
 .product-cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   column-gap: 0.625rem;
   row-gap: 1rem;
-  margin-bottom: 2.75rem;
 }
-@media only screen and (max-width: 89.99875em) {
+@media only screen and (min-width: 30.06125em) {
   .product-cards {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width: 63.99875em) {
+@media only screen and (min-width: 47.99875em) {
   .product-cards {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media only screen and (max-width: 47.99875em) {
+@media only screen and (min-width: 63.99875em) {
   .product-cards {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 89.99875em) {
+  .product-cards {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.product-cards--items {
+  margin-bottom: 2.75rem;
+}
+@media only screen and (max-width: 30.06125em) {
+  .product-cards--items {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1224,7 +1236,7 @@ h2 {
 }
 
 .product-card {
-  margin: 0 0 45px 0;
+  margin: 0 0 2.75rem 0;
   position: relative;
 }
 .product-card .slick-dots {
@@ -1293,34 +1305,31 @@ h2 {
   margin: 0 auto;
 }
 .product-card .title {
-  font-size: 19px;
-  line-height: 16px;
-  font-weight: 600;
+  font-family: "Tilda-Sans-Regular", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.0909090909;
   color: #1C1C1E;
-  margin-bottom: 5px;
   text-align: center;
   height: auto;
   overflow: hidden;
 }
 .product-card .title a {
-  text-decoration: none !important;
-  font-size: 19px;
-  line-height: 16px;
-  font-weight: 600;
+  margin-bottom: 0.9375rem;
+  text-decoration: none;
   display: block;
-  color: #1C1C1E !important;
+  color: #1C1C1E;
 }
 .product-card .text {
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.25;
+  font-family: "Tilda-Sans-Medium", sans-serif;
   margin-bottom: 15px;
   text-align: center;
   color: #8E8E93;
 }
 .product-card .price-block {
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
 }
 .product-card .price-old {
   display: inline-block;
@@ -1347,16 +1356,15 @@ h2 {
   font-family: "Houschka Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .product-card .price {
-  display: inline-block;
   vertical-align: top;
   text-align: center;
-  color: #636366;
-  font-size: 19px;
-  line-height: 16px;
-  font-weight: 600;
+  color: #8E8E93;
+  font-family: "Tilda-Sans-Semibold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3333333333 r;
 }
 .product-card .price span {
-  font-family: "Houschka Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Tilda-Sans-Semibold", sans-serif;
 }
 .product-card .product-color-list {
   font-size: 0;
@@ -1366,6 +1374,11 @@ h2 {
   overflow-x: auto;
   margin: 0 -15px 0 0;
   padding: 0 0 10px 0;
+}
+@media only screen and (min-width: 63.99875em) {
+  .product-card .product-color-list {
+    display: none;
+  }
 }
 .product-card .product-color-list .color {
   margin: 0 3px;
@@ -2402,6 +2415,7 @@ h2 {
   border-bottom: 1px solid rgb(229, 229, 234);
 }
 .header__wrapper {
+  position: relative;
   height: 58px;
   display: -ms-flexbox;
   display: flex;

@@ -1,8 +1,7 @@
 @import "settings"
 
-
 .product-card
-  margin: 0 0 45px 0
+  margin: 0 0 rem(44) 0
   position: relative
   .slick-dots
     position: absolute
@@ -68,25 +67,28 @@
       display: block
       margin: 0 auto
   .title
-    @include fonts(19px, 16px, 600)
+    font-family: $tildaReg
+    font-size: rem(22px)
+    line-height: calc(24/22)
     color: #1C1C1E
-    margin-bottom: 5px
     text-align: center
     height: auto
     overflow: hidden
     a
-      text-decoration: none !important
-      @include fonts(19px, 16px, 600)
+      margin-bottom: rem(15px)
+      text-decoration: none
       display: block
-      color: #1C1C1E !important
+      color: #1C1C1E
   .text
-    @include fonts(12px, 15px, 500)
+    font-size: rem(15)
+    line-height: calc(15/12)
+    font-family: $tildaMed
     margin-bottom: 15px
     text-align: center
     color: #8E8E93
   .price-block
     text-align: center
-    margin-bottom: 12px
+    margin-bottom: rem(16)
 
   .price-old
     display: inline-block
@@ -108,13 +110,14 @@
     span
       font-family: "Houschka Pro",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
   .price
-    display: inline-block
     vertical-align: top
     text-align: center
-    color: #636366
-    @include fonts(19px, 16px, 600)
+    color: #8E8E93
+    font-family: $tildaSemi
+    font-size: rem(18px)
+    line-height: calc(24/18)r
     span
-      font-family: "Houschka Pro",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+      font-family: $tildaSemi
   .product-color-list
     font-size: 0
     text-align: center
@@ -123,6 +126,10 @@
     overflow-x: auto
     margin: 0 -15px 0 0
     padding: 0 0 10px 0
+
+    +min-screen($md)
+      display: none
+
     .color
       margin: 0 3px
       width: 24px
