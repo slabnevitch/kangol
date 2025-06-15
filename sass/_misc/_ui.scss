@@ -98,6 +98,11 @@ h2{
 .sect-title{
     margin-bottom: rem(32);
 }
+.block-title{
+    margin-bottom: rem(32);
+    font-size: rem(20);
+    font-family: $tildaReg;
+}
 .product-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
@@ -125,10 +130,6 @@ h2{
     // aspect-ratio: 159 / 173;
     text-align: center;
 }
-.slider {}
-.slider-product {}
-.slide {}
-.img-fluid {}
 .product-card__title {
     margin-bottom: rem(16);
     font-size: rem(15);
@@ -139,14 +140,34 @@ h2{
     line-height: math.div(10,13);
     color: #8E8E93;
 }
+[data-simplebar-hor]{
+    position: relative;
+    padding-bottom: rem(8);   
+   
+   margin-inline: rem(-16);
+    padding-left: rem(16px);
 
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar,
-.simplebar-track.simplebar-horizontal{
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 8px;
+        width: 100%;
+        background-color: #fff;
+    }
+}
+.simplebar-track{
+    margin-right: 1rem;
+}
+.simplebar-track.simplebar-horizontal,
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar{
     height: rem(2px);
 }
 .simplebar-track.simplebar-horizontal{
     margin-left: rem(16);
     background-color: rgb(242, 242, 245);
+    // background-color: pink;
 }
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar{
     top: 0;
@@ -155,9 +176,9 @@ h2{
     opacity: 1;
     background-color: #C1C5C8;
 }
-.simplebar-track{
-    bottom: -8px;
-}
+// .simplebar-track{
+//     margin-top: 8px;
+// }
 
 .breadcrumbs {
     padding-top: rem(24px);
@@ -194,6 +215,50 @@ h2{
    }
 }
 
+.tags{
+    margin-bottom: rem(44);
+}
+.tags__container{
+    margin-right: -1rem;
+}
+.tags__items{
+    display: flex;
+    // align-items: center;
+    column-gap: rem(8);
+    // overflow-x: scroll;
+
+    &--blog{
+        column-gap: rem(10);
+
+    }
+}
+.tags__item{
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: rem(34);
+    padding: rem(6) rem(12) rem(6px) rem(15px);
+    border-radius: rem(25px);
+    background: #F2F2F5;
+    color: $text;
+    font-size: rem(14px);
+    font-family: $tildaMed;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    transition: background-color .2s;
+
+    @media (any-hover: hover) { //только для устройств с ховером
+            &:hover{
+                background-color: darken(#F2F2F5, 5%);
+            }
+        }
+
+    &.active{
+        background: rgb(0, 52, 104);
+        color: #fff;
+    }
+}
 // .toggle-mnu{
 // 	position: fixed;
 // 	right: 30px;

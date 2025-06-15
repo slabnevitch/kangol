@@ -222,9 +222,12 @@ mobFooterMenu();
 mobCommon();
 
 document.addEventListener('DOMContentLoaded', () => {
-	new SimpleBar(document.querySelector('.bestsellers__content'), { 
-		autoHide: false,
-		clickOnTrack: false
-		 // scrollbarMinSize: 300
-	});
+	if(document.querySelector('[data-simplebar]') !== null){
+		new SimpleBar(document.querySelector('[data-simplebar]'), { 
+			autoHide: false,
+			clickOnTrack: false
+			 // scrollbarMinSize: 300
+		});
+	}
+	
 }); //DOMContentLoaded

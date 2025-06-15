@@ -6,7 +6,7 @@
 .sect-title {}
 .blog-previews-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(rem(300), 100%), 1fr));
 	column-gap: rem(16px);
 }
 .blog-preview {
@@ -22,7 +22,7 @@
 	margin-bottom: rem(16px);
 	font-size: rem(18px);
 	font-family: $tildaMed;
-	line-height: math.div(16,18);
+	line-height: math.div(20,18);
 
 	&:only-child {
 		margin-bottom: rem(32px);
@@ -32,5 +32,11 @@
 	// 	margin-bottom: rem(32px);
 		
 	// }
+}
+.blog-preview__text {
+	margin-bottom: rem(44);
+	font-size: rem(14px);
+	line-height: math.div(19,14);
+	color: $textLight;
 }
 /*--------------------END blog-previews----------------------*/ 
