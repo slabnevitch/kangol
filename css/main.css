@@ -1351,16 +1351,15 @@ h2 {
   margin-bottom: 1rem;
 }
 .product-card .price-old {
+  position: relative;
+  margin: 0 0.625rem 0 0;
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  color: rgba(0, 0, 0, 0.35);
-  font-size: 19px;
-  line-height: 16px;
-  font-weight: 600;
-  margin: 0 10px 0 0;
+  font-family: "Tilda-Sans-Semibold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
   color: #C1C5C8;
-  position: relative;
 }
 .product-card .price-old:before {
   content: "";
@@ -1375,12 +1374,13 @@ h2 {
   font-family: "Houschka Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .product-card .price {
+  display: inline-block;
   vertical-align: top;
   text-align: center;
   color: #8E8E93;
   font-family: "Tilda-Sans-Semibold", sans-serif;
   font-size: 1.125rem;
-  line-height: 1.3333333333 r;
+  line-height: 1.3333333333;
 }
 .product-card .price span {
   font-family: "Tilda-Sans-Semibold", sans-serif;
@@ -1495,6 +1495,15 @@ h2 {
   .product__colors {
     display: none;
   }
+}
+
+.product-card__sale {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-size: 0.8125rem;
+  font-family: "Tilda-Sans-Bold", sans-serif;
+  color: #003468;
 }
 
 [data-simplebar-hor] {

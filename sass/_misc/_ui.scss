@@ -178,6 +178,15 @@ h2{
     }
 }
 
+.product-card__sale{
+    position: absolute;
+    left: 0;
+    top: rem(16px);
+    font-size: rem(13);
+    font-family: $tildaBold;
+    color: $accent;
+}
+
 [data-simplebar-hor]{
     position: relative;
     padding-bottom: rem(8);   

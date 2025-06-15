@@ -23,41 +23,44 @@ block content
 								option(value=i)= opt
 
 				.catatalog__content
+					- var prods = [{name: 'Massive Trapper', price: '1 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '11 750 ₽', old: '11 750 '}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Wool Spitfire', price: '11 750 ₽'}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '4 800 ₽', old: '11 750 '}];
 					.product-cards
-						- for (var i=0; i <10 ; i++)
-							.product-card
-								.img
-									.slider.slider-product
-										.slide
-											img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
-										.slide
-											img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
-										.slide
-											img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
-								.ic-block
-									.ic-sale
-									.ic-fav
-									.ic-video
-								.title
-									a(href='#') Massive Trapper
-									.text &Dcy;&iecy;&mcy;&icy;&scy;&iecy;&zcy;&ocy;&ncy;&ncy;&acy;&yacy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy; &ncy;&acy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;&iecy;
-								.price-block
-									.price
-										| 4 800 
-										span &rcy;&ucy;&bcy;
-								
-								.product__colors
-									if i % 2
-										.product-color-list
-											- for (var n=0;  n< 5; n++)
-												.product__color.color
-													img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
-										.product__color-num +25
-									else
-										.product-color-list
-											- for (var n=0;  n< 3; n++)
-												.product__color.color
-													img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+						- for (var i=0; i <2 ; i++)
+							each prod, m in prods
+								.product-card
+									.img
+										.slider.slider-product
+											.slide
+												img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
+											.slide
+												img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
+											.slide
+												img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+
+									if i == 4 ||  i == 7 || i == 9 || i == 8
+										.product-card__sale SALE
+										
+									.title
+										a(href='#')= prod.name
+										.text &Dcy;&iecy;&mcy;&icy;&scy;&iecy;&zcy;&ocy;&ncy;&ncy;&acy;&yacy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy; &ncy;&acy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;&iecy;
+									.price-block
+										if prod.old
+											.price-old= prod.old
+
+										.price= prod.price
+									
+									.product__colors
+										if i % 2
+											.product-color-list
+												- for (var n=0;  n< 5; n++)
+													.product__color.color
+														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+											.product__color-num +25
+										else
+											.product-color-list
+												- for (var n=0;  n< 3; n++)
+													.product__color.color
+														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
 					.btn-wrap
 						a(href="#").btn.btn-centered загрузить ещё
 

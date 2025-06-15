@@ -91,14 +91,16 @@
     margin-bottom: rem(16)
 
   .price-old
+    position: relative
+    margin: 0 rem(10px) 0 0
     display: inline-block
     vertical-align: top
     text-align: center
-    color: rgba(0, 0, 0, 0.35)
-    @include fonts(19px, 16px, 600)
-    margin: 0 10px 0 0
+    font-family: $tildaSemi
+    font-size: rem(18px)
+    line-height: calc(24/18)
     color: #C1C5C8
-    position: relative
+
     &:before
       content: ""
       position: absolute
@@ -110,12 +112,13 @@
     span
       font-family: "Houschka Pro",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
   .price
+    display: inline-block
     vertical-align: top
     text-align: center
     color: #8E8E93
     font-family: $tildaSemi
     font-size: rem(18px)
-    line-height: calc(24/18)r
+    line-height: calc(24/18)
     span
       font-family: $tildaSemi
   .product-color-list
