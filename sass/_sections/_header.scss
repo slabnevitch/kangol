@@ -1,7 +1,7 @@
 /*--------------------header----------------------*/
 @import "../_source/mob_header";
 .header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -71,5 +71,53 @@
 	@include min-screen($md){
 		right:64px;
 	}
+}
+.header__announcement {
+	background-color: $accent;
+
+	@include max-screen($md){
+		display: none;
+	}
+}
+.announcement-header {}
+.announcement-header__wrapper {
+	padding-block: rem(11.5);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.announcement-header__body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: rem(32);
+	color: rgb(255, 255, 255);
+	font-size: rem(13px);
+	font-family: $tildaMed;
+	line-height: 1;
+	text-transform: uppercase;
+}
+.announcement-header__text {
+}
+.announcement-header__link {
+	display: flex;
+	align-items: center;
+	column-gap: rem(8);
+	margin-left: rem(32);
+	text-decoration: none;
+	color: #fff;
+}
+.announcement-header__close {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	@include but-null();
+	height: rem(32);
+	width: rem(24);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 /*--------------------END header----------------------*/ 

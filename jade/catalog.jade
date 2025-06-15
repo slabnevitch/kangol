@@ -3,6 +3,7 @@ extends _templates/main
 
 block title
 	| Каталог
+	- var pageName = 'catalog'
 
 block content
 	main.main
@@ -50,7 +51,7 @@ block content
 										.price= prod.price
 									
 									.product__colors
-										if i % 2
+										if !i % 2
 											.product-color-list
 												- for (var n=0;  n< 5; n++)
 													.product__color.color
@@ -64,6 +65,7 @@ block content
 					.btn-wrap
 						a(href="#").btn.btn-centered загрузить ещё
 
+		button.btn.btn-gray.btn-fw.to-top-btn(type="button") НАВЕРХ
 	//- include _sections/example-sections
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

@@ -222,6 +222,11 @@ mobFooterMenu();
 mobCommon();
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	$('.announcement-header__close').on('click', function(){
+		$(this).closest('.header__announcement').remove();
+	})
+
 	if(document.querySelector('[data-simplebar]') !== null){
 		new SimpleBar(document.querySelector('[data-simplebar]'), { 
 			autoHide: false,
@@ -247,6 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	//END открытие фильтра на стр. листинга
 
-	document.querySelector('.fstdropdown-select').onchange = (e)=> console.log(e.target.value);
-	// document.querySelector(".fstdropdown-select").fstdropdown.openSelect();
+	// scroll наверх страницы
+	$('.to-top-btn').on('click', function() {
+		window.scroll({
+		  top: 0, 
+		  behavior: 'smooth'
+		});
+	});
+	//END scroll наверх страницы
+	
+	// document.querySelector('.fstdropdown-select').onchange = (e)=> console.log(e.target.value);
 }); //DOMContentLoaded

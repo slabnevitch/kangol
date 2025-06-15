@@ -99,6 +99,14 @@
         justify-content: flex-end;
     }
 }
+.to-top-btn{
+    margin-top: rem(80);
+    color: $textLight;
+
+    @include max-screen($md){
+        display: none;
+    }
+}
 h2{
    font-family: $tildaSemi;
    font-size: rem(25px);
