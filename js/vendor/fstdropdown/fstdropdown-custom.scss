@@ -1,0 +1,69 @@
+.fstdropdown{
+	position: relative;
+	overflow: visible;
+	display: flex;
+	height: 48px;
+	align-items: center;
+	border-radius: 12px;
+
+	cursor: default;
+	outline: none;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+	}
+}
+.fstdropdown.open > .fstlist {
+    width: calc(100% + 2px); /*dropdown займет ширину селекта полностью*/ 
+}
+.fstdiv.open>.fstdropdown{
+	position: relative;
+}
+.fstdropdown>.fstselected{
+	box-shadow: none;
+	width: 100%;
+	color: #C4C4C4;
+	font-size: 16px;
+}
+/*.fstdropdown.open{// изменение углов поля
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	
+}*/
+
+.fstdropdown.open:hover{
+	outline: none;
+	box-shadow: none;
+	border-color: #C4C4C4;
+}
+.fstdropdown>.fstlist{
+	background-color: #fff;
+	position: absolute;
+	top: calc(100% + 2px);
+	box-shadow: none;
+}
+
+.fstdropdown>.fstlist div:first-child{/*удаление из dropdown первого "невидимого" пункта, которому в исходном <select> соответствует <option selected disbled hidden>*/
+/*	display: none;*/
+}
+.fstdropdown.open:hover{
+	overflow: visible;
+}
+.fstlist>div{
+  padding: rem(16) rem(16) rem(16) rem(48);
+  border-bottom-color: #0A1F36;
+/*  font-family: $med;*/
+}
+.fstlist>div.selected{
+  background-color: transparent;
+  @include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
+  color: #fff;
+}
+.fstdropdown>.fstselected:after{
+  right: rem(19);
+  border-color: #fff transparent transparent;
+}
+.fstlist>div:hover{
+  background-color: transparent;
+  @include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
+}

@@ -6,6 +6,9 @@ export const mobFooterMenu = () => {
 		 $(".mob-menu-trigger").click(function(e){
 	        e.stopPropagation();
 
+	        $(".catatalog__select .fstdiv").removeClass('open');
+			$(".catatalog__select .fstdropdown").removeClass('open');
+
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");
 	            $(".modal-menu").hide();
@@ -45,7 +48,10 @@ export const mobFooterMenu = () => {
 
 	    $(".footer-icon-cart").click(function(e){
 	        e.stopPropagation();
-
+	        
+	        $(".catatalog__select .fstdiv").removeClass('open');
+			$(".catatalog__select .fstdropdown").removeClass('open');
+	        
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");
 	            $(".modal-cart").hide();
@@ -74,6 +80,9 @@ export const mobFooterMenu = () => {
 
 	    $(".mob-search").click(function(e){
 	        e.stopPropagation();
+
+	        $(".catatalog__select .fstdiv").removeClass('open');
+			$(".catatalog__select .fstdropdown").removeClass('open');
 
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");

@@ -197,7 +197,7 @@ require('./vendor/slick/slick.min.js')
 var SimpleBar = require('~/app/js/vendor/simplebar/simplebar.min.js')
 	
 //- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
-// require('~/app/libs-vanilla/fstdropdown/fstdropdown.min.js')
+require('./vendor/fstdropdown/fstdropdown.js')
 
 //- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
 // var baguetteBox = require('~/app/libs-vanilla/baguetteBox/dist/baguetteBox.min.js')
@@ -230,4 +230,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	
+	// открытие фильтра на стр. листинга
+	if(document.getElementById('cards-filter-open') !== null && document.getElementById('cards-filter-select') !== null){
+		document.getElementById('cards-filter-open').onclick = () => {
+			document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
+			document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
+		}		
+	}
+	document.documentElement.addEventListener('click', docClick);
+	function docClick(e) {
+		console.log(e.target.closest('#cards-filter-open'));
+		if (e.target.closest('#cards-filter-open') === null){
+			document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
+			document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+		}
+	}
+	//END открытие фильтра на стр. листинга
+
+	document.querySelector('.fstdropdown-select').onchange = (e)=> console.log(e.target.value);
+	// document.querySelector(".fstdropdown-select").fstdropdown.openSelect();
 }); //DOMContentLoaded
