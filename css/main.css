@@ -1532,22 +1532,40 @@ h2 {
   margin-right: 1rem;
 }
 
-.simplebar-track.simplebar-horizontal,
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-  height: 0.125rem;
-}
-
 .simplebar-track.simplebar-horizontal {
+  height: 16px;
   margin-left: 1rem;
   background-color: rgb(242, 242, 245);
+  background-color: transparent;
+}
+.simplebar-track.simplebar-horizontal:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #F2F2F5;
 }
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   top: 0;
+  height: 11px;
+  background-color: transparent;
 }
 
 .simplebar-scrollbar:before {
   opacity: 1;
+  height: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 2px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #C1C5C8;
 }
 
