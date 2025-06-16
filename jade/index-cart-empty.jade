@@ -6,18 +6,29 @@ block title
 	
 block content
 	main.main
-		h1(style="text-align:center;") Привет! Можно начинать
-		.container
-			.row
-				.col-6
-					button.btn.btn-primary.w-100(type="button") Primary
-					button.btn.btn-secondary(type="button") Secondary
-					button.btn(type="button" disabled) disabled
-					button.btn.btn-danger(type="button") danger
-				.col-6
-					| Skotnkik
+		main.main
+		.main-slider
+			.main-slider__wrapper
+				.main-slider__container(data-simplebar-hor data-simplebar)
+					.main-slider__slides
+						- for (var n=0; n < 2; n++)
+							- for (var i=0; i < 4; i++)
+								.main-slider__slide._fit
+									img._fit-img(src="img/source/temp/img-home-slider-"+(i+1)+".png" alt="alt")
+				//- .slider.home-slider
+				//- 	.home-slider__slide
+				//- 		img(src='./img/source/temp/img-home-slider-1.png', alt='')
+				//- 	.home-slider__slide
+				//- 		img(src='./img/source/temp/img-home-slider-2.png', alt='')
+				//- 	.home-slider__slide
+				//- 		img(src='./img/source/temp/img-home-slider-3.png', alt='')
+				//- 	.home-slider__slide
+				//- 		img(src='./img/source/temp/img-home-slider-4.png', alt='')
 
-	include _sections/example-sections
+		include _sections/index-page/index-categories
+		include _sections/index-page/newitems
+		include _sections/index-page/bestsellers
+		include _sections/index-page/blog-previews
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
