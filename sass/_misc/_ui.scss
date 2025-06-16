@@ -45,7 +45,7 @@
 }
     &[disabled]{
         background-color: $grayBg;
-        color: #878788;
+        color: rgba($text, .25);
 
         @media (any-hover: hover) { //только для устройств с ховером
              &:hover{
@@ -68,6 +68,15 @@
         @media (any-hover: hover) { //только для устройств с ховером
              &:hover{
                background-color: darken(#F2F2F5, 5%);
+           }
+       }   
+    }
+    &-black{
+        background-color: #000;
+        color: #fff;
+        @media (any-hover: hover) { //только для устройств с ховером
+             &:hover{
+               background-color: lighten(#000, 15%);
            }
        }   
     }
@@ -343,6 +352,36 @@ h2{
         background: rgb(0, 52, 104);
         color: #fff;
     }
+}
+[data-spoiler-item]{
+    &:not(:last-child){
+        margin-bottom: rem(44);
+    }
+}
+[data-spoiler-item].is-open [data-spoiler-title]::after{
+    background-image: url(../img/icons/spoler-minus.svg);
+}
+[data-spoiler-title]{
+    padding-left: rem(28);
+    
+    font-size: rem(17px);
+    font-family: $tildaSemi;
+    line-height: math.div(15,17);
+    color: $accent;
+    text-transform: uppercase;
+
+    &:after{
+        margin-top: rem(-2);
+        left: 0;
+        right: auto;
+        width: rem(10);
+        height: rem(10);
+        background-image: url(../img/icons/spoler-plus.svg);
+        background-position: center;
+    }
+}
+[data-spoiler-content]{
+    margin-top: rem(24);
 }
 // .toggle-mnu{
 // 	position: fixed;

@@ -85,9 +85,9 @@
               <div class="product__price">4 950 ₽</div>
             </div>
             <div class="product__block">
-              <div class="product__colors colors-product">
+              <div class="product__colors-sect colors-product">
                 <div class="colors-product__header">
-                  <div class="colors-product__key product__title">ЦВЕТ</div>
+                  <div class="colors-product__key product__info-title">ЦВЕТ</div>
                   <div class="colors-product__val">Golden Palm</div>
                 </div>
                 <div class="colors-product__list">
@@ -119,7 +119,7 @@
                     <input type="radio" name="prod-color" class="colors-product__input"><span class="colors-product__color"><img src="img/product-page/colors/09.png" alt="alt"></span>
                   </label>
                   <label class="colors-product__item">
-                    <input type="radio" name="prod-color" class="colors-product__input"><span class="colors-product__color"><img src="img/product-page/colors/010.png" alt="alt"></span>
+                    <input type="radio" name="prod-color" class="colors-product__input"><span class="colors-product__color"><img src="img/product-page/colors/10.png" alt="alt"></span>
                   </label>
                   <label class="colors-product__item">
                     <input type="radio" name="prod-color" class="colors-product__input"><span class="colors-product__color"><img src="img/product-page/colors/11.png" alt="alt"></span>
@@ -161,7 +161,7 @@
               </div>
             </div>
             <div class="product__block">
-              <div class="product__title">РАЗМЕР</div>
+              <div class="product__info-title">РАЗМЕР</div>
               <div class="list-size">
                 <label class="list-size__label">
                   <input type="radio" name="prod-size" class="list-size__radio"><span class="list-size__item"><span class="list-size__item-name">s</span><span class="list-size__item-value">54/55</span></span>
@@ -181,11 +181,11 @@
                 <div class="list-size__item list-size__item--link js-modal-size active"><a href="#" class="list-size__item-action">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;</a></div>
               </div>
             </div>
-            <div class="product__block">
-              <button type="button" class="btn btn-gray btn-fw">для заказа выберите размер</button>
+            <div class="product__block product__to-cart">
+              <button type="button" disabled class="btn btn-gray btn-fw product__order-btn">для заказа выберите размер</button>
             </div>
             <div class="product__block">
-              <div class="product__title">НАЛИЧИЕ В МАГАЗИНАХ</div>
+              <div class="product__info-title">НАЛИЧИЕ В МАГАЗИНАХ</div>
               <div class="mob-main-item mob-card-availability">
                 <div class="mob-card-availability-list">
                   <div class="mob-card-availability-list__item">
@@ -206,6 +206,28 @@
                       <div class="mob-card-availability-list__item-value">&Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;</div><a href="#" class="mob-card-availability-list__item-book">&Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;</a>
                     </div>
                   </div>
+                  <div class="product__booking">
+                    <div class="form__group">
+                      <label class="form__label">
+                        <input type="text" name="name" placeholder="ФИО" class="form__input">
+                        <button type="button" class="inp-reset"></button>
+                      </label>
+                      <label class="form__label">
+                        <input type="text" name="phone" placeholder="Телефон" class="form__input">
+                        <button type="button" class="inp-reset"></button>
+                      </label>
+                      <label class="form__label">
+                        <input type="text" name="email" placeholder="Комментарий" class="form__input">
+                        <button type="button" class="inp-reset"></button>
+                      </label>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label">
+                        <button type="button" class="btn btn-black btn-fw">онлайн оплата</button>
+                      </label>
+                      <div class="form__text">Нажав на кнопку «Оформить» Вы даёте согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>, а также с  <a href="#">Условиями продажи.</a> С правилами возврата можно ознакомиться здесь.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,41 +238,87 @@
                 <p>Также кепка украшена тонкими контрастными полосами, которые симметрично расходятся от центра к боковым панелям.</p>
               </div>
             </div>
-            <div class="product__block">
-              <div data-spoilers data-minimizeSiblings>
-                <details data-spoiler-item>
-                  <summary data-spoiler-title="">подробнее</summary>
-                  <div data-spoiler-content="">
-                    <div class="product__text-block">
-                      <h4 class="product__subtitle">Оплата</h4>
-                      <div class="product__text">
-                        <p>Оплата курьеру наличными при получении заказа на территории РФ.</p>
-                        <p>Вы можете оплатить заказ наложенным платежом при получении на почте.</p>
-                        <p>При покупках в наших розничных магазинах вы можете оплатить как наличными, так и банковской картой.</p>
-                        <p>Для заказов из стран СНГ — 100% оплата перед отправкой, так как курьерская служба не оказывает услуги наложенного платежа при доставках в другие страны. Примерка перед оплатой товара — невозможна, так как курьерская служба не оказывает данную услугу.</p>
+            <div class="product__spoilers">
+              <div class="product__block">
+                <div data-spoilers>
+                  <details data-spoiler-item>
+                    <summary data-spoiler-title="">подробнее</summary>
+                    <div data-spoiler-content="">
+                      <div class="mob-card-availability-list__item">
+                        <div class="mob-card-availability-list__item-name">Производство</div>
+                        <div class="mob-card-availability-list__item-data">
+                          <div class="mob-card-availability-list__item-value">Вьетнам</div>
+                        </div>
+                      </div>
+                      <div class="mob-card-availability-list__item">
+                        <div class="mob-card-availability-list__item-name">Артикул</div>
+                        <div class="mob-card-availability-list__item-data">
+                          <div class="mob-card-availability-list__item-value">K4366</div>
+                        </div>
+                      </div>
+                      <div class="mob-card-availability-list__item">
+                        <div class="mob-card-availability-list__item-name">Уход</div>
+                        <div class="mob-card-availability-list__item-data">
+                          <div class="mob-card-availability-list__item-value">Химчистка</div>
+                        </div>
+                      </div>
+                      <div class="mob-card-availability-list__item">
+                        <div class="mob-card-availability-list__item-name">Состав</div>
+                        <div class="mob-card-availability-list__item-data">
+                          <div class="mob-card-availability-list__contain">
+                            <div class="mob-card-availability-list__col">
+                              <div class="mob-card-availability-list__item-value">Полиэстер</div>
+                            </div>
+                            <div class="mob-card-availability-list__col">
+                              <div class="mob-card-availability-list__item-value">100%</div>
+                            </div>
+                          </div>
+                          <div class="mob-card-availability-list__contain">
+                            <div class="mob-card-availability-list__col">
+                              <div class="mob-card-availability-list__item-value">Эластан</div>
+                            </div>
+                            <div class="mob-card-availability-list__col">
+                              <div class="mob-card-availability-list__item-value">8%</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="product__text-block">
-                      <h4 class="product__subtitle">Обмен / Возврат</h4>
-                      <div class="product__text">
-                        <p>Вы можете обменять или вернуть любой купленный у нас в товар в течении 14 дней со дня получения своего заказа - при отсутствии следов эксплуатации, сохранении товарного вида, всех заводских бирок и упаковки. Доставка возвратов до нас – оплачивается покупателем. Возврат денежных средств осуществляется без стоимости доставки.</p>
+                  </details>
+                  <details data-spoiler-item>
+                    <summary data-spoiler-title="">доставка и оплата</summary>
+                    <div data-spoiler-content="">
+                      <div class="product__block">
+                        <div class="product__text-block">
+                          <h4 class="product__subtitle">Оплата</h4>
+                          <div class="product__text">
+                            <p>Оплата курьеру наличными при получении заказа на территории РФ.</p>
+                            <p>Вы можете оплатить заказ наложенным платежом при получении на почте.</p>
+                            <p>При покупках в наших розничных магазинах вы можете оплатить как наличными, так и банковской картой.</p>
+                            <p>Для заказов из стран СНГ — 100% оплата перед отправкой, так как курьерская служба не оказывает услуги наложенного платежа при доставках в другие страны. Примерка перед оплатой товара — невозможна, так как курьерская служба не оказывает данную услугу.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__block">
+                        <div class="product__text-block">
+                          <h4 class="product__subtitle">Обмен / Возврат</h4>
+                          <div class="product__text">
+                            <p>Вы можете обменять или вернуть любой купленный у нас в товар в течении 14 дней со дня получения своего заказа - при отсутствии следов эксплуатации, сохранении товарного вида, всех заводских бирок и упаковки. Доставка возвратов до нас – оплачивается покупателем. Возврат денежных средств осуществляется без стоимости доставки.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__block">
+                        <div class="product__text-block">
+                          <h4 class="product__subtitle">Доставка</h4>
+                          <div class="product__text">
+                            <p>Мы доставим товар самым быстрым и удобным для вас способом или же вы можете забрать свой заказ в любом из наших магазинов в Москве.</p>
+                            <p>Курьером по Москве на следующий день после заказа, курьером в регионы до двери, или терминала, почтой по территории РФ, службами доставки в СНГ - выбирать вам, свяжитесь с нами для уточнения сроков доставки.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="product__text-block">
-                      <h4 class="product__subtitle">Доставка</h4>
-                      <div class="product__text">
-                        <p>Мы доставим товар самым быстрым и удобным для вас способом или же вы можете забрать свой заказ в любом из наших магазинов в Москве.</p>
-                        <p>Курьером по Москве на следующий день после заказа, курьером в регионы до двери, или терминала, почтой по территории РФ, службами доставки в СНГ - выбирать вам, свяжитесь с нами для уточнения сроков доставки.</p>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-                <details data-spoiler-item>
-                  <summary data-spoiler-title="">доставка и оплата</summary>
-                  <div data-spoiler-content="">
-                    <p>HomePro is a home care platform that connects homeowners with professional service providers offering a wide range of home services, including repairs, maintenance, cleaning, and more.</p>
-                  </div>
-                </details>
+                  </details>
+                </div>
               </div>
             </div>
           </div>

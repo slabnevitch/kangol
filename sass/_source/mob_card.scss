@@ -149,22 +149,26 @@
 }
 
 .list-size {
-  margin-top: 24px;
-  margin-bottom: 44px;
-  padding-right: 3px;
+  // margin-top: 24px;
+  // margin-bottom: 44px;
+  // padding-right: 3px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-wrap: wrap;
+  column-gap: rem(16);
+  row-gap: rem(8px);
 
   &__item {
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 83px;
-    height: 40px;
-    border: 2px solid #c1c5c8;
+    width: rem(98.67px);
+    flex: 0 0  rem(98.67px);
+    height: rem(48px);
+    border: 1px solid rgb(193, 197, 200);
+    border-radius: rem(6px);
 
     &:nth-child(4),
     &:nth-child(5),
@@ -173,21 +177,20 @@
     }
 
     &-name {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: rem(13px);
+      font-family: $tildaSemi;
       letter-spacing: -0.08px;
-      color: #1c1c1e;
       text-transform: uppercase;
       line-height: .8;
     }
 
     &-value {
-      margin-top: 4px;
-      font-size: 11px;
+      margin-top: rem(6px);
+      font-size: rem(11px);
       font-weight: 400;
       text-align: center;
       letter-spacing: 0.06;
-      color: #8e8e93;
+      color: #C1C5C8;
       line-height: .8;
     }
 
@@ -263,11 +266,6 @@
   }
 }
 
-.mob-card-availability {
-  margin-top: 32px;
-  padding-top: 44px;
-}
-
 .mob-card-availability-list {
   margin-top: 24px;
 
@@ -275,35 +273,32 @@
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    padding: 11px 0 10px;
+    padding: 11px 24px;
     background-color: #F2F2F5;
+    border-radius: rem(6px);
 
     &-name {
       width: 50%;
-      padding-left: 12%;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: rem(15px);
       color: #1C1C1E;
-      line-height: .8;
     }
 
     &-data {
       width: 50%;
       padding-left: 3%;
-      
       font-size: 12px;
       line-height: .8;
     }
 
     &-value {
-      font-weight: 500;
+      font-family: $tildaMed;
       color: #1C1C1E;
     }
 
     &-book {
       display: inline-block;
       margin-top: 4px;
-      font-weight: 600;
+      font-family: $tildaSemi;
       color: #003468;
       text-decoration: none;
     }

@@ -1,14 +1,30 @@
+.form__group{
+	padding: 0 rem(24px) rem(24px) rem(24px);
+
+	&:first-child{
+		padding-top: rem(32);
+	}
+}
+.form__label{
+	display: block;
+	position: relative;
+
+	&:not(:last-child){
+		margin-bottom: rem(24);
+	}
+}
 .form__input {
-	height: rem(50);
-	padding-left: rem(24);
-	padding-right: rem(24);
-	border: 1px solid #000;
-	padding-right: 55px;
+	height: rem(48);
+	padding-left: rem(16);
+	padding-right: rem(16);
+	border: 1px solid rgb(193, 197, 200);
 	background: #fff ;
-	border-radius: rem(3) 0 0 rem(3);
-	@include placecolor(rgba(#fff, 0.5));
-	color: #fff;
-	font-family: inherit;
+	border-radius: rem(8);
+	@include placecolor(#8E8E93);
+	color: $text;
+	font-family: $tildaMed;
+	font-size: rem(14px);
+	line-height: math.div(16,14);
 }
 .form__custom-policy {
 	display: flex;
@@ -65,36 +81,23 @@
 .form__policy {
 
 }
-
-// иконка глаза для скрытия пароля
-// gist - "password input eye"
-
-.eye-ico{
-	width: rem(24);
-	height: rem(24);
-	position: relative;
+.inp-reset{
 	@include but-null();
 	position: absolute;
-	bottom: rem(12);
-	right: rem(20);
+	width: rem(20);
+	height: rem(20);
+	background: url(../img/source/reset2.svg) center no-repeat;
+    background-size: rem(10px) rem(10px);
+    right: rem(11px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form__text{
+	font-size: rem(12px);
+	line-height: math.div(16,12);
+	color: $textLight;
 
-	.icon{
-		@include absolute-center;
-		font-size: rem(14);
-	}
-
-	&.unblind{
-		.eye-ico__show{
-			display: block;
-
-		}
-		.eye-ico__hide{
-			display: none;
-
-		}
-	}
-
-	.eye-ico__show{
-		display: none;
+	a{
+		color: $accent;
 	}
 }
