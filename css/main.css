@@ -3116,6 +3116,8 @@ h2 {
 .list-size {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   column-gap: 1rem;
@@ -3158,6 +3160,7 @@ h2 {
 }
 .list-size__item--link {
   border-color: transparent;
+  margin-left: auto;
 }
 .list-size__item-action {
   font-size: 12px;
