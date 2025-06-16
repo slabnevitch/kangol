@@ -1,0 +1,7 @@
+- var tags = ['#Зимние бейсболки', '#Желтые', '#Черные', '#Кривые козырьки', '#Томас Шелби', '#Красные мохнатые', '#Меховые', '#Тухлое плетение', '#Тухлое плетение', '#Тухлое плетение'];
+.tags
+	.tags__container(data-simplebar data-simplebar-hor)
+		.tags__items
+			- for (var i=0; i < 10; i++)
+				each tag, i in tags
+					a(href="#" class="tags__item")= tag

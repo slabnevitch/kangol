@@ -2,7 +2,7 @@
 .tags
 	.tags__container(data-simplebar data-simplebar-hor)
 		.tags__items.tags__items--blog
-			a(href="#" class="tags__item active") Все статьи
+			button(type="button" class="tags__item active") Все статьи
 			- for (var i=0; i < 10; i++)
 				each tag, i in tags
-					a(href="#" class="tags__item")= tag
+					button(type="button" class="tags__item")= tag

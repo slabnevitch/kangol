@@ -1,6 +1,6 @@
 /*--------------------blog-previews----------------------*/
 .blog-previews {
-	padding-top: rem(80px);
+	padding-top: rem(64px);
 }
 .blog-previews__wrapper {}
 .sect-title {}
@@ -14,6 +14,7 @@
 	// margin-bottom: rem(32px);
 }
 .blog-preview__img {
+	display: block;
 	aspect-ratio: 16 / 9;
 	padding-bottom: 0;
 	margin-bottom: rem(16px);
@@ -28,10 +29,9 @@
 		margin-bottom: rem(32px);
 	}
 
-	// &:first-child:last-child{
-	// 	margin-bottom: rem(32px);
-		
-	// }
+	a{
+		text-decoration: none;
+	}
 }
 .blog-preview__text {
 	margin-bottom: rem(44);

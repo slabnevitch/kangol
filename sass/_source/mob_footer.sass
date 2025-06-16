@@ -91,7 +91,7 @@
     padding: 0 30px 5px 0
     border: none
     border-bottom: 1px solid #636366
-    color: #8E8E93
+    color: $text
     font-size: 14px
     font-family: $tildaMed
     letter-spacing: -0.2px
@@ -271,7 +271,7 @@
     position: relative
     // display: inline-block
     padding-right: rem(14px)
-    color: #1C1C1E !important
+    color: #1C1C1E
     font-size: rem(14)
     line-height: math.div(30,14)
     letter-spacing: -0.2px
@@ -279,8 +279,12 @@
 
     +min-screen($md)
       padding-right: rem(5) 
-      color: $textLight !important
+      color: $textLight
       border-right: none
+
+    @media (any-hover: hover) //только для устройств с ховером
+      &:hover
+        color: $text
 
 .footer-menu
   border-top: 1px solid #E5E5EA

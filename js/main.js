@@ -241,13 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
 			document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
 		}		
-	}
-	document.documentElement.addEventListener('click', docClick);
-	function docClick(e) {
-		console.log(e.target.closest('#cards-filter-open'));
-		if (e.target.closest('#cards-filter-open') === null){
-			document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
-			document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+		
+		document.documentElement.addEventListener('click', docClick);
+		function docClick(e) {
+			console.log(e.target.closest('#cards-filter-open'));
+			if (e.target.closest('#cards-filter-open') === null){
+				document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
+				document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+			}
 		}
 	}
 	//END открытие фильтра на стр. листинга

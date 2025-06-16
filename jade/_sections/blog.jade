@@ -2,17 +2,19 @@ section.blog
 	.blog-previews__wrapper
 		h2.block-title Блог
 
-		include ../_includes/tags/tags
+		.blog__tags
+			include ../_includes/tags/tags
 
 		- var blogs = ['История вельвета и обзор головных уборов из него', 'Скандал с продажей панамы участника BTS', 'Обзор зимних головных уборов Kangol', 'Гайд по кепкам Kangol, которые можно носить козырьком назад', 'Обзор коллекции Весна Лето 2021', 'Новая коллаборация Kangol и Staple', 'Осень Зима 2020 официальный лукбук'];
 		
 		.blog-previews-grid
 			each item, i in blogs
-				a(href="#").blog-preview
-					.blog-preview__img._fit
+				article.blog-preview
+					a(href="#").blog-preview__img._fit
 						img._fit-img(src="img/blog-previews/blog-page/"+(i+1)+".jpeg" alt="alt")
 					.blog-preview__content
-						.blog-preview__title= item
+						h3.blog-preview__title
+							a(href="#")= item
 						p.blog-preview__text
 							| Официальный лукбук коллекции весна-лето 2020. Обзор всех основных моделей головных уборов и новых цветов
 

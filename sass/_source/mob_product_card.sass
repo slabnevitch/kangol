@@ -16,7 +16,7 @@
   .ic-block
     position: absolute
     right: 5px
-    top: 0
+    top: rem(16)
     width: 20px
     z-index: 5
   .ic-sale
@@ -29,7 +29,7 @@
     -webkit-background-size: 100% 100%
     background-size: 100% 100%
   .ic-fav
-    background: url(../img/fav.svg) center center no-repeat
+    background: url(../img/source/fav.svg) center center no-repeat
     -webkit-background-size: 100% 100%
     background-size: 100% 100%
     width: 20px
@@ -40,7 +40,7 @@
         opacity: 1
     &:after
       opacity: 0
-      background: url(../img/fav-active.svg) center center no-repeat
+      background: url(../img/source/fav-active.svg) center center no-repeat
       -webkit-background-size: 100% 100%
       background-size: 100% 100%
       width: 20px
@@ -50,6 +50,10 @@
       left: 0
       content: ""
       z-index: 2
+
+    @media (any-hover: hover) //только для устройств с ховером
+      cursor: pointer
+  
   .ic-video
     width: 20px
     height: 20px
@@ -60,6 +64,7 @@
     text-align: center
     height: 280px
     position: relative
+    margin-bottom: rem(10)
 
     img
       max-width: 100%
@@ -135,6 +140,7 @@
       column-gap: 0
 
     .color
+      +but-null()
       width: rem(44)
       height: rem(44)
       flex-shrink: 0
@@ -144,6 +150,10 @@
 
       +min-screen($xss)
         margin-inline: rem(-5)
+
+        @media (any-hover: hover) //только для устройств с ховером
+          cursor: pointer
+
       &.num
         background: #F2F2F5
         +border-radius(20px)
@@ -174,3 +184,4 @@
 
     +min-screen($xss)
       margin-left: rem(0)
+ 

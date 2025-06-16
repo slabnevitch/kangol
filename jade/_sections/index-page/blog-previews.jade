@@ -5,11 +5,12 @@ section.blog-previews
 		
 		.blog-previews-grid
 			each item, i in blogs
-				a(href="#").blog-preview
-					.blog-preview__img._fit
+				article.blog-preview
+					a(href="#").blog-preview__img._fit
 						img._fit-img(src="img/blog-previews/"+(i+1)+".jpg" alt="alt")
 					.blog-preview__content
-						.blog-preview__title= item
+						h3.blog-preview__title
+							a(href="#")= item
 
 		.btn-wrap
 			a(href="#").btn.btn-centered архив статей

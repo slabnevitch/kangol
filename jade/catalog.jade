@@ -16,6 +16,7 @@ block content
 					h2.block-title Головные уборы
 					button(id="cards-filter-open" class="catatalog__filter-open" type="button")
 						img(src="img/icons/filter-burger.svg" alt="alt")
+						.catatalog__filter-caption СОРТИРОВКА
 				
 					.catatalog__select
 						- var opts = ['Сначала новые товары', 'Сначала старые товары', 'Сначала дороже', 'Сначала дешевле']
@@ -23,6 +24,9 @@ block content
 							each opt, i in opts
 								option(value=i)= opt
 
+				.catatalog__tags
+					include _includes/tags/tags-catalog
+				
 				.catatalog__content
 					- var prods = [{name: 'Massive Trapper', price: '1 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '11 750 ₽', old: '11 750 '}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Wool Spitfire', price: '11 750 ₽'}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '4 800 ₽', old: '11 750 '}];
 					.product-cards
@@ -30,6 +34,7 @@ block content
 							each prod, m in prods
 								.product-card
 									.img
+										
 										.slider.slider-product
 											.slide
 												img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
@@ -38,8 +43,11 @@ block content
 											.slide
 												img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
 
-									if i == 4 ||  i == 7 || i == 9 || i == 8
+									if m == 4 ||  m == 7 || m == 9 || m == 8
 										.product-card__sale SALE
+										
+									.ic-block
+										.ic-fav
 										
 									.title
 										a(href='#')= prod.name
@@ -54,13 +62,13 @@ block content
 										if !i % 2
 											.product-color-list
 												- for (var n=0;  n< 5; n++)
-													.product__color.color
+													button(type="button").product__color.color
 														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
 											.product__color-num +25
 										else
 											.product-color-list
 												- for (var n=0;  n< 3; n++)
-													.product__color.color
+													button(type="button").product__color.color
 														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
 					.btn-wrap
 						a(href="#").btn.btn-centered загрузить ещё

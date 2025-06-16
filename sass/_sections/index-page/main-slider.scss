@@ -1,4 +1,21 @@
 /*--------------------main-slider----------------------*/
+.main-slider{
+  margin-top: rem(24);
+  margin-bottom: rem(20px);
+
+}
+.main-slider__slides{
+  display: flex;
+  column-gap: rem(8);
+}
+.main-slider__slide{
+  flex: 0 0 rem(320);
+  width: rem(320);
+    padding-bottom: 0;
+    aspect-ratio: 320 / 456;
+    border-radius: rem(8px);
+    overflow: hidden;
+}
 .home-slider {
 	margin-top: rem(24);
 	margin-right: rem(-16px);

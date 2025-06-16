@@ -1210,7 +1210,13 @@ h2 {
   margin-bottom: 2rem;
   font-size: 1.25rem;
   font-family: "Tilda-Sans-Regular", sans-serif;
+  line-height: 0.9;
   text-transform: none;
+}
+@media only screen and (min-width: 63.99875em) {
+  .block-title {
+    font-size: 1.5rem;
+  }
 }
 
 .product-cards {
@@ -1277,7 +1283,7 @@ h2 {
 .product-card .ic-block {
   position: absolute;
   right: 5px;
-  top: 0;
+  top: 1rem;
   width: 20px;
   z-index: 5;
 }
@@ -1291,7 +1297,7 @@ h2 {
   background-size: 100% 100%;
 }
 .product-card .ic-fav {
-  background: url(../img/fav.svg) center center no-repeat;
+  background: url(../img/source/fav.svg) center center no-repeat;
   background-size: 100% 100%;
   width: 20px;
   height: 20px;
@@ -1302,7 +1308,7 @@ h2 {
 }
 .product-card .ic-fav:after {
   opacity: 0;
-  background: url(../img/fav-active.svg) center center no-repeat;
+  background: url(../img/source/fav-active.svg) center center no-repeat;
   background-size: 100% 100%;
   width: 20px;
   height: 20px;
@@ -1311,6 +1317,11 @@ h2 {
   left: 0;
   content: "";
   z-index: 2;
+}
+@media (any-hover: hover) {
+  .product-card .ic-fav {
+    cursor: pointer;
+  }
 }
 .product-card .ic-video {
   width: 20px;
@@ -1322,6 +1333,7 @@ h2 {
   text-align: center;
   height: 280px;
   position: relative;
+  margin-bottom: 0.625rem;
 }
 .product-card .img img {
   max-width: 100%;
@@ -1410,6 +1422,10 @@ h2 {
   }
 }
 .product-card .product-color-list .color {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
   width: 2.75rem;
   height: 2.75rem;
   -ms-flex-negative: 0;
@@ -1421,9 +1437,19 @@ h2 {
   -ms-flex-pack: center;
   justify-content: center;
 }
+@media (any-hover: hover) {
+  .product-card .product-color-list .color {
+    cursor: pointer;
+  }
+}
 @media only screen and (min-width: 30.06125em) {
   .product-card .product-color-list .color {
     margin-inline: -0.3125rem;
+  }
+}
+@media only screen and (min-width: 30.06125em) and (any-hover: hover) {
+  .product-card .product-color-list .color {
+    cursor: pointer;
   }
 }
 .product-card .product-color-list .color.num {
@@ -1528,8 +1554,9 @@ h2 {
   background-color: #fff;
 }
 
-.simplebar-track {
+.simplebar-horizontal.simplebar-track {
   margin-right: 1rem;
+  bottom: -0.5rem;
 }
 
 .simplebar-track.simplebar-horizontal {
@@ -1552,7 +1579,7 @@ h2 {
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   top: 0;
-  height: 11px;
+  height: 1rem;
   background-color: transparent;
 }
 
@@ -1623,6 +1650,10 @@ h2 {
 }
 
 .tags__item {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   display: -ms-inline-flexbox;
@@ -1643,6 +1674,11 @@ h2 {
   transition: background-color 0.2s;
 }
 @media (any-hover: hover) {
+  .tags__item {
+    cursor: pointer;
+  }
+}
+@media (any-hover: hover) {
   .tags__item:hover {
     background-color: #e4e4ea;
   }
@@ -1654,6 +1690,10 @@ h2 {
 
 /*--------------------END ui----------------------*/
 /*--------------------blog----------------------*/
+.blog__tags {
+  margin-bottom: 2.75rem;
+}
+
 /*--------------------END blog----------------------*/
 /*--------------------catalog----------------------*/
 .catatalog__header {
@@ -1664,6 +1704,11 @@ h2 {
   align-items: center;
   column-gap: 0.625rem;
   margin-bottom: 2rem;
+}
+@media only screen and (min-width: 63.99875em) {
+  .catatalog__header {
+    margin-bottom: 1.5rem;
+  }
 }
 .catatalog__header .block-title {
   margin-bottom: 0;
@@ -1676,7 +1721,6 @@ h2 {
   background-color: transparent;
   border: none;
   outline: none;
-  width: 2.75rem;
   height: 2.75rem;
   display: -ms-flexbox;
   display: flex;
@@ -1684,10 +1728,32 @@ h2 {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
+  column-gap: 0.6875rem;
 }
 @media (any-hover: hover) {
   .catatalog__filter-open {
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 63.99875em) {
+  .catatalog__filter-open {
+    width: 2.75rem;
+  }
+}
+
+.catatalog__tags {
+  margin-bottom: 1.5rem;
+}
+
+.catatalog__filter-caption {
+  font-size: 0.875rem;
+  line-height: 0.8571428571;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 63.99875em) {
+  .catatalog__filter-caption {
+    display: none;
   }
 }
 
@@ -1857,7 +1923,7 @@ h2 {
   padding: 0 30px 5px 0;
   border: none;
   border-bottom: 1px solid #636366;
-  color: #8E8E93;
+  color: #1C1C1E;
   font-size: 14px;
   font-family: "Tilda-Sans-Medium", sans-serif;
   letter-spacing: -0.2px;
@@ -2095,7 +2161,7 @@ h2 {
 .footer-link a {
   position: relative;
   padding-right: 0.875rem;
-  color: #1C1C1E !important;
+  color: #1C1C1E;
   font-size: 0.875rem;
   line-height: 2.1428571429;
   letter-spacing: -0.2px;
@@ -2104,8 +2170,13 @@ h2 {
 @media only screen and (min-width: 63.99875em) {
   .footer-link a {
     padding-right: 0.3125rem;
-    color: #636366 !important;
+    color: #636366;
     border-right: none;
+  }
+}
+@media (any-hover: hover) {
+  .footer-link a:hover {
+    color: #1C1C1E;
   }
 }
 
@@ -2289,6 +2360,11 @@ h2 {
   font-size: 0.875rem;
   line-height: 1.3571428571;
   text-decoration: none;
+}
+@media (any-hover: hover) {
+  .footer-mob__link:hover {
+    color: #636366;
+  }
 }
 
 .footer-mob__submit {
@@ -2665,6 +2741,7 @@ h2 {
 /*--------------------bestsellers----------------------*/
 .bestsellers {
   padding-top: 5rem;
+  padding-bottom: 16px;
 }
 
 .bestsellers__title {
@@ -2708,7 +2785,7 @@ h2 {
 /*--------------------END bestsellers----------------------*/
 /*--------------------blog-previews----------------------*/
 .blog-previews {
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .blog-previews-grid {
@@ -2724,6 +2801,7 @@ h2 {
 }
 
 .blog-preview__img {
+  display: block;
   aspect-ratio: 16/9;
   padding-bottom: 0;
   margin-bottom: 1rem;
@@ -2737,6 +2815,9 @@ h2 {
 }
 .blog-preview__title:only-child {
   margin-bottom: 2rem;
+}
+.blog-preview__title a {
+  text-decoration: none;
 }
 
 .blog-preview__text {
@@ -2795,6 +2876,27 @@ h2 {
 
 /*--------------------END index-categories----------------------*/
 /*--------------------main-slider----------------------*/
+.main-slider {
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.main-slider__slides {
+  display: -ms-flexbox;
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.main-slider__slide {
+  -ms-flex: 0 0 20rem;
+  flex: 0 0 20rem;
+  width: 20rem;
+  padding-bottom: 0;
+  aspect-ratio: 320/456;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
 .home-slider {
   margin-top: 1.5rem;
   margin-right: -1rem;

@@ -84,6 +84,12 @@
 	font-size: rem(14px);
 	line-height: math.div(19,14);
 	text-decoration: none;
+	
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				color: $textLight;
+			}
+		}
 }
 .footer-mob__submit{
 	height: rem(38);
