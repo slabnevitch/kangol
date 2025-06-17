@@ -3,6 +3,10 @@
   margin-top: rem(24);
   margin-bottom: rem(20px);
 
+  @include min-screen($md){    
+    margin-bottom: rem(24px);
+  }
+
 }
 .main-slider__slides{
   display: flex;
@@ -15,6 +19,12 @@
     aspect-ratio: 320 / 456;
     border-radius: rem(8px);
     overflow: hidden;
+
+    @include min-screen($md){
+      flex: 0 0 rem(850);
+      width: rem(850);
+      aspect-ratio: 850 / 450;
+    }
 }
 .home-slider {
 	margin-top: rem(24);
