@@ -158,6 +158,11 @@
   column-gap: rem(16);
   row-gap: rem(8px);
 
+  @include min-screen($md){
+    column-gap: rem(4);
+    
+  }
+
   &__item {
     // margin-bottom: 8px;
     display: flex;
@@ -169,6 +174,23 @@
     height: rem(48px);
     border: 1px solid rgb(193, 197, 200);
     border-radius: rem(6px);
+
+    @include min-screen($md){
+       width: rem(56.2px);
+       height: rem(44px);
+      flex: 0 0  rem(56.2px);
+    }
+
+    &--link{
+      @include min-screen($md){
+        margin-top: rem(8px);
+        width: 100%;
+        height: auto;
+        flex-basis: 100%;
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
 
     &:nth-child(4),
     &:nth-child(5),
@@ -200,13 +222,8 @@
     }
 
     &-action {
-      font-size: 12px;
-      font-weight: 700;
       color: #013f7d;
-      font-style: italic;
-      text-decoration: none;
       line-height: .9;
-      margin-left: -3px;
       letter-spacing: -0.4px;
     }
   }
@@ -277,6 +294,10 @@
     min-height: rem(48);
     background-color: #F2F2F5;
     border-radius: rem(6px);
+
+    @include min-screen($md){
+      background-color: #E5E5EA;
+    }
 
     &--absent{
       .mob-card-availability-list__item-name,

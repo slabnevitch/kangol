@@ -317,6 +317,8 @@
 }
 .modal-size__box{
 	@extend .modal-cart__box;
+
+	max-width: rem(435px);
 }
 .modal-size__container{
 	flex: 1 1 auto;

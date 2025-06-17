@@ -1,8 +1,17 @@
 /*=====================Product=========================*/
 @import '../_source/mob_card';
 .product {}
-.product__wrapper {}
+.product__wrapper {
+	@include min-screen($md){
+		display: flex;
+		column-gap: rem(8px);
+	}
+}
 .product__view {
+	min-width: 0;
+	@include min-screen($md){
+		flex: 1 1 auto;
+	}
 	.product-card {
 		margin-bottom: rem(30);
 	}
@@ -13,7 +22,14 @@
 .slider-product {}
 .slide {}
 .img-fluid {}
-.product__info {}
+.product__info {
+	@include min-screen($md){
+		flex: 0 0 rem(360);
+		padding: rem(48px) rem(24px);
+		border-radius: rem(10px);
+		background-color: #F2F2F5;
+	}
+}
 .product__block {
 	&:not(:last-child){
 		
@@ -124,9 +140,8 @@
 .js-modal-size {}
 .active {}
 .list-size__item-action {
-	font-family: $houschkaDemi;
+	font-family: $tildaBold;
 	font-size: rem(11px);
-	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.06px;
 }
@@ -178,6 +193,10 @@
 	margin-bottom: rem(8);
 	border-radius: rem(6px);
 	background-color: #F2F2F5;
+
+	@include min-screen($md){
+		background-color: #E5E5EA;
+	}
 
 	&.active{
 		display: block;
