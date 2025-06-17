@@ -274,10 +274,35 @@
     align-items: center;
     margin-bottom: 8px;
     padding: 11px 24px;
+    min-height: rem(48);
     background-color: #F2F2F5;
     border-radius: rem(6px);
 
+    &--absent{
+      .mob-card-availability-list__item-name,
+      .mob-card-availability-list__item-value{
+        color: #8E8E93;
+      }
+    }
+    &--success{
+      .mob-card-availability-list__item-name{
+        top: 0;
+        width: 100%;
+        padding-left: rem(56px);
+        background-image: url(../img/icons/check-success.svg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: rem(28) rem(16px);
+        font-size: rem(15px);
+      }
+       .mob-card-availability-list__item-data{
+        display: none;
+       }
+    }
+
     &-name {
+      position: relative;
+      top: rem(-2);
       width: 50%;
       font-size: rem(15px);
       color: #1C1C1E;
@@ -293,11 +318,15 @@
     &-value {
       font-family: $tildaMed;
       color: #1C1C1E;
+
+      &:not(:only-child) {
+        margin-bottom: rem(4);
+      }
     }
 
     &-book {
       display: inline-block;
-      margin-top: 4px;
+      // margin-top: 4px;
       font-family: $tildaSemi;
       color: #003468;
       text-decoration: none;
@@ -469,14 +498,12 @@
 }
 
 .modal-size-preview-text {
-  margin: -2px 0 27px;
+  margin-bottom: rem(32px);
 
   p {
-    margin: 0;
-    font-size: 14px;
-    color: #1C1C1E;
-    letter-spacing: -0.15px;
-    line-height: 1.35;
+    font-size: rem(14px);
+    line-height: math.div(19,14);
+    color: $textLight;
   }
 }
 

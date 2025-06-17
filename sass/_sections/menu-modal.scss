@@ -1,4 +1,4 @@
-/*=====================modals=========================*/
+/*=====================Modals=========================*/
 @import "_source/mob_modal";
 /*--------------------menu-modal----------------------*/
 
@@ -75,7 +75,7 @@
 	.modal-cart-title{
 		flex: 0 0 auto;
 		padding-top: rem(6);
-		padding-bottom: rem(24px);
+		padding-bottom: rem(16px);
 		position: relative;
 
 		&:after{
@@ -310,4 +310,100 @@
 	text-decoration: none;
 }
 /*--------------------END modal-search----------------------*/ 
-/*===================== end modals======================*/ 
+
+/*--------------------modal-search----------------------*/
+.modal-size{
+
+}
+.modal-size__box{
+	@extend .modal-cart__box;
+}
+.modal-size__container{
+	flex: 1 1 auto;
+	overflow-y: auto;
+}
+.modal-size__title{
+	@extend .modal-cart-title;
+
+	flex: 0 0 auto;
+	padding-top: rem(6);
+	padding-bottom: rem(16px);
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: rem(-16px);
+		right: rem(-16px);
+		height: rem(1px);
+		background-color: #F2F2F5;
+	}
+
+}
+.modal-size__table{
+	width: 100%;
+	margin-bottom: rem(44px);
+	thead{
+		background-color: #F2F2F5;
+	}
+	.table-box-header{
+		td{
+			padding: 1rem;
+			font-size: rem(12px);
+			font-family: $tildaSemi;
+			line-height: math.div(10,12);
+		}
+	}
+
+	tbody{
+		tr{
+			&:not(:last-child){
+				border-bottom: 1px solid #E5E5EA;
+
+			}
+
+			td.bordered{
+					.td-inner{
+
+						&:not(:last-child){
+							border-bottom: 1px solid #E5E5EA;
+
+						}
+					}
+					
+				}
+
+
+				
+			}
+		}
+	}
+
+.modal-size__block{
+
+	&:not(:last-child){
+		margin-bottom: rem(44px);
+	}
+}
+.modal-size__subtitle{
+	margin-bottom: rem(24px);
+	font-size: rem(22px);
+	line-height: math.div(16,22);
+
+	span{
+		margin-right: 1rem;
+		font-size: rem(24px);
+		font-family: $tildaExtBold;
+		line-height: math.div(10p,24);
+		letter-spacing: 0.5px;
+	}
+	img{
+		margin-right: 1rem;
+		max-width: rem(45px);
+		vertical-align: middle;
+	}
+}
+
+/*--------------------END modal-search----------------------*/ 
+/*===================== end Modals======================*/ 

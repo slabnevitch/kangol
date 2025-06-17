@@ -147,5 +147,10 @@ export const mobCommon = () => {
             $(".modal-size").show();
         }
     });
+
+    $('.modal-cart__close').on('click', function() {
+        $(".js-modal-size").removeClass("active");
+        $(".modal-size").hide();
+    });
 });
 }

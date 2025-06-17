@@ -71,7 +71,7 @@ block content
 								span.list-size__item
 									span.list-size__item-name xxl
 									span.list-size__item-value 62/63
-							.list-size__item.list-size__item--link.js-modal-size.active
+							.list-size__item.list-size__item--link.js-modal-size
 								a.list-size__item-action(href='#') &Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;
 					
 					.product__block.product__to-cart
@@ -81,11 +81,10 @@ block content
 						.product__info-title НАЛИЧИЕ В МАГАЗИНАХ
 						.mob-main-item.mob-card-availability
 							.mob-card-availability-list
-								.mob-card-availability-list__item
-									.mob-card-availability-list__item-name &Fcy;&lcy;&acy;&kcy;&ocy;&ncy;
+								.mob-card-availability-list__item.mob-card-availability-list__item--absent
+									.mob-card-availability-list__item-name Дизайн завод
 									.mob-card-availability-list__item-data
-										.mob-card-availability-list__item-value &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
-										a.mob-card-availability-list__item-book(href='#') &Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;
+										.mob-card-availability-list__item-value Закончились
 								.mob-card-availability-list__item
 									.mob-card-availability-list__item-name &Tcy;&vcy;&iecy;&rcy;&scy;&kcy;&acy;&yacy;
 									.mob-card-availability-list__item-data
@@ -95,7 +94,10 @@ block content
 									.mob-card-availability-list__item-name &Scy;&kcy;&lcy;&acy;&dcy;
 									.mob-card-availability-list__item-data
 										.mob-card-availability-list__item-value &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
-										a.mob-card-availability-list__item-book(href='#') &Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;
+										.mob-card-availability-list__item-value Готово к отправке
+
+								.mob-card-availability-list__item.mob-card-availability-list__item--success
+									.mob-card-availability-list__item-name Заказ успешно оформлен
 
 								.product__booking
 									.form__group
@@ -112,6 +114,7 @@ block content
 										label.form__label
 											button.btn.btn-black.btn-fw(type="button") онлайн оплата
 										.form__text Нажав на кнопку «Оформить» Вы даёте согласие на обработку персональных данных в соответствии с #[a(href="#") Условиями], а также с  #[a(href="#") Условиями продажи.] С правилами возврата можно ознакомиться здесь.
+					
 					.product__block
 						h4.product__subtitle Классическая летняя панама от Kangol
 						.product__text
