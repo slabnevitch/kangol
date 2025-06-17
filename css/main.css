@@ -1365,9 +1365,28 @@ textarea {
 .btn-fw {
   width: 100%;
 }
+.btn-righted {
+  width: 100%;
+  margin-inline: auto;
+}
+@media only screen and (min-width: 48.06125em) {
+  .btn-righted {
+    max-width: 27.375rem;
+  }
+}
+@media only screen and (min-width: 63.99875em) {
+  .btn-righted {
+    margin-right: 0;
+    width: auto;
+    max-width: none;
+    padding-inline: 3.5rem;
+  }
+}
 .btn-centered {
   width: 100%;
   margin-inline: auto;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media only screen and (min-width: 48.06125em) {
   .btn-centered {
@@ -1376,9 +1395,6 @@ textarea {
 }
 @media only screen and (min-width: 63.99875em) {
   .btn-centered {
-    margin-right: 0;
-    width: auto;
-    max-width: none;
     padding-inline: 3.5rem;
   }
 }
@@ -1397,7 +1413,7 @@ textarea {
 }
 
 .to-top-btn {
-  margin-top: 5rem;
+  margin-top: 2.75rem;
   color: #636366;
 }
 @media only screen and (max-width: 63.99875em) {
@@ -1884,6 +1900,9 @@ h2 {
   letter-spacing: 0.25px;
   text-decoration: none;
   transition: background-color 0.2s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (any-hover: hover) {
   .tags__item {
@@ -3712,6 +3731,11 @@ h2 {
   padding-top: 1rem;
   background-color: #F2F2F5;
 }
+@media only screen and (min-width: 63.99875em) {
+  .bestsellers__content {
+    margin-inline: -1.5rem;
+  }
+}
 
 .bestsellers__items {
   display: -ms-flexbox;
@@ -3725,6 +3749,13 @@ h2 {
   -ms-flex: 0 0 12.5rem;
   flex: 0 0 12.5rem;
   text-decoration: none;
+}
+@media only screen and (min-width: 63.99875em) {
+  .bestsellers__item {
+    width: 18.5625rem;
+    -ms-flex: 0 0 18.5625rem;
+    flex: 0 0 18.5625rem;
+  }
 }
 
 .item-bestsellers__img {
@@ -3749,10 +3780,11 @@ h2 {
 }
 
 .blog-previews-grid {
+  margin-bottom: 0.75rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(min(18.75rem, 100%), 1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
+  -ms-grid-columns: (minmax(min(18.75rem, 100%), 1fr))[auto-fill];
+  grid-template-columns: repeat(auto-fill, minmax(min(18.75rem, 100%), 1fr));
   column-gap: 1rem;
 }
 
@@ -3879,6 +3911,13 @@ h2 {
     width: 53.125rem;
     aspect-ratio: 850/450;
   }
+}
+.main-slider__slide:only-child {
+  width: 100%;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  height: auto;
+  aspect-ratio: 976/516;
 }
 
 .home-slider {

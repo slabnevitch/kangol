@@ -5,8 +5,9 @@
 .blog-previews__wrapper {}
 .sect-title {}
 .blog-previews-grid {
+	margin-bottom: rem(12);
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(rem(300), 100%), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(min(rem(300), 100%), 1fr));
 	column-gap: rem(16px);
 }
 .blog-preview {

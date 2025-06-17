@@ -25,6 +25,14 @@
       width: rem(850);
       aspect-ratio: 850 / 450;
     }
+
+    &:only-child {
+      width: 100%;
+      flex-basis: auto;
+      height: auto;
+      aspect-ratio: 976 / 516;
+    }
+
 }
 .home-slider {
 	margin-top: rem(24);

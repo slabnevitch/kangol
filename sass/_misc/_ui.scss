@@ -83,7 +83,7 @@
     &-fw{
        width: 100%;
     }
-    &-centered{
+    &-righted{
        width: 100%;
        margin-inline: auto;
 
@@ -98,6 +98,19 @@
             padding-inline: rem(56);
        }
     }
+    &-centered{
+       width: 100%;
+       margin-inline: auto;
+       display: flex;
+
+       @include min-screen($sm){
+           
+            max-width: rem(438px);
+       }
+        @include min-screen($md){
+            padding-inline: rem(56);
+       }
+    }
 
 }
 .btn-wrap{
@@ -109,7 +122,7 @@
     }
 }
 .to-top-btn{
-    margin-top: rem(80);
+    margin-top: rem(44);
     color: $textLight;
 
     @include max-screen($md){
@@ -341,6 +354,7 @@ h2{
     letter-spacing: 0.25px;
     text-decoration: none;
     transition: background-color .2s;
+    user-select: none;
 
     @media (any-hover: hover) { //только для устройств с ховером
             &:hover{

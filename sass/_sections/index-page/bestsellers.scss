@@ -9,14 +9,12 @@
 	margin-bottom: rem(32px);
 }
 .bestsellers__content {
-	
 	padding-top: rem(16);
-	
-	
 	background-color: #F2F2F5;
 
-	
-	
+	@include min-screen($md){
+		margin-inline: rem(-24);
+	}
 }
 .bestsellers__items {
 	display: flex;
@@ -28,6 +26,12 @@
 	padding-bottom: rem(18px);
 	flex: 0 0 rem(200);
 	text-decoration: none;
+
+	@include min-screen($md){
+		width: rem(297);
+		flex: 0 0 rem(297);
+		
+	}
 }
 .item-bestsellers {}
 .item-bestsellers__img {
