@@ -49,7 +49,7 @@
 
         @media (any-hover: hover) { //только для устройств с ховером
              &:hover{
-               background-color: darken($grayBg, 5%);
+               background-color: $grayBg;
            }
        }
     }

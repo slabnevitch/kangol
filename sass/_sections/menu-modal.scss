@@ -404,6 +404,24 @@
 		vertical-align: middle;
 	}
 }
+.modal-size__text{
+	p{
+		 font-size: rem(14px);
+		 line-height: math.div(19,14);
+		 color: $textLight;
 
+		&:not(:last-child){
+			margin-bottom: rem(16px);
+		}
+	}
+
+	&--final{
+		padding-bottom: rem(44px);
+		p{
+			font-family: $tildaMed;
+			color: $text;
+		}
+	}
+}
 /*--------------------END modal-search----------------------*/ 
 /*===================== end Modals======================*/ 

@@ -1333,7 +1333,7 @@ textarea {
 }
 @media (any-hover: hover) {
   .btn[disabled]:hover {
-    background-color: #cdcfd1;
+    background-color: #DADCDD;
   }
 }
 .btn-danger {
@@ -3274,10 +3274,19 @@ h2 {
   margin-bottom: 0.25rem;
 }
 .mob-card-availability-list__item-book {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
   display: inline-block;
   font-family: "Tilda-Sans-Semibold", sans-serif;
   color: #003468;
   text-decoration: none;
+}
+@media (any-hover: hover) {
+  .mob-card-availability-list__item-book {
+    cursor: pointer;
+  }
 }
 .mob-card-availability-list__item:last-child {
   margin-bottom: 0;
@@ -3553,6 +3562,11 @@ h2 {
 .list-size__label {
   position: relative;
 }
+@media (any-hover: hover) {
+  .list-size__label {
+    cursor: pointer;
+  }
+}
 
 .list-size__radio {
   position: absolute;
@@ -3615,8 +3629,13 @@ h2 {
 }
 
 .product__booking {
+  display: none;
+  margin-bottom: 0.5rem;
   border-radius: 0.375rem;
   background-color: #F2F2F5;
+}
+.product__booking.active {
+  display: block;
 }
 .product__booking .form__label:not(:last-child) {
   margin-bottom: 1rem;
@@ -5193,6 +5212,22 @@ input.form-control {
   margin-right: 1rem;
   max-width: 2.8125rem;
   vertical-align: middle;
+}
+
+.modal-size__text p {
+  font-size: 0.875rem;
+  line-height: 1.3571428571;
+  color: #636366;
+}
+.modal-size__text p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.modal-size__text--final {
+  padding-bottom: 2.75rem;
+}
+.modal-size__text--final p {
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  color: #1C1C1E;
 }
 
 /*--------------------END modal-search----------------------*/

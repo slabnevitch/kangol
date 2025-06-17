@@ -75,7 +75,7 @@ block content
 								a.list-size__item-action(href='#') &Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;
 					
 					.product__block.product__to-cart
-						button.btn.btn-gray.btn-fw.product__order-btn(type="button" disabled) для заказа выберите размер
+						button.btn.btn-fw.product__order-btn(type="button" disabled) для заказа выберите размер
 					
 					.product__block
 						.product__info-title НАЛИЧИЕ В МАГАЗИНАХ
@@ -85,35 +85,27 @@ block content
 									.mob-card-availability-list__item-name Дизайн завод
 									.mob-card-availability-list__item-data
 										.mob-card-availability-list__item-value Закончились
+								
+								include _includes/product-card/product-booking-form
+
 								.mob-card-availability-list__item
 									.mob-card-availability-list__item-name &Tcy;&vcy;&iecy;&rcy;&scy;&kcy;&acy;&yacy;
 									.mob-card-availability-list__item-data
 										.mob-card-availability-list__item-value &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
-										a.mob-card-availability-list__item-book(href='#') &Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;
+										button(type="button").mob-card-availability-list__item-book(href='#') &Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;
+								
+								include _includes/product-card/product-booking-form
+								
 								.mob-card-availability-list__item
 									.mob-card-availability-list__item-name &Scy;&kcy;&lcy;&acy;&dcy;
 									.mob-card-availability-list__item-data
 										.mob-card-availability-list__item-value &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
 										.mob-card-availability-list__item-value Готово к отправке
+								
 
 								.mob-card-availability-list__item.mob-card-availability-list__item--success
 									.mob-card-availability-list__item-name Заказ успешно оформлен
 
-								.product__booking
-									.form__group
-										label.form__label
-											input.form__input(type='text' name='name' placeholder='ФИО')
-											button.inp-reset(type="button")
-										label.form__label
-											input.form__input(type='text' name='phone' placeholder='Телефон')
-											button.inp-reset(type="button")
-										label.form__label
-											input.form__input(type='text' name='email' placeholder='Комментарий')
-											button.inp-reset(type="button")
-									.form__group
-										label.form__label
-											button.btn.btn-black.btn-fw(type="button") онлайн оплата
-										.form__text Нажав на кнопку «Оформить» Вы даёте согласие на обработку персональных данных в соответствии с #[a(href="#") Условиями], а также с  #[a(href="#") Условиями продажи.] С правилами возврата можно ознакомиться здесь.
 					
 					.product__block
 						h4.product__subtitle Классическая летняя панама от Kangol

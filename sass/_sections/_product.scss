@@ -103,8 +103,13 @@
 }
 .list-size {}
 .list-size__label {
-
 	position: relative;
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+	
+			}
+		}
 }
 .list-size__radio {
 	@include checkbox();
@@ -169,8 +174,14 @@
 	}
 }
 .product__booking{
+	display: none;
+	margin-bottom: rem(8);
 	border-radius: rem(6px);
 	background-color: #F2F2F5;
+
+	&.active{
+		display: block;
+	}
 
 	.form__label{
 		
