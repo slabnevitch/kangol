@@ -1,0 +1,214 @@
+/*--------------------Checkout----------------------*/
+.checkout {
+	padding-top: rem(25px);
+}
+.checkout__wrapper {}
+.form {}
+.checkout__container {}
+.checkout__block {
+	margin-bottom: rem(44px);
+}
+.block-title {}
+.block-title--semi {}
+.checkout__clue {
+	text-transform: none;
+	background-color: #F2F2F5;
+	color: #8E8E93;
+	
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: default;
+			&:hover{
+				color: #8E8E93;
+				background-color: #F2F2F5;
+			}
+		}
+}
+.checkout__payment {}
+.payment-checkout {}
+.payment-checkout__label {
+	position: relative;
+	display: block;
+	
+	&:first-child{
+		.payment-checkout__view{
+			border-radius: rem(8px) rem(8px) 0px 0px;
+
+		}
+	}
+	&:last-child{
+		.payment-checkout__view{
+			// border-top-width: 0;
+			border-top-color: transparent;
+			border-radius: 0px 0px rem(8px) rem(8px);
+
+		}
+		
+	}
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+	
+			}
+		}
+}
+.payment-checkout__input {
+	@include checkbox();
+
+	&:checked + .payment-checkout__view  {
+		background-color: rgb(242, 248, 254);
+		border-color: rgb(31, 101, 172);
+		border-top-color:rgb(31, 101, 172);
+
+		
+		.payment-checkout__point {
+			position: relative;
+			background-color: #013F7D;
+			border-color: #013F7D;
+			
+			&:after{
+				content: '';
+				@include absolute-center;
+				width: rem(8px);
+				height: rem(8px);
+				border-radius: 50%;
+				background-color: #fff;
+			}
+		}
+	}
+}
+.payment-checkout__view {
+	padding: rem(15px) rem(21px);
+	display: flex;
+	align-items: center;
+	column-gap: rem(10px);
+	border: 1px solid rgb(193, 197, 200);
+
+
+}
+.payment-checkout__point {
+	width: rem(18px);
+	height: rem(18px);
+	border: 1px solid rgb(193, 197, 200);
+	border-radius: 50%;
+
+}
+.payment-checkout__text {
+	font-family: $tildaMed;
+	font-size: rem(14px);
+	line-height: math.div(16,14);
+}
+.checkout__group{
+	padding: rem(32px) rem(16px) rem(32px) rem(16px);
+	margin-inline: rem(-16);
+	background-color: #F2F2F5;
+
+	.block-title{
+		margin-bottom: rem(24px);
+	}
+}
+.checkout__compound {
+	padding-bottom: rem(24px);
+}
+.compound-checkout {}
+.compound-checkout__item {
+	display: grid;
+	grid-template-columns: rem(59px) 1fr minmax(rem(59px), 20%);
+	column-gap: rem(8);
+	// align-items: center;
+	font-family: $tildaMed;
+
+	
+	&:not(:last-child){
+		margin-bottom: rem(24px);
+	}	
+	
+}
+.compound-checkout__image-wrap {
+	position: relative;
+}
+.compound-checkout__image {
+	position: relative;
+	height: rem(59);
+	background-color: #fff;
+	border-radius: rem(6px);
+	border: 1px solid #C1C5C8;
+	overflow: hidden;
+
+	img{
+		@include absolute-center;
+	}
+}
+.compound-checkout__count {
+	position: absolute;
+	top: rem(-11px);
+	right:rem(-11px);
+	width: rem(22px);
+	height: rem(22px);
+	border-radius: 50%;
+	color: rgb(255, 255, 255);
+	font-family: $tildaSemi;
+	font-size: rem(12px);
+	line-height: rem(22px);
+	text-align: center;
+	background-color: #8E8E93;
+	color: #fff;
+	z-index: 12;
+}
+.compound-checkout__body {
+	margin-top: rem(14px);
+}
+.compound-checkout__title {
+	margin-bottom: rem(3px);
+	font-size: rem(14px);
+	line-height: math.div(16,14);
+}
+.compound-checkout__sub {
+	color: #8E8E93;
+	font-size: rem(10px);
+	line-height: math.div(12,10);
+	text-transform: uppercase;
+}
+.compound-checkout__price {
+	margin-top: rem(14);
+	font-size: rem(14px);
+	line-height: math.div(16,14);
+	text-align: right;
+	// align-self: baseline;
+}
+.checkout__coupon {
+	margin-bottom: rem(24px);
+	display: flex;
+	column-gap: rem(8px);
+}
+.coupon-checkout {}
+.coupon-checkout__input {
+	flex: 1 1 auto;
+}
+.coupon-checkout__use{
+	flex: 0 0 rem(126px) 
+}
+.checkout__result {
+}
+.result-checkout {}
+.result-checkout__content {
+	margin-bottom: rem(24px);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: rem(8px);
+	row-gap: rem(16px);
+	font-family: $tildaMed;
+	font-size: rem(14px);
+	line-height: math.div(16p,14);
+}
+.result-checkout__key {}
+.result-checkout__val {
+	text-align: right;
+}
+.result-checkout__final {}
+.result-checkout__final-key {}
+.result-checkout__final-val {}
+.btn-black {}
+.btn-fw {}
+.product-online-payment {}
+.form__text {}
+/*--------------------END Checkout----------------------*/ 

@@ -1,4 +1,4 @@
-header.header
+header(class=pageName=='checkout'?"header header--checkout":"header")
 	if pageName == 'catalog'
 		.header__announcement.announcement-header
 			.announcement-header__wrapper
@@ -25,13 +25,14 @@ header.header
 		nav.header-nav
 			+menu('header-nav', ['Головные уборы', 'Одежда', 'Сумки и рюкзаки'])
 
-		.mob-search
-			.ic
-				svg(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-					path(d='M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z', stroke='#1C1C1E', stroke-width='2', stroke-miterlimit='10')
-					path(d='M12 12L19 19', stroke='#1C1C1E', stroke-width='2', stroke-miterlimit='10')
+		if pageName != 'checkout'
+			.mob-search
+				.ic
+					svg(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+						path(d='M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z', stroke='#1C1C1E', stroke-width='2', stroke-miterlimit='10')
+						path(d='M12 12L19 19', stroke='#1C1C1E', stroke-width='2', stroke-miterlimit='10')
 
-		div(class=pageName=='cart-empty'?"mob-cart modal-icon-block footer-icon-cart":"mob-cart modal-icon-block footer-icon-cart selected")
+		div(class=pageName=='cart-empty' || pageName=='checkout'?"mob-cart modal-icon-block footer-icon-cart":"mob-cart modal-icon-block footer-icon-cart selected")
 			.ic
 				svg(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
 					g(clip-path='url(#clip0_34_189)')
@@ -42,6 +43,7 @@ header.header
 						clippath#clip0_34_189
 							rect(width='20', height='20', fill='white')
 
-		.mob-menu-trigger
-			span
-			span
+		if pageName != 'checkout'
+			.mob-menu-trigger
+				span
+				span
