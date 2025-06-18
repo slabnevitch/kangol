@@ -2593,7 +2593,7 @@ h2 {
   line-height: 0;
   display: inline;
   vertical-align: top;
-  margin: 0 12px 8px 0;
+  margin: 0 9px 8px 0;
   border-right: 1px solid #E5E5EA;
 }
 .footer-link .link:last-child {
@@ -2608,7 +2608,7 @@ h2 {
 }
 .footer-link a {
   position: relative;
-  padding-right: 0.875rem;
+  padding-right: 0.5625rem;
   color: #1C1C1E;
   font-size: 0.875rem;
   line-height: 2.1428571429;
@@ -2818,6 +2818,15 @@ h2 {
 .footer-mob__submit {
   height: 2.375rem;
   min-height: auto;
+}
+
+.footer-link--checkout a {
+  color: #003468;
+}
+@media only screen and (min-width: 63.99875em) {
+  .footer-link--checkout a {
+    color: #003468;
+  }
 }
 
 /*--------------------END footer----------------------*/

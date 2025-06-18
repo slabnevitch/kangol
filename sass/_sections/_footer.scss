@@ -95,4 +95,16 @@
 	height: rem(38);
 	min-height: auto;
 }
+
+.footer-link--checkout{
+	a{
+      color: $accent;
+
+      @include min-screen($md){
+      	color: $accent;
+      	
+      }
+
+	}
+}
 /*--------------------END footer----------------------*/ 
