@@ -1,0 +1,47 @@
+.checkout__block
+	.checkout__group
+		.checkout__compound.compound-checkout
+			h2.block-title.block-title--semi Состав заказа
+
+			- var prods = [{count: '1', price: '5 720 ₽'}, {count: '3', price: '36 720 ₽'}];
+			each prod in prods
+				.compound-checkout__item
+					.compound-checkout__image-wrap
+						.compound-checkout__count= prod.count
+						.compound-checkout__image
+							img(src="img/checkout-page/1.jpg" alt="alt")
+					
+					.compound-checkout__body
+						.compound-checkout__title Tropic Wide Brim Stripe Casual
+						.compound-checkout__sub NATURAL / M
+					
+					.compound-checkout__price= prod.price
+
+		.checkout__coupon.coupon-checkout
+			input(autocomplete="off" type="text" name="coupon-checkout" class="form__input coupon-checkout__input" placeholder="Купон или сертификат")
+			button.btn.btn-gray.coupon-checkout__use(type="button") Применить
+		
+		.checkout__result.result-checkout
+			- var results = [{key:'Скидка', val: '- 930 ₽'}, {key:'Заказ 4 товара', val: '27 698 ₽'}, {key:'Доставка', val: '650 ₽'}];
+			
+			.result-checkout__content
+				each item, i in results
+					.result-checkout__key= item.key
+					.result-checkout__val= item.val
+
+			.result-checkout__final
+				.result-checkout__final-key Итого 
+				.result-checkout__final-val 37 720 ₽
+
+
+.checkout__block
+	label.form__label
+		button.btn.btn-black.btn-fw.product-online-payment(type="button") оформить заказ
+	.form__text Нажав на кнопку «Оформить заказ» Вы даёте согласие на обработку персональных данных в соответствии с #[a(href="#") Условиями], а также с  #[a(href="#") Условиями продажи.] С правилами возврата можно ознакомиться  #[a(href="#")здесь].
+
+.checkout__footer
+	- var footerLinks = ['Политика конфиденциальности', 'Пользовательское соглашение',  'Оферта',   'Доставка и оплата',   'Возврат товара'];
+		.footer-link
+			each link, i in footerLinks
+				.link
+					a(href='#')= link
