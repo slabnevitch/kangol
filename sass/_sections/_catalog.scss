@@ -1,5 +1,9 @@
 /*--------------------catalog----------------------*/
-.catatalog {}
+.catatalog {
+	@include min-screen($md){
+		margin-bottom: rem(80px);
+	}
+}
 .catatalog__wrapper {}
 .catatalog__header {
 	display: flex;

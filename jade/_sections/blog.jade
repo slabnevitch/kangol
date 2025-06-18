@@ -5,18 +5,44 @@ section.blog
 		.blog__tags
 			include ../_includes/tags/tags
 
-		- var blogs = ['История вельвета и обзор головных уборов из него', 'Скандал с продажей панамы участника BTS', 'Обзор зимних головных уборов Kangol', 'Гайд по кепкам Kangol, которые можно носить козырьком назад', 'Обзор коллекции Весна Лето 2021', 'Новая коллаборация Kangol и Staple', 'Осень Зима 2020 официальный лукбук'];
+		- var blogs = [{name: 'История вельвета и обзор головных уборов из него', date: '17 июня, 2022', tag: 'Лукбук'}, {name: 'Скандал с продажей панамы участника BTS', date: '2 мая, 2022', tag: 'Руководство'}, {name: 'Обзор зимних головных уборов Kangol', data: '10 апреля, 2022', tag:'Обзор', date: '10 апреля, 2022'}, {name: 'Гайд по кепкам Kangol, которые можно носить козырьком назад', date: '19 марта, 2022', tag: 'Новости'}, {name:'Обзор коллекции Весна Лето 2021', date: '26 февраля, 2022', tag: 'Видео'}, {name: 'Новая коллаборация Kangol и Staple', date: '10 апреля, 2022', tag: 'Видео'}, {name: 'Осень Зима 2020 официальный лукбук', date: '19 марта, 2022', tag: 'Обзор'}, {name: 'Почему Kangol никого не спонсирует', date: '26 февраля, 2022', tag: 'Видео'}];
 		
 		.blog-previews-grid
-			each item, i in blogs
-				article.blog-preview
-					a(href="#").blog-preview__img._fit
-						img._fit-img(src="img/blog-previews/blog-page/"+(i+1)+".jpeg" alt="alt")
-					.blog-preview__content
-						h3.blog-preview__title
-							a(href="#")= item
-						p.blog-preview__text
-							| Официальный лукбук коллекции весна-лето 2020. Обзор всех основных моделей головных уборов и новых цветов
+				each item, i in blogs
+					if i < 2
+						article(class=i==0?"blog-preview blog-preview--full":"blog-preview")
+							a(href="#").blog-preview__img._fit
+								img._fit-img(src="img/blog-previews/blog-page/"+(i+1)+".jpg" alt="alt")
+							.blog-preview__content
+								h3.blog-preview__title
+									a(href="#")= item.name
+								//- p.blog-preview__text
+									//- | Официальный лукбук коллекции весна-лето 2020. Обзор всех основных моделей головных уборов и новых цветов
+								.blog-preview__footer
+									.blog-preview__category= item.tag
+									time(datetime="2013-02-15").blog-preview__date= item.date
+					if i==2
+						.blog-subscribe
+							.blog-subscribe__content
+								.blog-subscribe__title Kangol Новости
+								p.blog-subscribe__text Подпишитесь, чтобы получать свежие новости, информацию о новых коллекциях и поставках вашего любимого бренда.
+							.blog-subscribe__form
+								input(autocomplete="off" type="text" name="blog-subs-mail" class="blog-subscribe__input" placeholder="Введите свой e-mail")
+				
+					if i > 1
+						article(class=i==0?"blog-preview blog-preview--full":"blog-preview")
+							a(href="#").blog-preview__img._fit
+								img._fit-img(src="img/blog-previews/blog-page/"+(i+1)+".jpg" alt="alt")
+							.blog-preview__content
+								h3.blog-preview__title
+									a(href="#")= item.name
+								//- p.blog-preview__text
+									//- | Официальный лукбук коллекции весна-лето 2020. Обзор всех основных моделей головных уборов и новых цветов
+								.blog-preview__footer
+									.blog-preview__category= item.tag
+									time(datetime="2013-02-15").blog-preview__date= item.date
 
 		.btn-wrap
 			a(href="#").btn.btn-centered больше новостей
+
+		button.btn.btn-gray.btn-fw.to-top-btn(type="button") НАВЕРХ

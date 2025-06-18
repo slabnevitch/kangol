@@ -1,6 +1,10 @@
 /*=====================Product=========================*/
 @import '../_source/mob_card';
-.product {}
+.product {
+	@include min-screen($md){
+		margin-bottom: rem(80px);
+	}
+}
 .product__wrapper {
 	@include min-screen($md){
 		display: flex;
