@@ -148,6 +148,10 @@ h2{
     line-height: math.div(18,20);
     text-transform: none;
 
+    &--semi{
+        font-family: $tildaSemi;
+    }
+
     @include min-screen($md){
         // margin-bottom: rem(24);
         font-size: rem(24);

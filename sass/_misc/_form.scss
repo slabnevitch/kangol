@@ -28,13 +28,13 @@
 }
 .form__custom-policy {
 	display: flex;
-	align-items: flex-start;
-
+	align-items: center;
+	margin-top: rem(35px);
 }
 .form__custom {
 	position: relative;
 	flex-shrink: 0;
-	margin-right: rem(20);
+	margin-right: rem(12);
 }
 .form__check {
 	@include checkbox;
@@ -47,10 +47,11 @@
 .form__custom-chek {
 	display: block;
 	position: relative;
-	width: rem(16);
-	height: rem(16);
-	border: 1px solid #000;
-	border-radius: rem(2);
+	width: rem(20);
+	height: rem(20);
+	// border: 1px solid #000;
+	border-radius: rem(4);
+	background-color: #013F7D;
 
 	@media (any-hover: hover) { //только для устройств с ховером
 				&:hover{
@@ -58,13 +59,15 @@
 			}
 		}
 	&:before{
+		content: '';
 		@include absolute-center-old;
 		display: none;
-		width: rem(8);
-		height: rem(8);
+		width: rem(11.43);
+		height: rem(7.81);
 		border-radius: rem(2);
-		background-color: #000;
-		content: '';
+		background-image: url(../img/icons/policy-check.svg);
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 }
 .form__area{
@@ -79,7 +82,8 @@
 	font-family: inherit;
 }
 .form__policy {
-
+	font-size: 14px;
+	line-height: math.div(10,14);
 }
 .inp-reset{
 	@include but-null();

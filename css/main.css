@@ -1115,15 +1115,16 @@ textarea {
 .form__custom-policy {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 2.1875rem;
 }
 
 .form__custom {
   position: relative;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: 1.25rem;
+  margin-right: 0.75rem;
 }
 
 .form__check {
@@ -1145,10 +1146,10 @@ textarea {
 .form__custom-chek {
   display: block;
   position: relative;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid #000;
-  border-radius: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  background-color: #013F7D;
 }
 @media (any-hover: hover) {
   .form__custom-chek:hover {
@@ -1156,6 +1157,7 @@ textarea {
   }
 }
 .form__custom-chek:before {
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -1163,11 +1165,12 @@ textarea {
   margin: auto;
   position: absolute;
   display: none;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.714375rem;
+  height: 0.488125rem;
   border-radius: 0.125rem;
-  background-color: #000;
-  content: "";
+  background-image: url(../img/icons/policy-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form__area {
@@ -1180,6 +1183,11 @@ textarea {
   padding-left: 1.25rem;
   color: #222222;
   font-family: inherit;
+}
+
+.form__policy {
+  font-size: 14px;
+  line-height: 0.7142857143;
 }
 
 .inp-reset {
@@ -1439,6 +1447,9 @@ h2 {
   font-family: "Tilda-Sans-Regular", sans-serif;
   line-height: 0.9;
   text-transform: none;
+}
+.block-title--semi {
+  font-family: "Tilda-Sans-Semibold", sans-serif;
 }
 @media only screen and (min-width: 63.99875em) {
   .block-title {

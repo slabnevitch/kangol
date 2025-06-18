@@ -57,8 +57,88 @@
       </div>
     </header>
     <main class="main">
-      <h1>checkout</h1>
+      <section class="checkout">
+        <div class="checkout__wrapper">
+          <div action="#" class="form form checkout__container">
+            <div class="checkout__block">
+              <h2 class="block-title block-title--semi">Контакты</h2>
+              <label class="form__label">
+                <input type="text" name="name" placeholder="ФИО" class="form__input">
+                <button type="button" class="inp-reset"></button>
+              </label>
+              <label class="form__label">
+                <input type="text" name="phone" placeholder="Телефон" class="form__input">
+                <button type="button" class="inp-reset"></button>
+              </label>
+              <label class="form__label">
+                <input type="text" name="email" placeholder="Комментарий" class="form__input">
+                <button type="button" class="inp-reset"></button>
+              </label>
+              <div class="form__custom-policy">
+                <label class="form__custom">
+                  <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
+                </label><span class="form__policy">Позвоните мне, для подтверждения заказа</span>
+              </div>
+            </div>
+            <div class="checkout__block">
+              <h2 class="block-title block-title--semi">Доставка</h2>
+              <label class="form__label">
+                <input type="text" name="name" placeholder="Город" class="form__input">
+                <button type="button" class="inp-reset"></button>
+              </label>
+              <button type="button" disabled class="btn checkout__clue">Введите город, чтобы увидеть способы доставки</button>
+            </div>
+            <div class="checkout__block">
+              <h2 class="block-title block-title--semi">Оплата</h2>
+              <div class="checkout__payment payment-checkout">
+                <label class="payment-checkout__label">
+                  <input type="radio" name="checkout-payment" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Онлайн оплата</span></span>
+                </label>
+                <label class="payment-checkout__label">
+                  <input type="radio" name="checkout-payment" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Оплата при получении</span></span>
+                </label>
+              </div>
+            </div>
+            <div class="checkout__block">
+              <div class="checkout__compound compound-checkout">
+                <h2 class="block-title block-title--semi">Состав заказа</h2>
+                <div class="compound-checkout__item">
+                  <div class="compound-checkout__image">
+                    <div class="compound-checkout__count">1</div><img src="img/checkout-page/1.jpg" alt="alt">
+                  </div>
+                  <div class="compound-checkout__body">
+                    <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
+                    <div class="compound-checkout__sub">NATURAL / M</div>
+                  </div>
+                  <div class="compound-checkout__price">5 720 ₽</div>
+                </div>
+                <div class="compound-checkout__item">
+                  <div class="compound-checkout__image">
+                    <div class="compound-checkout__count">3</div><img src="img/checkout-page/1.jpg" alt="alt">
+                  </div>
+                  <div class="compound-checkout__body">
+                    <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
+                    <div class="compound-checkout__sub">NATURAL / M</div>
+                  </div>
+                  <div class="compound-checkout__price">36 720 ₽</div>
+                </div>
+              </div>
+              <div class="checkout__coupon coupon-checkout">
+                <input autocomplete="off" type="text" name="coupon-checkout" placeholder="Купон или сертификат" class="coupon-checkout__input">
+                <button type="button" class="btn">Применить</button>
+              </div>
+              <div class="checkout__result result-checkout">
+                <!-- - var results = [{k'']-->
+                <div class="result-checkout__content">
+                  <div class="result-checkout__content"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <button type="submit" class="btn btn-wide">Получить консультацию</button>
     <footer class="footer-mob">
       <div class="footer-mob__wrapper">
         <div class="footer-mob__top">

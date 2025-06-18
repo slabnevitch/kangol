@@ -3,11 +3,84 @@ extends _templates/main
 
 block title
 	| Офрмление заказа
-	- var pageName = 'checkout'
+	- var pageName = 'checkout';
 
 block content
 	main.main
-		h1= pageName
+		section.checkout
+			.checkout__wrapper
+				.form(action="#" class="form").checkout__container
+					.checkout__block
+						h2.block-title.block-title--semi Контакты
+						
+						label.form__label
+							input.form__input(type='text' name='name' placeholder='ФИО')
+							button.inp-reset(type="button")
+						label.form__label
+							input.form__input(type='text' name='phone' placeholder='Телефон')
+							button.inp-reset(type="button")
+						label.form__label
+							input.form__input(type='text' name='email' placeholder='Комментарий')
+							button.inp-reset(type="button")
+
+						.form__custom-policy
+							label.form__custom
+								input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
+								span.form__custom-chek
+							span.form__policy Позвоните мне, для подтверждения заказа
+
+					.checkout__block
+						h2.block-title.block-title--semi Доставка
+
+						label.form__label
+							input.form__input(type='text' name='name' placeholder='Город')
+							button.inp-reset(type="button")
+					
+						button.btn.checkout__clue(type="button" disabled) Введите город, чтобы увидеть способы доставки
+
+					.checkout__block
+						h2.block-title.block-title--semi Оплата
+						
+						.checkout__payment.payment-checkout
+							label.payment-checkout__label
+								input( type="radio" name="checkout-payment" class="payment-checkout__input" checked)
+								span.payment-checkout__view
+									span.payment-checkout__point
+									span.payment-checkout__text Онлайн оплата
+
+							label.payment-checkout__label
+								input( type="radio" name="checkout-payment" class="payment-checkout__input" checked)
+								span.payment-checkout__view
+									span.payment-checkout__point
+									span.payment-checkout__text Оплата при получении
+
+					.checkout__block
+						.checkout__compound.compound-checkout
+							h2.block-title.block-title--semi Состав заказа
+
+							- var prods = [{count: '1', price: '5 720 ₽'}, {count: '3', price: '36 720 ₽'}];
+							each prod in prods
+								.compound-checkout__item
+									.compound-checkout__image
+										.compound-checkout__count= prod.count
+										img(src="img/checkout-page/1.jpg" alt="alt")
+									
+									.compound-checkout__body
+										.compound-checkout__title Tropic Wide Brim Stripe Casual
+										.compound-checkout__sub NATURAL / M
+									
+									.compound-checkout__price= prod.price
+
+						.checkout__coupon.coupon-checkout
+							input(autocomplete="off" type="text" name="coupon-checkout" class="coupon-checkout__input" placeholder="Купон или сертификат")
+							button.btn(type="button") Применить
+						
+						.checkout__result.result-checkout
+							// - var results = [{k'']
+							.result-checkout__content
+								.result-checkout__content
+	
+	button.btn.btn-wide(type='submit') Получить консультацию
 
 
 block page-scripts
