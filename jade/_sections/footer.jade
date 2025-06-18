@@ -89,12 +89,9 @@ footer.footer-mob
 								a(href='#') &Scy;&ocy;&tcy;&rcy;&ucy;&dcy;&ncy;&icy;&chcy;&iecy;&scy;&tcy;&vcy;&ocy;
 		
 		.footer-mob__bottom
-			if pageName == 'checkout'
-				- var footerLinks = ['Политика конфиденциальности', 'Пользовательское соглашение',  'Оферта',   'Доставка и оплата',   'Возврат товара'];
-			else
-				- var footerLinks = ['Политика конфиденциальности', 'Пользовательское соглашение',  'Оферта'];
+			- var footerLinks = ['Политика конфиденциальности', 'Пользовательское соглашение',  'Оферта'];
 			
-			div(class=pageName == 'checkout'?"footer-link footer-link--checkout":"footer-link")
+			.footer-link
 				each link, i in footerLinks
 					.link
 						a(href='#')= link

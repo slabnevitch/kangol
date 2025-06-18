@@ -43,7 +43,8 @@ html(lang='ru')
 		//- при использовании _body-html-for-slideout или _footer-to-bottom  -- закомментировать:
 		include ../_sections/header
 		block content
-		include ../_sections/footer
+		if pageName != 'checkout'
+			include ../_sections/footer
 
 
 		//- source modals
