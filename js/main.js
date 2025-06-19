@@ -219,12 +219,14 @@ import {mobFooterMenu} from '~/app/js/source/mob-footer-menu.js';
 import {mobCommon} from '~/app/js/source/mob-common.js';
 import {availabilityBooking, sizeChecking} from '~/app/js/components/product-card.js';
 import {checkoutLabels} from '~/app/js/components/checkout.js';
+import {inputReset} from '~/app/js/components/form.js';
 
 mobFooterMenu();
 mobCommon();
 availabilityBooking();
 sizeChecking();
 checkoutLabels();
+inputReset();
 
 document.addEventListener('DOMContentLoaded', () => {
 
