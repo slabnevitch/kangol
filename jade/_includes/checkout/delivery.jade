@@ -1,18 +1,44 @@
-.checkout__delivery.delivery-checkout
-	.delivery-checkout__check
-		label.payment-checkout__label
-			input( type="radio" name="checkout-delivery-method" class="payment-checkout__input")
-			span.payment-checkout__view
-				span.payment-checkout__point
-				span.payment-checkout__text Самовывоз
+.checkout__delivery.delivery-checkout.checkout__delivery--delivery
+	if delivery == 'moscow'
+		.checkout__block.delivery-checkout__method
+			label.payment-checkout__label
+				input(type="radio" name="checkout-delivery-method" class="payment-checkout__input" value='self-pickup')
+				span.payment-checkout__view
+					span.payment-checkout__point
+					span.payment-checkout__text Самовывоз
 
-		label.payment-checkout__label
-			input( type="radio" name="checkout-delivery-method" class="payment-checkout__input" checked)
-			span.payment-checkout__view
-				span.payment-checkout__point
-				span.payment-checkout__text Доставка
+			label.payment-checkout__label
+				input( type="radio" name="checkout-delivery-method" class="payment-checkout__input" checked value='delivery')
+				span.payment-checkout__view
+					span.payment-checkout__point
+					span.payment-checkout__text Доставка
 
+	if delivery == 'moscow'
+		.delivery-checkout__points
+			.checkout__block
+				h2.block-title.block-title--semi Пункт самовывоза
+				.delivery-checkout__point
+					label.payment-checkout__label
+							input( type="radio" name="checkout-delivery-point" class="payment-checkout__input" checked)
+							span.payment-checkout__view
+								span.payment-checkout__point
+								span.payment-checkout__text Тверская, 9
+
+							span.payment-checkout__content
+								span.payment-checkout__row м. Охотный ряд
+								span.payment-checkout__row Время работы с 12:00 до 21:00, без выходных
+
+						label.payment-checkout__label
+							input( type="radio" name="checkout-delivery-point" class="payment-checkout__input")
+							span.payment-checkout__view
+								span.payment-checkout__point
+								span.payment-checkout__text Большая Новодмитровская, 36
+							
+							//- span.payment-checkout__content
+							//- 	span.payment-checkout__row м. Охотный ряд
+							//- 	span.payment-checkout__row Время работы с 12:00 до 21:00, без выходных
+	
 	.delivery-checkout__fields
-	- var data = ['Улица, дом', 'Подьезд', 'Этаж', 'Квартира'];
-	each item in data
-		+inpBlock(item, false, false, false)
+		- var data = ['Улица, дом', 'Подьезд', 'Этаж', 'Квартира'];
+		each item in data
+			+inpBlock(item, false, false, false)

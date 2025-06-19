@@ -1078,10 +1078,16 @@ textarea {
 
 .form__label {
   display: block;
-  position: relative;
 }
 .form__label:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+.form__label--error .form__error-text {
+  display: block;
+}
+
+.form__label-inner {
+  position: relative;
 }
 
 .form__input {
@@ -1139,6 +1145,14 @@ textarea {
   font-family: "Tilda-Sans-Medium", sans-serif;
   color: #8E8E93;
   transition: all 0.2s;
+}
+
+.form__error-text {
+  display: none;
+  margin-top: 0.5rem;
+  color: #D45151;
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 .form__custom-policy {
@@ -2349,6 +2363,9 @@ h2 {
   padding: 0;
   opacity: 0;
 }
+.payment-checkout__input:checked ~ .payment-checkout__content {
+  display: block;
+}
 .payment-checkout__input:checked + .payment-checkout__view {
   background-color: rgb(242, 248, 254);
   border-color: rgb(31, 101, 172);
@@ -2551,8 +2568,41 @@ h2 {
   }
 }
 
-.delivery-checkout__check {
-  margin-block: 2rem;
+.checkout__delivery--delivery .delivery-checkout__fields {
+  display: block;
+}
+.checkout__delivery--delivery .delivery-checkout__points {
+  display: none;
+}
+.checkout__delivery--self-pickup .delivery-checkout__fields {
+  display: none;
+}
+.checkout__delivery--self-pickup .delivery-checkout__points {
+  display: block;
+}
+
+.delivery-checkout__method {
+  margin-top: 2rem;
+}
+
+.payment-checkout__content {
+  display: none;
+  padding: 1.5rem 1rem;
+  background-color: #F2F2F5;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  color: #636366;
+  border-bottom: 1px solid rgb(193, 197, 200);
+  border-left: 1px solid rgb(193, 197, 200);
+  border-right: 1px solid rgb(193, 197, 200);
+}
+
+.payment-checkout__row {
+  display: block;
+}
+.payment-checkout__row:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 /*--------------------END Checkout----------------------*/

@@ -21,10 +21,10 @@ block content
 					.checkout__block
 						h2.block-title.block-title--semi Доставка
 
-						+ inpBlock('Город', 'Москва', false, false)
+						// + inpBlock('Город', 'Москва', errorClass = false, activeClass = false, errorText = false')
+						+inpBlock('Город', 'Москва', errorClass = false, activeClass = false, errorText = 'Введите город')
 						
-						.checkout__delivery
-							include _includes/checkout/delivery
+						include _includes/checkout/delivery
 
 					.checkout__block
 						h2.block-title.block-title--semi Оплата

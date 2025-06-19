@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Офрмление заказа - Санкт-Петербург
+    <title>Офрмление заказа
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,29 +53,29 @@
           <div action="#" class="form form checkout__container">
             <div class="checkout__block">
               <h2 class="block-title block-title--semi">Контакты</h2>
-              <div class="form__label">
+              <div class="form__label form__label--error">
                 <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
+                  <input type="text" name="name" placeholder=" " class="form__input form__input--error"/>
                   <button type="button" class="inp-reset"></button>
                   <label class="form__placeholder">ФИО</label>
                 </div>
-                <div class="form__error-text"></div>
+                <div class="form__error-text">Введите имя и фамилию</div>
               </div>
-              <div class="form__label">
+              <div class="form__label form__label--error">
                 <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
+                  <input type="text" name="name" placeholder=" " class="form__input form__input--error"/>
                   <button type="button" class="inp-reset"></button>
                   <label class="form__placeholder">Электронная почта</label>
                 </div>
-                <div class="form__error-text"></div>
+                <div class="form__error-text">Введите почту</div>
               </div>
-              <div class="form__label">
+              <div class="form__label form__label--error">
                 <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
+                  <input type="text" name="name" placeholder=" " class="form__input form__input--error"/>
                   <button type="button" class="inp-reset"></button>
                   <label class="form__placeholder">Телефон</label>
                 </div>
-                <div class="form__error-text"></div>
+                <div class="form__error-text">Введите контактный номер телефона</div>
               </div>
               <div class="form__label">
                 <div class="form__label-inner">
@@ -93,50 +93,17 @@
             </div>
             <div class="checkout__block">
               <h2 class="block-title block-title--semi">Доставка</h2>
-              <div class="form__label">
+              <div class="form__label form__label--error">
                 <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " value="Санкт-Петербург" class="form__input"/>
+                  <input type="text" name="name" placeholder=" " value="Москва" class="form__input form__input--error"/>
                   <button type="button" class="inp-reset"></button>
                   <label class="form__placeholder">Город</label>
                 </div>
-                <div class="form__error-text"></div>
+                <div class="form__error-text">Введите город</div>
               </div>
-              <div class="checkout__delivery delivery-checkout checkout__delivery--delivery">
-                <div class="delivery-checkout__fields">
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Улица, дом</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Подьезд</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Этаж</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Квартира</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                </div>
-              </div>
+              <button type="button" class="btn btn-fw checkout__clue">Введите город, чтобы увидеть способы доставки</button>
+              <!-- .checkout__delivery-->
+              <!-- 	include _includes/checkout/delivery-->
             </div>
             <div class="checkout__block">
               <h2 class="block-title block-title--semi">Оплата</h2>

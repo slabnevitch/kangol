@@ -1,0 +1,12 @@
+- var tops = [{text: 'ФИО', error:'Введите имя и фамилию'}, {text:'Электронная почта', error:'Введите почту'}, {text:'Телефон', error: 'Введите контактный номер телефона'}];
+
+each item in tops
+	+inpBlock(item.text, val = false, errorClass = true, activeClass = false, errorText = item.error)
+
++inpBlock('Комментарий')
+
+.form__custom-policy
+	label.form__custom
+		input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
+		span.form__custom-chek
+	span.form__policy Позвоните мне, для подтверждения заказа

@@ -9,11 +9,19 @@
 }
 .form__label{
 	display: block;
-	position: relative;
-
 	&:not(:last-child){
 		margin-bottom: rem(24);
 	}
+
+	&--error{
+		.form__error-text{
+			display: block;
+		}
+	}
+
+}
+.form__label-inner{
+	position: relative;
 }
 .form__input {
 	height: rem(48);
@@ -55,6 +63,13 @@
 	font-family: $tildaMed;
 	color: #8E8E93;
 	transition: all .2s;
+}
+.form__error-text{
+	display: none;
+	margin-top: rem(8px);
+	color: $danger;
+	font-size: rem(14px);
+	line-height: 1;
 }
 .form__custom-policy {
 	display: flex;

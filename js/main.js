@@ -218,11 +218,13 @@ require('~/app/js/source/lazy_load/jquery.lazy.min.js')
 import {mobFooterMenu} from '~/app/js/source/mob-footer-menu.js';
 import {mobCommon} from '~/app/js/source/mob-common.js';
 import {availabilityBooking, sizeChecking} from '~/app/js/components/product-card.js';
+import {checkoutLabels} from '~/app/js/components/checkout.js';
 
 mobFooterMenu();
 mobCommon();
 availabilityBooking();
 sizeChecking();
+checkoutLabels();
 
 document.addEventListener('DOMContentLoaded', () => {
 

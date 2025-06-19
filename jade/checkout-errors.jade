@@ -2,9 +2,8 @@ extends _templates/main
 //- extends _templates/main-tailwind
 
 block title
-	| Офрмление заказа - Санкт-Петербург
+	| Офрмление заказа
 	- var pageName = 'checkout';
-	- var delivery = 'petersburg';
 
 include _includes/_input-block
 
@@ -16,15 +15,17 @@ block content
 					.checkout__block
 						h2.block-title.block-title--semi Контакты
 						
-						include _includes/checkout/top
+						include _includes/checkout/top-errors
 
 					.checkout__block
 						h2.block-title.block-title--semi Доставка
 
-						+ inpBlock('Город', 'Санкт-Петербург', false, false)
-						
-						
-						include _includes/checkout/delivery
+						+ inpBlock('Город', 'Москва', errorClass = true, activeClass = false, errorText = 'Введите город')
+					
+						button.btn.btn-fw.checkout__clue(type="button") Введите город, чтобы увидеть способы доставки
+
+						// .checkout__delivery
+						// 	include _includes/checkout/delivery
 
 					.checkout__block
 						h2.block-title.block-title--semi Оплата

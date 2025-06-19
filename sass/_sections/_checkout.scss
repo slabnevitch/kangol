@@ -58,6 +58,9 @@
 .payment-checkout__input {
 	@include checkbox();
 
+	&:checked ~ .payment-checkout__content  {
+		display: block;
+	}
 	&:checked + .payment-checkout__view  {
 		background-color: rgb(242, 248, 254);
 		border-color: rgb(31, 101, 172);
@@ -239,15 +242,48 @@
 	}
 } 
 .checkout__delivery{
-
+	&--delivery{
+		.delivery-checkout__fields{
+			display: block;
+		}
+		.delivery-checkout__points{
+			display: none;
+		}
+	}
+	&--self-pickup{
+		.delivery-checkout__fields{
+			display: none;
+		}
+		.delivery-checkout__points{
+			display: block;
+		}
+	}
 }
 .delivery-checkout{
 }
-.delivery-checkout__check{
-	margin-block: rem(32px);
-	
+.delivery-checkout__method{
+	margin-top: rem(32px);
+
 }
 .delivery-checkout__fields{
 
+}
+.payment-checkout__content{
+	display: none;
+	padding: rem(24px) rem(16px);
+	background-color: #F2F2F5;
+	font-size: rem(14px);
+	line-height: math.div(16,14);
+	font-family: $tildaMed;
+	color:$textLight;
+	border-bottom: 1px solid rgb(193, 197, 200);
+	border-left: 1px solid rgb(193, 197, 200);
+	border-right: 1px solid rgb(193, 197, 200);
+}
+.payment-checkout__row{
+	display: block;
+	&:not(:last-child){
+		margin-bottom: rem(8px);
+	}
 }
 /*--------------------END Checkout----------------------*/ 
