@@ -1,3 +1,18 @@
-- var data = ['Улица, дом', 'Подьезд', 'Этаж', 'Квартира'];
-each item in data
-	+inpBlock(item)
+.checkout__delivery.delivery-checkout
+	.delivery-checkout__check
+		label.payment-checkout__label
+			input( type="radio" name="checkout-delivery-method" class="payment-checkout__input")
+			span.payment-checkout__view
+				span.payment-checkout__point
+				span.payment-checkout__text Самовывоз
+
+		label.payment-checkout__label
+			input( type="radio" name="checkout-delivery-method" class="payment-checkout__input" checked)
+			span.payment-checkout__view
+				span.payment-checkout__point
+				span.payment-checkout__text Доставка
+
+	.delivery-checkout__fields
+	- var data = ['Улица, дом', 'Подьезд', 'Этаж', 'Квартира'];
+	each item in data
+		+inpBlock(item, false, false, false)

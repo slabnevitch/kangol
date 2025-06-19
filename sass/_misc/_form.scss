@@ -27,6 +27,34 @@
 	font-family: $tildaMed;
 	font-size: rem(14px);
 	line-height: math.div(16,14);
+
+	&--error{
+		border-color: $danger;
+	}
+	&--active{
+		border: 2px solid rgb(1, 63, 125);
+	}
+
+	&:focus, &:not(:placeholder-shown){
+		padding-top: rem(18);
+
+		& ~ .form__placeholder{
+			top: rem(11);
+			transform: translateY(0);
+			font-size: rem(12px);
+		}
+	}
+}
+.form__placeholder{
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
+	font-size: rem(14px);
+	line-height: 1;
+	font-family: $tildaMed;
+	color: #8E8E93;
+	transition: all .2s;
 }
 .form__custom-policy {
 	display: flex;

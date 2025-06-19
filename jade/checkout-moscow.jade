@@ -2,8 +2,9 @@ extends _templates/main
 //- extends _templates/main-tailwind
 
 block title
-	| Офрмление заказа
+	| Офрмление заказа - Москва
 	- var pageName = 'checkout';
+	- var delivery = 'moscow';
 
 include _includes/_input-block
 
@@ -20,12 +21,10 @@ block content
 					.checkout__block
 						h2.block-title.block-title--semi Доставка
 
-						+ inpBlock('Город', false, false, false)
-					
-						button.btn.btn-fw.checkout__clue(type="button") Введите город, чтобы увидеть способы доставки
-
-						// .checkout__delivery
-						// 	include _includes/checkout/delivery
+						+ inpBlock('Город', 'Москва', false, false)
+						
+						.checkout__delivery
+							include _includes/checkout/delivery
 
 					.checkout__block
 						h2.block-title.block-title--semi Оплата

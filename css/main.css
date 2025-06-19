@@ -1112,6 +1112,34 @@ textarea {
   color: #8E8E93;
   opacity: 1;
 }
+.form__input--error {
+  border-color: #D45151;
+}
+.form__input--active {
+  border: 2px solid rgb(1, 63, 125);
+}
+.form__input:focus, .form__input:not(:placeholder-shown) {
+  padding-top: 1.125rem;
+}
+.form__input:focus ~ .form__placeholder, .form__input:not(:placeholder-shown) ~ .form__placeholder {
+  top: 0.6875rem;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  font-size: 0.75rem;
+}
+
+.form__placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  line-height: 1;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+  color: #8E8E93;
+  transition: all 0.2s;
+}
 
 .form__custom-policy {
   display: -ms-flexbox;
@@ -2521,6 +2549,10 @@ h2 {
   .checkout__footer .footer-link a {
     color: #013F7D;
   }
+}
+
+.delivery-checkout__check {
+  margin-block: 2rem;
 }
 
 /*--------------------END Checkout----------------------*/
