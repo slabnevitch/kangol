@@ -24,8 +24,8 @@ block content
 							each opt, i in opts
 								option(value=i)= opt
 
-				.catatalog__tags
-					include _includes/tags/tags-catalog
+				//- .catatalog__tags
+				//- 	include _includes/tags/tags-catalog
 				
 				.catatalog__content
 					- var prods = [{name: 'Massive Trapper', price: '1 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '11 750 ₽', old: '11 750 '}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Wool Spitfire', price: '11 750 ₽'}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '4 800 ₽', old: '11 750 '}];
@@ -33,21 +33,27 @@ block content
 						- for (var i=0; i <2 ; i++)
 							each prod, m in prods
 								.product-card
-									.img
 										
-										.slider.slider-product
-											.slide
-												img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
-											.slide
-												img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
-											.slide
-												img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+									.slider.slider-product
+										.slide
+											.product-card__img._fit
+												img._fit-img(data-lazy='./img/source/temp/p-4.png', alt='')
+											
+											// img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
+										.slide
+											.product-card__img._fit
+												img._fit-img(data-lazy='./img/source/temp/p-2.jpg', alt='')
+											// img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
+										.slide
+											.product-card__img._fit
+												img._fit-img(data-lazy='./img/source/temp/p-3.jpg', alt='')
+											// img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
 
 									if m == 4 ||  m == 7 || m == 9 || m == 8
 										.product-card__sale SALE
 										
-									.ic-block
-										.ic-fav
+									//- .ic-block
+									//- 	.ic-fav
 										
 									.title
 										a(href='#')= prod.name

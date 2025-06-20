@@ -20,9 +20,11 @@
 						.cart-product__row
 							.cart-product__key Размер:
 							.cart-product__value= prod.size
-						.cart-product__row.cart-product__row--counter
+						.cart-product__row.cart-product__row--count
 							.cart-product__key Кол-во:
-							.cart-product__value
+						.cart-product__row.cart-product__row--counter
+
+							.cart-product__counter
 								.counter(data-min="0" data-max="100")
 									span.counter__button.counter-minus
 										svg(width='8.000000', height='1.600098', viewBox='0 0 8 1.6001', fill='none', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -33,8 +35,8 @@
 									span.counter__button.counter-plus
 										svg(width='8.000000', height='8.000000', viewBox='0 0 8 8', fill='none', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
 											path#Union(d='M4.56641 0C4.70312 0 4.80078 0.0566406 4.80078 0.195312L4.80078 3.19629L7.80469 3.19629C7.94336 3.19629 8 3.29395 8 3.43018L8 4.54248C8 4.6792 7.94336 4.79639 7.80469 4.79639L4.80078 4.79639L4.80078 7.80469C4.80078 7.94287 4.70312 8 4.56641 8L3.45312 8C3.31836 8 3.20117 7.94287 3.20117 7.80469L3.20117 4.79639L0.195312 4.79639C0.0566406 4.79639 0 4.6792 0 4.54248L0 3.43018C0 3.29395 0.0566406 3.19629 0.195312 3.19629L3.20117 3.19629L3.20117 0.195312C3.20117 0.0566406 3.31836 0 3.45312 0L4.56641 0Z', clip-rule='evenodd', fill='#1C1C1E', fill-opacity='1.000000', fill-rule='evenodd')
-
-						button(type="button").cart-product__remove Удалить
+		
+							button(type="button").cart-product__remove Удалить
 		
 		.modal-cart__footer.footer-modal-cart
 			.footer-modal-cart__inner

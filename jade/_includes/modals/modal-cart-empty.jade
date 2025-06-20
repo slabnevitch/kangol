@@ -8,20 +8,24 @@
 		.modal-cart-list
 			.modal-cart__empty
 				.modal-cart__empty-message
-					p Ваша корзина пуста, добавьте в неё товары!
+					p Ваша корзина пуста, 
+						br
+						| добавьте в неё товары!
 
-				- var similar = ['Cardinal 2 Way Beanie', 'Wool Flexfit Baseball', 'Tropic Wide Brim Stripe Casual', 'Retro Quaint Spacecap'];
-				.modal-cart__similar
-					.modal-cart__similar-title Вы недавно смотрели:
-					.modal-cart__similar-cards
-						- for (var i=0; i < 2; i++)
-							each item, i in similar
-								a(href="#").modal-cart__similar-item.similar-item
-									.similar-item__img._prod-img
-										img(src="img/cart-similar/"+(i+1)+".jpeg" alt="alt")
-									.similar-item__title= item
+				a(href="#").btn.btn-secondary Перейти к товарам
 
-						a(href="#").modal-cart__similar-item.similar-item
-							.similar-item__img._prod-img
-								img(src="img/cart-similar/3.jpeg" alt="alt")
-							.similar-item__title Tropic Wide Brim Stripe Casual
+				//- - var similar = ['Cardinal 2 Way Beanie', 'Wool Flexfit Baseball', 'Tropic Wide Brim Stripe Casual', 'Retro Quaint Spacecap'];
+				//- .modal-cart__similar
+				//- 	.modal-cart__similar-title Вы недавно смотрели:
+				//- 	.modal-cart__similar-cards
+				//- 		- for (var i=0; i < 2; i++)
+				//- 			each item, i in similar
+				//- 				a(href="#").modal-cart__similar-item.similar-item
+				//- 					.similar-item__img._prod-img
+				//- 						img(src="img/cart-similar/"+(i+1)+".jpeg" alt="alt")
+				//- 					.similar-item__title= item
+
+				//- 		a(href="#").modal-cart__similar-item.similar-item
+				//- 			.similar-item__img._prod-img
+				//- 				img(src="img/cart-similar/3.jpeg" alt="alt")
+				//- 			.similar-item__title Tropic Wide Brim Stripe Casual

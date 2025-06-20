@@ -888,7 +888,7 @@
 .slick-dots li {
   display: inline-block;
   vertical-align: top;
-  margin: 0 3px;
+  margin: 0 0.25rem;
 }
 .slick-dots li.slick-active button {
   background: #013F7D;
@@ -898,8 +898,8 @@
   border: none;
   display: block;
   font-size: 0;
-  height: 0.3125rem;
-  width: 0.3125rem;
+  height: 0.375rem;
+  width: 0.375rem;
   border-radius: 50%;
   background: #F2F2F5;
 }
@@ -1562,7 +1562,7 @@ h2 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 16px;
 }
 .product-card .slick-dots li button {
   width: 0.375rem;
@@ -2874,7 +2874,7 @@ h2 {
 }
 
 .mob-footer-text {
-  font-size: 14px;
+  font-size: 0.9375rem;
   line-height: 0.6;
   font-weight: 500;
   color: #636366;
@@ -2891,7 +2891,7 @@ h2 {
 .mob-footer-text a {
   text-decoration: none !important;
   color: #636366 !important;
-  font-size: 14px;
+  font-size: 0.9375rem;
   line-height: 0.6;
   font-weight: 500;
 }
@@ -2988,7 +2988,7 @@ h2 {
   width: 13px;
   height: 13px;
   position: absolute;
-  top: -1px;
+  top: 4px;
   right: 3px;
 }
 .footer-acc .list-link {
@@ -3065,7 +3065,6 @@ h2 {
   color: #1C1C1E;
   font-size: 0.875rem;
   line-height: 2.1428571429;
-  letter-spacing: -0.2px;
   border-right: 1px solid #E5E5EA;
 }
 @media only screen and (min-width: 63.99875em) {
@@ -4231,13 +4230,13 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-.slider-product__slide {
-  margin-bottom: 1rem;
-}
-.slider-product__img {
+.slider-product__img, .product-card__img {
   position: relative;
   aspect-ratio: 1/1;
   padding-bottom: 0;
+}
+.slider-product__img ._fit-img, .product-card__img ._fit-img {
+  width: auto;
 }
 
 @media only screen and (min-width: 63.99875em) {
@@ -4552,7 +4551,7 @@ h2 {
 
 .index-category__title {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Tilda-Sans-Medium", sans-serif;
   line-height: 0.7666666667;
 }
@@ -4582,9 +4581,8 @@ h2 {
 }
 
 .main-slider__slide {
-  -ms-flex: 0 0 20rem;
-  flex: 0 0 20rem;
-  width: 20rem;
+  -ms-flex: 1 0 91.1111111111%;
+  flex: 1 0 91.1111111111%;
   padding-bottom: 0;
   aspect-ratio: 320/456;
   border-radius: 0.5rem;
@@ -4592,9 +4590,8 @@ h2 {
 }
 @media only screen and (min-width: 63.99875em) {
   .main-slider__slide {
-    -ms-flex: 0 0 53.125rem;
-    flex: 0 0 53.125rem;
-    width: 53.125rem;
+    -ms-flex: 1 0 87.0010235415%;
+    flex: 1 0 87.0010235415%;
     aspect-ratio: 850/450;
   }
 }
@@ -4703,7 +4700,6 @@ h2 {
 
 .modal-cart-list {
   padding-top: 7px;
-  margin-bottom: 5px;
 }
 
 .modal-cart-fav .modal-cart-block .title {
@@ -4839,7 +4835,7 @@ h2 {
 }
 
 .modal-cart .block-btn {
-  padding: 0 0 23px;
+  padding: 0 0 0;
 }
 .modal-cart .btn {
   width: 100%;
@@ -5605,10 +5601,8 @@ input.form-control {
 
 /*--------------------menu-modal----------------------*/
 .modal-menu .mob-modal-box {
-  padding-top: 15.0625rem;
-  padding-bottom: 6.5625rem;
-  padding-left: 4.1875rem;
-  padding-right: 3.75rem;
+  padding-top: 9.25rem;
+  padding-left: 5.1875rem;
 }
 
 .modal-close {
@@ -5640,7 +5634,18 @@ input.form-control {
 }
 
 .header-mob-menu__list {
-  margin-bottom: 2.75rem;
+  padding-bottom: 3.0625rem;
+  margin-bottom: 3.8125rem;
+  position: relative;
+}
+.header-mob-menu__list:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 1.25rem);
+  height: 0.0625rem;
+  background-color: #E5E5EA;
 }
 
 .header-mob-menu__item {
@@ -5657,7 +5662,10 @@ input.form-control {
 }
 
 .modal-menu__sale {
-  color: #003468;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #636366;
+  text-decoration: none;
 }
 
 .modal-cart-title, .modal-size__title {
@@ -5678,12 +5686,16 @@ input.form-control {
 
 .modal-cart__box, .modal-size__box {
   width: 100%;
-  max-width: 22.5rem;
   height: 100svh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+@media only screen and (min-width: 63.99875em) {
+  .modal-cart__box, .modal-size__box {
+    max-width: 22.5rem;
+  }
 }
 .modal-cart__box .modal-cart-title, .modal-cart__box .modal-size__title, .modal-size__box .modal-cart-title, .modal-size__box .modal-size__title {
   -ms-flex: 0 0 auto;
@@ -5719,7 +5731,13 @@ input.form-control {
   -ms-flex-align: start;
   align-items: flex-start;
   column-gap: 0.5rem;
+}
+.modal-cart__product:not(:last-child) {
   border-bottom: 0.0625rem solid rgb(229, 229, 234);
+}
+
+.cart-product__counter {
+  width: 7.375rem;
 }
 
 .cart-product__img {
@@ -5730,6 +5748,8 @@ input.form-control {
 
 .cart-product__info {
   padding-top: 1.25rem;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .cart-product__title {
@@ -5757,6 +5777,22 @@ input.form-control {
 .cart-product__row:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+.cart-product__row--count {
+  margin-bottom: 0;
+}
+.cart-product__row--counter {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 22.49875em) {
+  .cart-product__row--counter {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
 .cart-product__key,
 .cart-product__value {
   font-size: 0.875rem;
@@ -5774,6 +5810,8 @@ input.form-control {
 }
 
 .cart-product__remove {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -5783,6 +5821,7 @@ input.form-control {
   line-height: 0.8571428571;
   letter-spacing: 0.25px;
   text-decoration: underline;
+  text-align: right;
 }
 @media (any-hover: hover) {
   .cart-product__remove {
@@ -5813,7 +5852,7 @@ input.form-control {
 }
 
 .footer-modal-cart__price {
-  font-family: "Tilda-Sans-Bold", sans-serif;
+  font-family: "Tilda-Sans-Medium", sans-serif;
 }
 
 .footer-modal-cart__text {
@@ -5824,17 +5863,15 @@ input.form-control {
 }
 
 .modal-cart__empty-message {
-  padding-top: 4.5rem;
-  padding-bottom: 9.5625rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
 }
 .modal-cart__empty-message p {
   margin-inline: auto;
-  max-width: 12.5rem;
   font-size: 1.125rem;
   font-family: "Tilda-Sans-Medium", sans-serif;
   line-height: 1.2222222222;
-  text-align: center;
-  color: #9A8084;
+  color: #8E8E93;
 }
 
 .modal-cart__similar {
@@ -5964,11 +6001,14 @@ input.form-control {
   overflow-y: auto;
 }
 
+.modal-size__box .modal-size__title {
+  padding-bottom: 1.5rem;
+}
+
 .modal-size__title {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-top: 0.375rem;
-  padding-bottom: 1rem;
   position: relative;
 }
 .modal-size__title:after {

@@ -79,18 +79,16 @@
 }
 .slider-product {
 	&__slide{
-		margin-bottom: rem(16px);
-		// img{
-		// 	@include absolute-center;
-		// 	margin-left: auto;
-		// 	margin-right: auto;
-		// }
+		
 	}
 	&__img{
 		position: relative;
 		aspect-ratio: 1 / 1;
 		padding-bottom: 0;
 
+		._fit-img{
+			width: auto;
+		}
 	}
 }
 .slide {}

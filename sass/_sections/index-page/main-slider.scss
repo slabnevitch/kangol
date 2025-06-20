@@ -13,16 +13,17 @@
   column-gap: rem(8);
 }
 .main-slider__slide{
-  flex: 0 0 rem(320);
-  width: rem(320);
+  flex: 1 0 prc(328,360);
+  // width: rem(320);
+
     padding-bottom: 0;
     aspect-ratio: 320 / 456;
     border-radius: rem(8px);
     overflow: hidden;
 
     @include min-screen($md){
-      flex: 0 0 rem(850);
-      width: rem(850);
+      flex: 1 0 prc(850, 977);
+      // width: rem(850);
       aspect-ratio: 850 / 450;
     }
 
