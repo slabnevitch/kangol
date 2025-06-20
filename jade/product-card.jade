@@ -11,16 +11,25 @@ block content
 
 		.product
 			.product__wrapper
-				.product__view
-					.product-card
-						.img
-							.slider.slider-product
-								.slide
-									img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
-								.slide
-									img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
-								.slide
-									img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+				.product__view.view-product
+					.view-product__thumbs
+						- for (var i=0; i < 5; i++)
+							a(href="#").view-product__thumb(data-anchor="product-image"+ i)
+								img(src="img/product-page/slider/previews/"+(i+1)+".jpg" alt="alt")
+					//- .product-card
+						//- .img
+					.view-product__slider.slider.slider-product
+						//- .slide.slider-product__slide
+						//- 	img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
+						- for (var i=0; i < 5; i++)
+							.slide.slider-product__slide
+								.slider-product__img._fit
+									img._fit-img(data-lazy="./img/product-page/slider/"+(i+1)+".jpg", alt='')
+
+					.view-product__images
+						- for (var i=0; i < 5; i++)
+							.view-product__image._fit(data-anchor-target="product-image"+ i)
+								img._fit-img(src="/img/product-page/slider/"+(i+1)+".jpg" alt="alt")
 				
 				form(action="#" class="form").product__info
 					.product__block

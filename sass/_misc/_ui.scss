@@ -127,6 +127,9 @@
 .to-top-btn{
     // margin-top: rem(44);
     color: $textLight;
+    border: none;
+    background-color: #F2F2F5;
+    border-radius: 0;
 
     @include max-screen($md){
         display: none;

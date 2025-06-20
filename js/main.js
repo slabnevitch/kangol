@@ -71,7 +71,7 @@
 // require ('~/app/libs-vanilla/service-functions/scrollWidth.js');
 
 //- scroll-to-sects--------------------------
-// import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {ScrollToSects} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- ScrollTabs (прокрутка длинных табов на моббильных экранах)-------------------------- 
 // import {ScrollTabs} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -268,6 +268,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 	//END scroll наверх страницы
+
+	if(document.querySelector('.view-product__thumbs') !== null && document.querySelector('.view-product__images') !== null){
+		console.log('if!!')
+		new ScrollToSects({
+		    linksContainer: '.view-product__thumbs', //контейнер, в котором лежат кнопки навигации. Если контейнеров несколько, перечислить ч/з запятую.
+		    // offsetTopCountdownElem: '.view-product__thumbs', // елемент, по которому отсчитывается отступ от верхнего края экрана (в случае, если отсчитывается не от 'header')
+		    offset: document.querySelector('.view-product__image').offsetHeight / 3, //отступ от верха экрана при прокрутке (если нужен)
+		    sectsSelector: '[data-anchor-target]', //селектор секций, default - "section"
+		     // delay: 300, //задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+		     // anchorSpy: false, //добавление активного класса ссылке при скролле, если соответствующая ей секция попадает в экран
+		     // activeClassAdding: false, //добавление классов активным ссылкам
+		    // afterNavClick: function(){
+		    //   // выполнится после нажатия на любою кнопку навигации, перед задержкой, если она задана
+
+		    // }
+		});
+	}
 	
 	// document.querySelector('.fstdropdown-select').onchange = (e)=> console.log(e.target.value);
 }); //DOMContentLoaded
