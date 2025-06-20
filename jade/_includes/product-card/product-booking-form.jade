@@ -1,14 +1,19 @@
+include ../_input-block
 .product__booking
+	- var tops = ['ФИО', 'Телефон', 'Комментарий'];
+
 	.form__group
-		label.form__label
-			input.form__input(type='text' name='name' placeholder='ФИО')
-			button.inp-reset(type="button")
-		label.form__label
-			input.form__input(type='text' name='phone' placeholder='Телефон')
-			button.inp-reset(type="button")
-		label.form__label
-			input.form__input(type='text' name='email' placeholder='Комментарий')
-			button.inp-reset(type="button")
+		each item in tops
+			+ inpBlock(item)
+		// label.form__label
+		// 	input.form__input(type='text' name='name' placeholder='ФИО')
+		// 	button.inp-reset(type="button")
+		// label.form__label
+		// 	input.form__input(type='text' name='phone' placeholder='Телефон')
+		// 	button.inp-reset(type="button")
+		// label.form__label
+		// 	input.form__input(type='text' name='email' placeholder='Комментарий')
+		// 	button.inp-reset(type="button")
 	.form__group
 		label.form__label
 			button.btn.btn-black.btn-fw.product-online-payment(type="button") оформить
