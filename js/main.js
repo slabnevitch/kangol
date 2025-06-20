@@ -62,7 +62,7 @@
 // require('~/app/libs-vanilla/multilevel-panel/multilevel-panel.js')
 
 //- isMobile--------------------------
-// import {isMobile} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {isMobile} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- scrollDisable(надежное отключение скролла на ios--------------------------
 // import scrollDisabler from '~/app/libs-vanilla/service-functions/scrollDisable.js'
@@ -243,20 +243,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	// открытие фильтра на стр. листинга
-	if(document.getElementById('cards-filter-open') !== null && document.getElementById('cards-filter-select') !== null){
-		document.getElementById('cards-filter-open').onclick = () => {
-			document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
-			document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
-		}		
-		
-		document.documentElement.addEventListener('click', docClick);
-		function docClick(e) {
-			console.log(e.target.closest('#cards-filter-open'));
-			if (e.target.closest('#cards-filter-open') === null){
-				document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
-				document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+	if(!isMobile.any()){
+		if(document.getElementById('cards-filter-open') !== null && document.getElementById('cards-filter-select') !== null){
+			document.getElementById('cards-filter-open').onclick = () => {
+				document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
+				document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
+			}		
+			
+			document.documentElement.addEventListener('click', docClick);
+			function docClick(e) {
+				console.log(e.target.closest('#cards-filter-open'));
+				if (e.target.closest('#cards-filter-open') === null){
+					document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
+					document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+				}
 			}
 		}
+	}else{
+		if(document.querySelector('.catatalog__header') !== null){
+			document.querySelector('.catatalog__header')
+				.classList.add('select-native');
+			
+		}
+
 	}
 	//END открытие фильтра на стр. листинга
 
