@@ -4,6 +4,7 @@ extends _templates/main
 block title
 	| Офрмление заказа
 	- var pageName = 'checkout';
+	- var checkoutErrors = true;
 
 include _includes/_input-block
 
@@ -12,38 +13,43 @@ block content
 		section.checkout
 			.checkout__wrapper
 				.form(action="#" class="form").checkout__container
-					.checkout__block
-						h2.block-title.block-title--semi Контакты
+					.checkout__fields
+						.checkout__block
+							h2.block-title.block-title--semi Контакты
+							
+							include _includes/checkout/top-errors
+
+						.checkout__block
+							h2.block-title.block-title--semi Доставка
+
+							+ inpBlock('Город', 'Москва', errorClass = true, activeClass = false, errorText = 'Введите город')
 						
-						include _includes/checkout/top-errors
+							button.btn.btn-fw.checkout__clue(type="button") Введите город, чтобы увидеть способы доставки
 
-					.checkout__block
-						h2.block-title.block-title--semi Доставка
+							// .checkout__delivery
+							// 	include _includes/checkout/delivery
 
-						+ inpBlock('Город', 'Москва', errorClass = true, activeClass = false, errorText = 'Введите город')
+						.checkout__block
+							h2.block-title.block-title--semi Оплата
+							
+							.checkout__payment.payment-checkout
+								label.payment-checkout__label
+									input( type="radio" name="checkout-payment" class="payment-checkout__input" checked)
+									span.payment-checkout__view
+										span.payment-checkout__point
+										span.payment-checkout__text Онлайн оплата
+
+								label.payment-checkout__label
+									input( type="radio" name="checkout-payment" class="payment-checkout__input")
+									span.payment-checkout__view
+										span.payment-checkout__point
+										span.payment-checkout__text Оплата при получении
+
+						include _includes/checkout/bottom-block
 					
-						button.btn.btn-fw.checkout__clue(type="button") Введите город, чтобы увидеть способы доставки
-
-						// .checkout__delivery
-						// 	include _includes/checkout/delivery
-
-					.checkout__block
-						h2.block-title.block-title--semi Оплата
-						
-						.checkout__payment.payment-checkout
-							label.payment-checkout__label
-								input( type="radio" name="checkout-payment" class="payment-checkout__input" checked)
-								span.payment-checkout__view
-									span.payment-checkout__point
-									span.payment-checkout__text Онлайн оплата
-
-							label.payment-checkout__label
-								input( type="radio" name="checkout-payment" class="payment-checkout__input")
-								span.payment-checkout__view
-									span.payment-checkout__point
-									span.payment-checkout__text Оплата при получении
-
 					include _includes/checkout/bottom
+					
+					.checkout-bottom-mob
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

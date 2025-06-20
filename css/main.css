@@ -1145,6 +1145,7 @@ textarea {
   font-family: "Tilda-Sans-Medium", sans-serif;
   color: #8E8E93;
   transition: all 0.2s;
+  pointer-events: none;
 }
 
 .form__error-text {
@@ -2311,12 +2312,55 @@ h2 {
 
 /*--------------------END catalog----------------------*/
 /*--------------------Checkout----------------------*/
-.checkout {
-  padding-top: 1.5625rem;
+@media only screen and (max-width: 63.99875em) {
+  .checkout {
+    padding-top: 1.5625rem;
+  }
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .checkout__container {
+    display: -ms-flexbox;
+    display: flex;
+    column-gap: 2.375rem;
+  }
+}
+
+.checkout__fields {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+@media only screen and (min-width: 63.99875em) {
+  .checkout__fields {
+    padding-left: 1.5rem;
+    padding-top: 1.875rem;
+  }
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .checkout-bottom-mob {
+    display: none;
+  }
+}
+
+.checkout__bottom {
+  -ms-flex: 0 0 26rem;
+  flex: 0 0 26rem;
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .checkout__bottom-block .checkout__block {
+    margin-bottom: 5rem;
+  }
 }
 
 .checkout__block {
   margin-bottom: 2.75rem;
+}
+@media only screen and (min-width: 63.99875em) {
+  .checkout__block {
+    margin-bottom: 3.75rem;
+  }
 }
 
 .checkout__clue {
@@ -2416,9 +2460,34 @@ h2 {
 }
 
 .checkout__group {
+  position: relative;
   padding: 2rem 1rem 2rem 1rem;
-  margin-inline: -1rem;
   background-color: #F2F2F5;
+}
+@media only screen and (max-width: 63.99875em) {
+  .checkout__group {
+    margin-inline: -1rem;
+  }
+}
+@media only screen and (min-width: 63.99875em) {
+  .checkout__group {
+    padding-top: 2.3125rem;
+    padding-left: 2.375rem;
+  }
+}
+.checkout__group:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 1.5rem;
+  background-color: inherit;
+}
+@media only screen and (min-width: 117em) {
+  .checkout__group:after {
+    width: calc((100vw - 117rem) / 2);
+  }
 }
 .checkout__group .block-title {
   margin-bottom: 1.5rem;
@@ -2506,19 +2575,18 @@ h2 {
 
 .checkout__coupon {
   margin-bottom: 1.5rem;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 7.875rem;
+  grid-template-columns: 1fr 7.875rem;
+  -ms-flex-align: start;
+  align-items: start;
   column-gap: 0.5rem;
 }
 
 .coupon-checkout__input {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-}
-
-.coupon-checkout__use {
-  -ms-flex: 0 0 7.875rem;
-  flex: 0 0 7.875rem;
 }
 
 .result-checkout__content {
@@ -2556,6 +2624,12 @@ h2 {
   padding-bottom: 2rem;
   border-top: 1px solid rgb(229, 229, 234);
 }
+@media only screen and (max-width: 63.99875em) {
+  .checkout__footer {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+}
 .checkout__footer .footer-link {
   margin-bottom: 0;
 }
@@ -2564,7 +2638,9 @@ h2 {
 }
 @media only screen and (min-width: 63.99875em) {
   .checkout__footer .footer-link a {
+    padding-right: 0.625rem;
     color: #013F7D;
+    border-right: inherit;
   }
 }
 

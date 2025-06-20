@@ -1,16 +1,48 @@
 /*--------------------Checkout----------------------*/
 .checkout {
-	padding-top: rem(25px);
+
+	@include max-screen($md){
+		padding-top: rem(25px);
+		
+	}
 }
 .checkout__wrapper {}
 .form {}
-.checkout__container {}
+.checkout__container {
+	@include min-screen($md){
+		display: flex;
+		column-gap: rem(38px);
+	}
+}
+.checkout__fields {
+	flex: 1 1 auto;
+
+	@include min-screen($md){
+		padding-left: rem(24px);
+		padding-top: rem(30px);
+	}
+}
+.checkout-bottom-mob{
+	@include min-screen($md){
+		display: none;
+	}
+}
+.checkout__bottom {
+	flex: 0 0 rem(416px);
+}
+.checkout__bottom-block{
+	.checkout__block{
+		@include min-screen($md){
+			margin-bottom: rem(80px);
+		}
+	}
+}
 .checkout__block {
 	margin-bottom: rem(44px);
 
-	// &:last-child{
-	// 	margin-bottom: 0;
-	// }
+	@include min-screen($md){
+		margin-bottom: rem(60px);
+	}
 }
 .block-title {}
 .block-title--semi {}
@@ -105,9 +137,31 @@
 	line-height: math.div(16,14);
 }
 .checkout__group{
+	position: relative;
 	padding: rem(32px) rem(16px) rem(32px) rem(16px);
-	margin-inline: rem(-16);
 	background-color: #F2F2F5;
+
+	@include max-screen($md){
+		margin-inline: rem(-16);
+		
+	}
+	@include min-screen($md){
+		padding-top: rem(37px);
+		padding-left: rem(38px);
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		left: 100%;
+		top: 0;
+		height: 100%;
+		width: rem(24px);
+		background-color: inherit;
+
+		@include min-screen(em($maxWidthContainer)){
+			width: calc((100vw - rem($maxWidthContainer)) / 2);
+		}
+	}
 
 	.block-title{
 		margin-bottom: rem(24px);
@@ -184,16 +238,18 @@
 }
 .checkout__coupon {
 	margin-bottom: rem(24px);
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr rem(126px);
+	align-items: start;
 	column-gap: rem(8px);
 }
 .coupon-checkout {}
 .coupon-checkout__input {
 	flex: 1 1 auto;
 }
-.coupon-checkout__use{
-	flex: 0 0 rem(126px) 
-}
+// .coupon-checkout__use{
+// 	flex: 0 0 rem(126px) 
+// }
 .checkout__result {
 }
 .result-checkout {}
@@ -228,14 +284,20 @@
 	padding-bottom: rem(32px);
 	border-top: 1px solid rgb(229, 229, 234);
 
+	@include max-screen($md){
+		margin-inline: rem(-16px);
+		padding-inline: rem(16px);
+	}
+
 	.footer-link{
 		margin-bottom: 0;
 		a{
 			color: #013F7D;
 
 			@include min-screen($md){
+				padding-right: rem(10);
 				color: #013F7D;
-
+				border-right: inherit;
 			}
 
 		}

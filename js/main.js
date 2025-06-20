@@ -116,7 +116,7 @@ require('./vendor/slick/slick.min.js')
 
 //- VANILLA JS===================================
 //- dynamic-adaptive--------------------------
-// require('~/app/libs-vanilla/dynamic-adaptive/da(es6).js')
+require('~/app/js/vendor/dynamic-adaptive/da(es6).js')
 	
 //- slideout--------------------------
 // var Slideout = require('~/app/libs-vanilla/slideout/slideout.js')

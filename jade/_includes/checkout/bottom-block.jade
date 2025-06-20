@@ -1,0 +1,12 @@
+.checkout__bottom-block(data-da=".checkout-bottom-mob, 1023,1")
+	.checkout__block
+		label.form__label
+			button.btn.btn-black.btn-fw.product-online-payment(type="button") оформить заказ
+		.form__text Нажав на кнопку «Оформить заказ» Вы даёте согласие на обработку персональных данных в соответствии с #[a(href="#") Условиями], а также с  #[a(href="#") Условиями продажи.] С правилами возврата можно ознакомиться  #[a(href="#")здесь].
+
+	.checkout__footer
+		- var footerLinks = ['Политика конфиденциальности', 'Пользовательское соглашение',  'Оферта',   'Доставка и оплата',   'Возврат товара'];
+			.footer-link
+				each link, i in footerLinks
+					.link
+						a(href='#')= link

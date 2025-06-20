@@ -63,6 +63,7 @@
 	font-family: $tildaMed;
 	color: #8E8E93;
 	transition: all .2s;
+	pointer-events: none;
 }
 .form__error-text{
 	display: none;

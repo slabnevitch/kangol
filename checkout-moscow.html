@@ -51,188 +51,202 @@
       <section class="checkout">
         <div class="checkout__wrapper">
           <div action="#" class="form form checkout__container">
-            <div class="checkout__block">
-              <h2 class="block-title block-title--semi">Контакты</h2>
-              <div class="form__label">
-                <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
-                  <button type="button" class="inp-reset"></button>
-                  <label class="form__placeholder">ФИО</label>
+            <div class="checkout__fields">
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Контакты</h2>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">ФИО</label>
+                  </div>
+                  <div class="form__error-text"></div>
                 </div>
-                <div class="form__error-text"></div>
-              </div>
-              <div class="form__label">
-                <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
-                  <button type="button" class="inp-reset"></button>
-                  <label class="form__placeholder">Электронная почта</label>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Электронная почта</label>
+                  </div>
+                  <div class="form__error-text"></div>
                 </div>
-                <div class="form__error-text"></div>
-              </div>
-              <div class="form__label">
-                <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
-                  <button type="button" class="inp-reset"></button>
-                  <label class="form__placeholder">Телефон</label>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Телефон</label>
+                  </div>
+                  <div class="form__error-text"></div>
                 </div>
-                <div class="form__error-text"></div>
-              </div>
-              <div class="form__label">
-                <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " class="form__input"/>
-                  <button type="button" class="inp-reset"></button>
-                  <label class="form__placeholder">Комментарий</label>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Комментарий</label>
+                  </div>
+                  <div class="form__error-text"></div>
                 </div>
-                <div class="form__error-text"></div>
-              </div>
-              <div class="form__custom-policy">
-                <label class="form__custom">
-                  <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
-                </label><span class="form__policy">Позвоните мне, для подтверждения заказа</span>
-              </div>
-            </div>
-            <div class="checkout__block">
-              <h2 class="block-title block-title--semi">Доставка</h2>
-              <!-- + inpBlock('Город', 'Москва', errorClass = false, activeClass = false, errorText = false')-->
-              <div class="form__label">
-                <div class="form__label-inner">
-                  <input type="text" name="name" placeholder=" " value="Москва" class="form__input"/>
-                  <button type="button" class="inp-reset"></button>
-                  <label class="form__placeholder">Город</label>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
+                  </label><span class="form__policy">Позвоните мне, для подтверждения заказа</span>
                 </div>
-                <div class="form__error-text">Введите город</div>
               </div>
-              <div class="checkout__delivery delivery-checkout checkout__delivery--delivery">
-                <div class="checkout__block delivery-checkout__method">
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Доставка</h2>
+                <!-- + inpBlock('Город', 'Москва', errorClass = false, activeClass = false, errorText = false')-->
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " value="Москва" class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Город</label>
+                  </div>
+                  <div class="form__error-text">Введите город</div>
+                </div>
+                <div class="checkout__delivery delivery-checkout checkout__delivery--delivery">
+                  <div class="checkout__block delivery-checkout__method">
+                    <label class="payment-checkout__label">
+                      <input type="radio" name="checkout-delivery-method" value="self-pickup" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Самовывоз</span></span>
+                    </label>
+                    <label class="payment-checkout__label">
+                      <input type="radio" name="checkout-delivery-method" checked value="delivery" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Доставка</span></span>
+                    </label>
+                  </div>
+                  <div class="delivery-checkout__points">
+                    <div class="checkout__block">
+                      <h2 class="block-title block-title--semi">Пункт самовывоза</h2>
+                      <div class="delivery-checkout__point">
+                        <label class="payment-checkout__label">
+                          <input type="radio" name="checkout-delivery-point" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Тверская, 9</span></span><span class="payment-checkout__content"><span class="payment-checkout__row">м. Охотный ряд</span><span class="payment-checkout__row">Время работы с 12:00 до 21:00, без выходных</span></span>
+                        </label>
+                        <label class="payment-checkout__label">
+                          <input type="radio" name="checkout-delivery-point" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Большая Новодмитровская, 36</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="delivery-checkout__fields">
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Улица, дом</label>
+                      </div>
+                      <div class="form__error-text"></div>
+                    </div>
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Подьезд</label>
+                      </div>
+                      <div class="form__error-text"></div>
+                    </div>
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Этаж</label>
+                      </div>
+                      <div class="form__error-text"></div>
+                    </div>
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Квартира</label>
+                      </div>
+                      <div class="form__error-text"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Оплата</h2>
+                <div class="checkout__payment payment-checkout">
                   <label class="payment-checkout__label">
-                    <input type="radio" name="checkout-delivery-method" value="self-pickup" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Самовывоз</span></span>
+                    <input type="radio" name="checkout-payment" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Онлайн оплата</span></span>
                   </label>
                   <label class="payment-checkout__label">
-                    <input type="radio" name="checkout-delivery-method" checked value="delivery" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Доставка</span></span>
+                    <input type="radio" name="checkout-payment" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Оплата при получении</span></span>
                   </label>
                 </div>
-                <div class="delivery-checkout__points">
-                  <div class="checkout__block">
-                    <h2 class="block-title block-title--semi">Пункт самовывоза</h2>
-                    <div class="delivery-checkout__point">
-                      <label class="payment-checkout__label">
-                        <input type="radio" name="checkout-delivery-point" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Тверская, 9</span></span><span class="payment-checkout__content"><span class="payment-checkout__row">м. Охотный ряд</span><span class="payment-checkout__row">Время работы с 12:00 до 21:00, без выходных</span></span>
-                      </label>
-                      <label class="payment-checkout__label">
-                        <input type="radio" name="checkout-delivery-point" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Большая Новодмитровская, 36</span></span>
-                      </label>
-                    </div>
-                  </div>
+              </div>
+              <div data-da=".checkout-bottom-mob, 1023,1" class="checkout__bottom-block">
+                <div class="checkout__block">
+                  <label class="form__label">
+                    <button type="button" class="btn btn-black btn-fw product-online-payment">оформить заказ</button>
+                  </label>
+                  <div class="form__text">Нажав на кнопку «Оформить заказ» Вы даёте согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>, а также с  <a href="#">Условиями продажи.</a> С правилами возврата можно ознакомиться  <a href="#">здесь</a>.</div>
                 </div>
-                <div class="delivery-checkout__fields">
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Улица, дом</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Подьезд</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Этаж</label>
-                    </div>
-                    <div class="form__error-text"></div>
-                  </div>
-                  <div class="form__label">
-                    <div class="form__label-inner">
-                      <input type="text" name="name" placeholder=" " class="form__input"/>
-                      <button type="button" class="inp-reset"></button>
-                      <label class="form__placeholder">Квартира</label>
-                    </div>
-                    <div class="form__error-text"></div>
+                <div class="checkout__footer">
+                  <div class="footer-link">
+                    <div class="link"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="link"><a href="#">Пользовательское соглашение</a></div>
+                    <div class="link"><a href="#">Оферта</a></div>
+                    <div class="link"><a href="#">Доставка и оплата</a></div>
+                    <div class="link"><a href="#">Возврат товара</a></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="checkout__block">
-              <h2 class="block-title block-title--semi">Оплата</h2>
-              <div class="checkout__payment payment-checkout">
-                <label class="payment-checkout__label">
-                  <input type="radio" name="checkout-payment" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Онлайн оплата</span></span>
-                </label>
-                <label class="payment-checkout__label">
-                  <input type="radio" name="checkout-payment" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Оплата при получении</span></span>
-                </label>
-              </div>
-            </div>
-            <div class="checkout__block">
-              <div class="checkout__group">
-                <div class="checkout__compound compound-checkout">
-                  <h2 class="block-title block-title--semi">Состав заказа</h2>
-                  <div class="compound-checkout__item">
-                    <div class="compound-checkout__image-wrap">
-                      <div class="compound-checkout__count">1</div>
-                      <div class="compound-checkout__image"><img src="img/checkout-page/1.jpg" alt="alt"></div>
+            <div class="checkout__bottom">
+              <div class="checkout__block">
+                <div class="checkout__group">
+                  <div class="checkout__compound compound-checkout">
+                    <h2 class="block-title block-title--semi">Состав заказа</h2>
+                    <div class="compound-checkout__item">
+                      <div class="compound-checkout__image-wrap">
+                        <div class="compound-checkout__count">1</div>
+                        <div class="compound-checkout__image"><img src="img/checkout-page/1.jpg" alt="alt"></div>
+                      </div>
+                      <div class="compound-checkout__body">
+                        <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
+                        <div class="compound-checkout__sub">NATURAL / M</div>
+                      </div>
+                      <div class="compound-checkout__price">5 720 ₽</div>
                     </div>
-                    <div class="compound-checkout__body">
-                      <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
-                      <div class="compound-checkout__sub">NATURAL / M</div>
+                    <div class="compound-checkout__item">
+                      <div class="compound-checkout__image-wrap">
+                        <div class="compound-checkout__count">3</div>
+                        <div class="compound-checkout__image"><img src="img/checkout-page/1.jpg" alt="alt"></div>
+                      </div>
+                      <div class="compound-checkout__body">
+                        <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
+                        <div class="compound-checkout__sub">NATURAL / M</div>
+                      </div>
+                      <div class="compound-checkout__price">36 720 ₽</div>
                     </div>
-                    <div class="compound-checkout__price">5 720 ₽</div>
                   </div>
-                  <div class="compound-checkout__item">
-                    <div class="compound-checkout__image-wrap">
-                      <div class="compound-checkout__count">3</div>
-                      <div class="compound-checkout__image"><img src="img/checkout-page/1.jpg" alt="alt"></div>
+                  <div class="checkout__coupon coupon-checkout">
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Купон или сертификат</label>
+                      </div>
+                      <div class="form__error-text">Неверный номер сертификата</div>
                     </div>
-                    <div class="compound-checkout__body">
-                      <div class="compound-checkout__title">Tropic Wide Brim Stripe Casual</div>
-                      <div class="compound-checkout__sub">NATURAL / M</div>
+                    <button type="button" class="btn btn-gray coupon-checkout__use">Применить</button>
+                  </div>
+                  <div class="checkout__result result-checkout">
+                    <div class="result-checkout__content">
+                      <div class="result-checkout__key">Скидка</div>
+                      <div class="result-checkout__val">- 930 ₽</div>
+                      <div class="result-checkout__key">Заказ 4 товара</div>
+                      <div class="result-checkout__val">27 698 ₽</div>
+                      <div class="result-checkout__key">Доставка</div>
+                      <div class="result-checkout__val">650 ₽</div>
                     </div>
-                    <div class="compound-checkout__price">36 720 ₽</div>
-                  </div>
-                </div>
-                <div class="checkout__coupon coupon-checkout">
-                  <input autocomplete="off" type="text" name="coupon-checkout" placeholder="Купон или сертификат" class="form__input coupon-checkout__input">
-                  <button type="button" class="btn btn-gray coupon-checkout__use">Применить</button>
-                </div>
-                <div class="checkout__result result-checkout">
-                  <div class="result-checkout__content">
-                    <div class="result-checkout__key">Скидка</div>
-                    <div class="result-checkout__val">- 930 ₽</div>
-                    <div class="result-checkout__key">Заказ 4 товара</div>
-                    <div class="result-checkout__val">27 698 ₽</div>
-                    <div class="result-checkout__key">Доставка</div>
-                    <div class="result-checkout__val">650 ₽</div>
-                  </div>
-                  <div class="result-checkout__final">
-                    <div class="result-checkout__final-key">Итого </div>
-                    <div class="result-checkout__final-val">37 720 ₽</div>
+                    <div class="result-checkout__final">
+                      <div class="result-checkout__final-key">Итого </div>
+                      <div class="result-checkout__final-val">37 720 ₽</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="checkout__block">
-              <label class="form__label">
-                <button type="button" class="btn btn-black btn-fw product-online-payment">оформить заказ</button>
-              </label>
-              <div class="form__text">Нажав на кнопку «Оформить заказ» Вы даёте согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>, а также с  <a href="#">Условиями продажи.</a> С правилами возврата можно ознакомиться  <a href="#">здесь</a>.</div>
-            </div>
-            <div class="checkout__footer">
-              <div class="footer-link">
-                <div class="link"><a href="#">Политика конфиденциальности</a></div>
-                <div class="link"><a href="#">Пользовательское соглашение</a></div>
-                <div class="link"><a href="#">Оферта</a></div>
-                <div class="link"><a href="#">Доставка и оплата</a></div>
-                <div class="link"><a href="#">Возврат товара</a></div>
-              </div>
-            </div>
+            <div class="checkout-bottom-mob"></div>
           </div>
         </div>
       </section>
