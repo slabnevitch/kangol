@@ -12,9 +12,15 @@
   display: flex;
   column-gap: rem(8);
 }
+.main-slider__carousel{
+  margin-right: rem(-16px);
+  border-radius: rem(8px) 0 0 rem(8px);
+  overflow: hidden;
+}
 .main-slider__slide{
   flex: 1 0 prc(328,360);
   // width: rem(320);
+  margin-right: rem(10px);
 
     padding-bottom: 0;
     aspect-ratio: 320 / 456;

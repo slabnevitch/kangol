@@ -220,6 +220,7 @@ import {mobCommon} from '~/app/js/source/mob-common.js';
 import {availabilityBooking, sizeChecking} from '~/app/js/components/product-card.js';
 import {checkoutLabels} from '~/app/js/components/checkout.js';
 import {inputReset} from '~/app/js/components/form.js';
+import {mainSliderInit} from '~/app/js/components/main-slider.js';
 
 mobFooterMenu();
 mobCommon();
@@ -227,6 +228,7 @@ availabilityBooking();
 sizeChecking();
 checkoutLabels();
 inputReset();
+mainSliderInit();
 
 document.addEventListener('DOMContentLoaded', () => {
 

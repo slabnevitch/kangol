@@ -15,6 +15,12 @@
 	@include min-screen($md){
 		margin-inline: rem(-24);
 	}
+	// .simplebar-content-wrapper{
+	// 	margin-right: 16px;
+	// }
+	// .simplebar-offset{
+	// 	padding-right: 16px;
+	// }
 }
 .bestsellers__items {
 	display: flex;
@@ -22,10 +28,21 @@
 	// overflow-x: scroll;
 }
 .bestsellers__item {
-	width: rem(200);
+	// width: rem(200);
 	padding-bottom: rem(18px);
 	flex: 0 0 rem(200);
 	text-decoration: none;
+	box-sizing: content-box;
+
+	
+	&:last-child{
+		padding-right: 16px;
+
+		@include min-screen($md){
+			
+			padding-right: 24px;
+		}
+	}
 
 	@include min-screen($md){
 		width: rem(297);

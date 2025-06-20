@@ -9,12 +9,17 @@ block content
 	main.main
 		.main-slider
 			.main-slider__wrapper
-				.main-slider__container(data-simplebar-hor data-simplebar)
-					.main-slider__slides
-						- for (var n=0; n < 2; n++)
-							- for (var i=0; i < 4; i++)
-								.main-slider__slide._fit
-									img._fit-img(src="img/source/temp/img-home-slider-"+(i+1)+".png" alt="alt")
+				.main-slider__carousel
+					- for (var n=0; n < 2; n++)
+						- for (var i=0; i < 4; i++)
+							.main-slider__slide._fit
+								img._fit-img(src="img/source/temp/img-home-slider-"+(i+1)+".png" alt="alt")
+			// 	.main-slider__container(data-simplebar-hor data-simplebar)
+			// 		.main-slider__slides
+			// 			- for (var n=0; n < 2; n++)
+			// 				- for (var i=0; i < 4; i++)
+			// 					.main-slider__slide._fit
+			// 						img._fit-img(src="img/source/temp/img-home-slider-"+(i+1)+".png" alt="alt")
 				//- .slider.home-slider
 				//- 	.home-slider__slide
 				//- 		img(src='./img/source/temp/img-home-slider-1.png', alt='')
