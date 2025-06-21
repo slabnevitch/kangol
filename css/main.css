@@ -1363,7 +1363,7 @@ textarea {
     cursor: pointer;
   }
   .btn:hover {
-    background-color: #004182;
+    background-color: #144474;
   }
 }
 .btn:active {
@@ -1415,7 +1415,7 @@ textarea {
 }
 @media (any-hover: hover) {
   .btn-black:hover {
-    background-color: #262626;
+    background-color: #1C1C1E;
   }
 }
 .btn-fw {
@@ -2258,6 +2258,7 @@ h2 {
 }
 
 .compound-checkout__image {
+  display: block;
   position: relative;
   height: 3.6875rem;
   background-color: #fff;
@@ -2298,6 +2299,7 @@ h2 {
 }
 
 .compound-checkout__title {
+  text-decoration: none;
   margin-bottom: 0.1875rem;
   font-size: 0.875rem;
   line-height: 1.1428571429;
@@ -5323,6 +5325,11 @@ h2 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media (any-hover: hover) {
+  .reset {
+    cursor: pointer;
+  }
+}
 
 input.form-control {
   border: 2px solid #C1C5C8;
@@ -6008,27 +6015,99 @@ input.form-control {
   left: auto;
   right: 0;
 }
+@media only screen and (min-width: 63.99875em) {
+  .mob-modal .modal-search__box {
+    max-width: none;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .modal-search__wrapper {
+    padding: 0;
+    padding-right: 16.9921875%;
+    padding-left: 26.3671875%;
+  }
+}
 
 .modal-search__close {
   position: static;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  border-left: 0.0625rem solid #F2F2F5;
-  border-bottom: 0.0625rem solid #F2F2F5;
+}
+@media only screen and (max-width: 63.99875em) {
+  .modal-search__close {
+    border-left: 0.0625rem solid #F2F2F5;
+    border-bottom: 0.0625rem solid #F2F2F5;
+  }
+}
+@media only screen and (min-width: 63.99875em) {
+  .modal-search__close {
+    margin-left: 9.27734375%;
+  }
 }
 
 .modal-search__top {
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+@media only screen and (min-width: 63.99875em) {
+  .modal-search__top {
+    padding-left: 26.3671875%;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.modal-search__top:after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  bottom: 0;
+  width: calc(100% + 2rem);
+  height: 1px;
+  background-color: #F2F2F5;
+}
+@media only screen and (max-width: 63.99875em) {
+  .modal-search__top:after {
+    display: none;
+  }
+}
+
+.modal-search__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 63.99875em) {
+  .modal-search__icon {
+    display: none;
+  }
+}
+
+.modal-search__label {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+.modal-search__label .reset {
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .modal-search__input {
   padding-inline: 1rem;
+  height: 3.625rem;
   font-size: 0.875rem;
   line-height: 1;
-  font-family: "HouschkaPro-Medium", sans-serif;
-  text-transform: uppercase;
-  border-bottom: 0.0625rem solid #F2F2F5;
+  font-family: "Tilda-Sans-Medium", sans-serif;
+}
+.modal-search__input::-webkit-input-placeholder {
+  color: #8E8E93;
+  opacity: 1;
+}
+.modal-search__input::-moz-placeholder {
+  color: #8E8E93;
+  opacity: 1;
 }
 .modal-search__input:-moz-placeholder {
   color: #8E8E93;
@@ -6038,12 +6117,38 @@ input.form-control {
   color: #8E8E93;
   opacity: 1;
 }
-.modal-search__input::placeholder {
-  font-family: "HouschkaPro-DemiBoldItalic", sans-serif;
+@media only screen and (max-width: 63.99875em) {
+  .modal-search__input {
+    border-bottom: 0.0625rem solid #F2F2F5;
+  }
+}
+@media only screen and (min-width: 63.99875em) {
+  .modal-search__input {
+    padding-inline: 1.25rem;
+  }
+}
+
+.modal-search__body {
+  padding-bottom: 4.0625rem;
+  display: -ms-flexbox;
+  display: flex;
+  column-gap: 0.5rem;
+  border-bottom: 0.0625rem solid #E5E5EA;
+}
+
+.modal-search__footer {
+  padding-top: 2.125rem;
 }
 
 .modal-search__results {
   margin-top: 2.375rem;
+  -ms-flex: 0 0 14.875rem;
+  flex: 0 0 14.875rem;
+}
+
+.modal-search__cards {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .modal-search__category {
@@ -6051,6 +6156,11 @@ input.form-control {
   font-family: "Tilda-Sans-Semibold", sans-serif;
   line-height: 0.8125;
   color: #8E8E93;
+}
+@media only screen and (min-width: 63.99875em) {
+  .modal-search__category {
+    display: none;
+  }
 }
 
 .modal-search__list {
@@ -6078,10 +6188,10 @@ input.form-control {
 }
 
 .modal-search__more {
+  display: block;
   font-family: "Tilda-Sans-Medium", sans-serif;
-  color: #636366;
   line-height: 0.8125;
-  text-decoration: none;
+  background: url(../img/source/arrow.svg) right -2px no-repeat;
 }
 
 /*--------------------END modal-search----------------------*/

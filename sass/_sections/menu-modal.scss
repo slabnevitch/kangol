@@ -279,42 +279,117 @@
 	left: auto;
 	right: 0;
 
+	@include min-screen($md){
+		max-width: none;
+		padding-top: 0;
+	}
+
+}
+
+.modal-search__wrapper{
+	@include min-screen($md){
+		padding: 0;
+		padding-right: prc(174,1024);
+		padding-left: prc(270,1024);
+	}
 }
 .modal-search__close{
 	position: static;
 	flex-shrink: 0;
-	// top: rem(24px);
-	// right: rem(17px);
 
-	border-left: rem(1) solid #F2F2F5;
-	border-bottom: rem(1) solid #F2F2F5;
+	@include max-screen($md){
+		border-left: rem(1) solid #F2F2F5;
+		border-bottom: rem(1) solid #F2F2F5;
+	}
+	
+	@include min-screen($md){
+		margin-left: prc(95,1024);
+	}
 }
 .modal-search__top {
 	display: flex;
+	position: relative;
 
+	@include min-screen($md){
+		padding-left: prc(270,1024);
+		align-items: center;
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		left: rem(-16px);
+		bottom: 0;
+		width: calc(100% + rem(32));
+		height: 1px;
+		background-color: #F2F2F5;
+
+		@include max-screen($md){
+			display: none;
+		}
+	}
+
+}
+.modal-search__icon{
+	flex-shrink: 0;
+	@include max-screen($md){
+		display: none;
+	}
+}
+.modal-search__label{
+	flex: 1 1 auto;
+	position: relative;
+
+	.reset{
+		width: rem(14px);
+		height: rem(14px);
+	}
 }
 .modal-search__input {
 	padding-inline: rem(16);
+	height: rem(58px);
 	font-size: rem(14px);
 	line-height: 1;
-	font-family: $houschkaMed;
-	text-transform: uppercase;
-	border-bottom: rem(1) solid #F2F2F5;
-
+	font-family: $tildaMed;
+	// text-transform: uppercase;
 	@include placecolor(#8E8E93);
 
-	&::placeholder{
-		font-family: $houschkaDemi;
+	@include max-screen($md){
+		border-bottom: rem(1) solid #F2F2F5;
 	}
+
+	@include min-screen($md){
+		padding-inline: rem(20px);
+	}
+
+	// &::placeholder{
+	// }
+}
+.modal-search__body{
+	padding-bottom: rem(65px);
+	display: flex;
+	column-gap: rem(8);
+	border-bottom: rem(1px) solid #E5E5EA;
+}
+.modal-search__footer{
+	padding-top: rem(34px);
 }
 .modal-search__results {
 	margin-top: rem(38);
+	flex: 0 0 rem(238);
+}
+.modal-search__cards{
+	flex: 1 1 auto;
 }
 .modal-search__category {
 	margin-bottom: rem(20px);
 	font-family: $tildaSemi;
 	line-height: math.div(13,16);
 	color: #8E8E93;
+
+	@include min-screen($md){
+		display: none;
+	}
 }
 .modal-search__list {
 	margin-bottom: rem(24px);
@@ -341,10 +416,10 @@
 		}
 }
 .modal-search__more {
+	display: block;
 	font-family: $tildaMed;
-	color: $textLight;
 	line-height: math.div(13,16);
-	text-decoration: none;
+	background: url(../img/source/arrow.svg) right -2px no-repeat;
 }
 /*--------------------END modal-search----------------------*/ 
 

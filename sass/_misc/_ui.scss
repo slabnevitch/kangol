@@ -22,7 +22,7 @@
    @media (any-hover: hover) { //только для устройств с ховером
        cursor: pointer;
        &:hover{
-         background-color: lighten($accent, 5%);
+         background-color: #144474;
 
      }
  }   
@@ -80,7 +80,7 @@
         color: #fff;
         @media (any-hover: hover) { //только для устройств с ховером
              &:hover{
-               background-color: lighten(#000, 15%);
+               background-color: $text;
            }
        }   
     }

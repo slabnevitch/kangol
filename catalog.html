@@ -603,22 +603,60 @@
       <div class="modal-bg"></div>
       <div class="mob-modal-box modal-search__box">
         <div class="modal-search__top">
-          <input autocomplete="off" type="text" name="" placeholder="что ищем?" class="modal-search__input">
+          <div class="modal-search__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+              <path d="M12 12L19 19" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+            </svg>
+          </div>
+          <div class="modal-search__label">
+            <input autocomplete="off" type="text" name="" placeholder="Введите запрос поиска" class="modal-search__input">
+            <div class="reset"></div>
+          </div>
           <button type="button" class="modal-close modal-search__close">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.8697 3.48792C17.0709 3.28672 17.0996 2.97056 16.8984 2.76936L15.2599 1.13081C15.0587 0.929616 14.7138 0.929614 14.5126 1.13081L8.99344 6.64993L3.44558 1.10207C3.24438 0.900872 2.95695 0.900872 2.75575 1.10207L1.11721 2.74062C0.916011 2.94181 0.887268 3.25798 1.08847 3.45918L6.63633 9.00704L1.11721 14.5262C0.916011 14.7274 0.916012 15.0723 1.11721 15.2735L2.75575 16.912C2.95695 17.1132 3.27312 17.0845 3.47432 16.8833L8.99344 11.3642L14.5408 16.9115C14.742 17.1127 15.0581 17.0839 15.2593 16.8828C15.2593 16.8828 16.6967 15.4454 16.8979 15.2442C17.0991 15.043 17.0991 14.7556 16.8979 14.5544C16.6967 14.3532 11.3505 9.00704 11.3505 9.00704L16.8697 3.48792Z" fill="#1C1C1E"></path>
             </svg>
           </button>
         </div>
-        <div class="modal-search__results">
-          <div class="modal-search__category">Модель</div>
-          <ul class="modal-search__list">
-            <div class="modal-search__item"><span>Wool</span> 504</div>
-            <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
-            <div class="modal-search__item">Tropic <span>Wool</span> Brim Stripe Casual</div>
-            <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
-            <div class="modal-search__item"><span>Wool</span> 504</div>
-          </ul><a href="#" class="modal-search__more">показать ещё</a>
+        <div class="modal-search__wrapper">
+          <div class="modal-search__body">
+            <div class="modal-search__results">
+              <div class="modal-search__category">Модель</div>
+              <ul class="modal-search__list">
+                <div class="modal-search__item"><span>Wool</span> 504</div>
+                <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
+                <div class="modal-search__item">Tropic <span>Wool</span> Brim Stripe Casual</div>
+                <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
+                <div class="modal-search__item"><span>Wool</span> 504</div>
+              </ul>
+            </div>
+            <div class="modal-search__cards product-cards">
+              <div class="product-card">
+                <div class="product-card__img _fit"><img src="./img/search-cards/1.jpg" alt="alt" class="_fit-img"></div>
+                <div class="title"><a href="#">Multi Quilt Earflap Bucket</a></div>
+                <div class="price-block">
+                  <div class="price">9 750 ₽</div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img _fit"><img src="./img/search-cards/2.jpg" alt="alt" class="_fit-img"></div>
+                <div class="title"><a href="#">Retrocore Standart Split Backpack</a></div>
+                <div class="price-block">
+                  <div class="price-old">6 500 ₽ </div>
+                  <div class="price">2 400 ₽</div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img _fit"><img src="./img/search-cards/3.jpg" alt="alt" class="_fit-img"></div>
+                <div class="title"><a href="#">Wool 507</a></div>
+                <div class="price-block">
+                  <div class="price">14 650 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-search__footer"><a href="#" class="modal-search__more">Все результаты по запросу «WOOL»</a></div>
         </div>
       </div>
     </div>
@@ -650,7 +688,7 @@
               </div>
               <div class="cart-product__row cart-product__row--counter">
                 <div class="cart-product__counter">
-                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
                       <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
                       </svg></span>
@@ -685,7 +723,7 @@
               </div>
               <div class="cart-product__row cart-product__row--counter">
                 <div class="cart-product__counter">
-                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
                       <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
                       </svg></span>
@@ -720,7 +758,7 @@
               </div>
               <div class="cart-product__row cart-product__row--counter">
                 <div class="cart-product__counter">
-                  <div data-min="0" data-max="100" class="counter"><span class="counter__button counter-minus">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
                       <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
                       </svg></span>

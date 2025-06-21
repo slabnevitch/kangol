@@ -211,6 +211,7 @@
 	position: relative;
 }
 .compound-checkout__image {
+	display: block;
 	position: relative;
 	height: rem(59);
 	background-color: #fff;
@@ -242,6 +243,7 @@
 	margin-top: rem(14px);
 }
 .compound-checkout__title {
+	text-decoration: none;
 	margin-bottom: rem(3px);
 	font-size: rem(14px);
 	line-height: math.div(16,14);
