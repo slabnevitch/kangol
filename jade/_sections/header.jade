@@ -23,7 +23,18 @@ header(class=pageName=='checkout'?"header header--checkout":"header")
 				img(src='img/logo.svg', alt='')
 		
 		nav.header-nav
-			+menu('header-nav', ['Головные уборы', 'Одежда', 'Сумки и рюкзаки'])
+			//- +menu('header-nav', ['Головные уборы', 'Одежда', 'Сумки и рюкзаки'])
+			- var menu = [{name:'Головные уборы', sub: ['Кепки','Бейсболки','Панамы','Шляпы','Береты','Шапки']}, {name: 'Одежда', sub: ['Куртки','Свитеры','Водолазки','Толстовки','Олимпийки','Платья', 'Рубашки', 'Лонгсливы','Футболки']}, {name: 'Сумки и рюкзаки', sub: ['Дорожные сумки', 'Дорожные чемоданы', 'Косметички', 'Органайзеры', 'Рюкзаки', 'Сумки', 'Сумки на пояс']}];
+
+			ul.header-nav__list
+				each item in menu
+					li(data-single-dropdown='').header-nav__item
+						a.header-nav__link(data-single-dropdown-link href='#')= item.name
+						//- button.menu__arrow(type='button' data-dropdown-arrow)
+						ul.single-dropdown.header-nav__submenu
+							each link in item.sub
+								li.single-dropdown__item.header-nav__submenu-item
+									a.header-nav__submenu-link(href='#')= link
 
 		if pageName != 'checkout'
 			.mob-search

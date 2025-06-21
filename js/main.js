@@ -18,13 +18,13 @@
 //- SERVIVE FUNCTIONS==================
 
 //- remove-class--------------------------
-// require ('~/app/libs-vanilla/service-functions/ibg-class.js');
+// require ('~/app/js/vendor/service-functions/ibg-class.js');
 
 //- remove-class--------------------------
-// import {removeClass} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {removeClass} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- siblings--------------------------
-// import {siblings} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {siblings} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- fadeIn--------------------------
 // import {fadeIn} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -83,10 +83,10 @@ import {ScrollToSects} from '~/app/js/vendor/service-functions/all-functions.js'
 // }
 
 //- singleDropdown--------------------------
-// import {singleDropdown} from '~/app/libs-vanilla/service-functions/all-functions.js';
-// if(document.querySelectorAll('[data-single-dropdown]') != null){
-// 	singleDropdown();
-// }
+import {singleDropdown} from '~/app/js/vendor/service-functions/all-functions.js';
+if(document.querySelectorAll('[data-single-dropdown]') != null){
+	singleDropdown();
+}
 
 
 //- WITH JQUERY===================================

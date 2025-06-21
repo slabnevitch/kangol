@@ -1,5 +1,5 @@
 [data-single-dropdown]{
-	position: relative;
+	// position: relative;
 
 	&.touch-hover{
 		.single-dropdown{
@@ -24,7 +24,7 @@
 	min-width: 150px;
 	position: absolute;
 	left: 0;
-	top: 100%;
+	top: calc(100% + rem(1px));
 	background-color: gray;
 	visibility: hidden;
 	opacity: 0;

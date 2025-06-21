@@ -432,5 +432,6 @@ module.exports.slideUp = slideUp;
 module.exports.slideDown = slideDown;
 module.exports.slideToggle= slideToggle;
 module.exports.ScrollToSects = ScrollToSects;
+module.exports.singleDropdown = singleDropdown;
 module.exports.multiDropdown = multiDropdown;
 module.exports.ScrollTabs = ScrollTabs;

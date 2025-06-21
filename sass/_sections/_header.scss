@@ -1,5 +1,7 @@
 /*--------------------header----------------------*/
 @import "../_source/mob_header";
+@import "_misc/single-dropdown";//один или несколько дропдаунов в составе обычного меню. Требует подключения service-functions/dropdown-toggle.js, mobileDetect.js + siblings.js + removeClass
+
 .header{
     position: sticky;
     top: 0;
@@ -59,6 +61,33 @@
 	@media (any-hover: hover) { //только для устройств с ховером
 			&:hover{
 				color: $accent;
+			}
+		}
+}
+.header-nav__submenu{
+	width: 100%;
+	height: rem(254);
+	padding: rem(30px) rem(16px) rem(30) rem(182px);
+	column-width: rem(130px);
+	columns-gap: rem(32px);
+	column-fill: auto;
+	background-color: #fff;
+}
+.header-nav__submenu-item{
+
+	&:not(:last-child){
+		margin-bottom: rem(15px);
+	}
+}
+.header-nav__submenu-link{
+	font-family: $tildaMed;
+	font-size: rem(14px);
+	line-height: math.div(19,14);
+	text-decoration: none;
+	@media (any-hover: hover) { //только для устройств с ховером
+
+			&:hover{
+				color: $textLight;
 			}
 		}
 }

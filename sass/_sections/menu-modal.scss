@@ -287,9 +287,9 @@
 }
 
 .modal-search__wrapper{
+	padding: 0;
 	@include min-screen($md){
-		padding: 0;
-		padding-right: prc(174,1024);
+		padding-right: prc(123,1024);
 		padding-left: prc(270,1024);
 	}
 }
@@ -299,7 +299,7 @@
 
 	@include max-screen($md){
 		border-left: rem(1) solid #F2F2F5;
-		border-bottom: rem(1) solid #F2F2F5;
+		// border-bottom: rem(1) solid #F2F2F5;
 	}
 	
 	@include min-screen($md){
@@ -325,7 +325,9 @@
 		background-color: #F2F2F5;
 
 		@include max-screen($md){
-			display: none;
+			left: 0;
+			right: 0;
+			width: auto;
 		}
 	}
 
@@ -343,6 +345,10 @@
 	.reset{
 		width: rem(14px);
 		height: rem(14px);
+
+		@include max-screen($md){
+			display: none;
+		}
 	}
 }
 .modal-search__input {
@@ -354,9 +360,7 @@
 	// text-transform: uppercase;
 	@include placecolor(#8E8E93);
 
-	@include max-screen($md){
-		border-bottom: rem(1) solid #F2F2F5;
-	}
+
 
 	@include min-screen($md){
 		padding-inline: rem(20px);
@@ -395,6 +399,7 @@
 	margin-bottom: rem(24px);
 }
 .modal-search__item {
+	font-size: rem(14px);
 	list-style-type: none;
 	line-height: 1;
 	transition: color .2s;
@@ -414,6 +419,36 @@
 				color: $textLight;
 			}
 		}
+}
+.modal-search__cards{
+	grid-template-columns: repeat(3, 1fr);
+	max-width: rem(360px);
+
+	@include max-screen($md){
+		display: none;
+	}
+
+	.product-card{
+			.product-card__img{
+				margin-bottom: rem(16px);
+			}
+			.title a{
+				font-size: rem(14px);
+			}
+			.price{
+				font-family: $tildaReg;
+				color: $text;
+			}
+			.price-old{
+				font-family: $tildaReg;
+
+				&:before{
+					content: '';
+					height: rem(1px);
+				}
+			}
+
+	}
 }
 .modal-search__more {
 	display: block;
