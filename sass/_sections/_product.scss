@@ -76,6 +76,12 @@
 	&:not(:last-child){
 		margin-bottom: rem(8px);
 	}
+
+	&--video{
+		max-width: rem(600px);
+		max-height: rem(600px);
+		margin-inline: auto;
+	}
 }
 .slider-product {
 	&__slide{
@@ -87,7 +93,9 @@
 		padding-bottom: 0;
 
 		._fit-img{
-			width: auto;
+			&.slick-loading{
+				opacity: 0;
+			}
 		}
 	}
 }

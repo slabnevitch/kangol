@@ -4,7 +4,16 @@
 		margin-bottom: rem(80px);
 	}
 }
-.catatalog__wrapper {}
+.catatalog__content {
+	.product-cards{
+		margin-bottom: rem(44px);
+
+		@include min-screen($md){
+			
+			margin-bottom: rem(60px);
+		}
+	}
+}
 .catatalog__header {
 	display: flex;
 	// flex-wrap: wrap;

@@ -1,7 +1,6 @@
 @import "settings"
 
 .product-card
-  margin: 0 0 rem(44) 0
   position: relative
   .slick-dots
     position: absolute
@@ -79,21 +78,30 @@
     text-align: center
     height: auto
     overflow: hidden
+
+    +min-screen($md)
+      text-align: left
     a
       margin-bottom: rem(15px)
       text-decoration: none
       display: block
       color: #1C1C1E
   .text
-    font-size: rem(15)
+    font-size: rem(12)
     line-height: calc(15/12)
     font-family: $tildaMed
     margin-bottom: 15px
     text-align: center
     color: #8E8E93
+
+    +min-screen($md)
+      text-align: left
+
   .price-block
     text-align: center
-    margin-bottom: rem(16)
+
+    +min-screen($md)
+      text-align: left
 
   .price-old
     position: relative
@@ -102,14 +110,14 @@
     vertical-align: top
     text-align: center
     font-family: $tildaSemi
-    font-size: rem(18px)
+    font-size: rem(14px)
     line-height: calc(24/18)
     color: #C1C5C8
 
     &:before
       content: ""
       position: absolute
-      top: 12px
+      top: rem(8)
       left: 0
       right: 0
       background: #C1C5C8
@@ -122,8 +130,12 @@
     text-align: center
     color: #8E8E93
     font-family: $tildaSemi
-    font-size: rem(18px)
+    font-size: rem(14px)
     line-height: calc(24/18)
+
+    +min-screen($md)
+      text-align: left
+
     span
       font-family: $tildaSemi
   .product-color-list

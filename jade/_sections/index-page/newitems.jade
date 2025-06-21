@@ -10,11 +10,20 @@ section.new-items
 					.product-card__slider
 						.slider.slider-product
 							.slider-product__slide
-								img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
+								.product-card__img._fit
+									img._fit-img(data-lazy='./img/source/temp/p-4.png', alt='')
+
 							.slider-product__slide
-								img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
+								.product-card__img._fit
+									img._fit-img(data-lazy='./img/source/temp/p-2.jpg', alt='')
+
 							.slider-product__slide
-								img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+								.product-card__img._fit
+									img._fit-img(data-lazy='./img/source/temp/p-3.jpg', alt='')
+							// .slider-product__slide
+							// 	img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
+							// .slider-product__slide
+							// 	img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
 				
 					.product-card__title= item.name
 					.product-card__price= item.price
