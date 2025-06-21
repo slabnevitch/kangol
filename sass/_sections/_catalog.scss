@@ -103,34 +103,35 @@
 	}
 	.fstdropdown.open > .fstlist{
 		top: rem(9);
-		width: rem(206);
+		width: rem(190);
 		right: 1rem;
-		border-radius: rem(12px);
+		// border-radius: rem(12px);
 	}
 	.fstlist > div{
-		padding: rem(11) rem(16px);
-		font-size: rem(12px);
-		line-height: math.div(20.5,12);
+		padding: rem(10) rem(16px);
+		font-size: rem(14px);
+		line-height: math.div(20.5,14);
 		letter-spacing: -0.41px;
 		border-bottom-color: #C1C5C8;
-		background: #EDEDED;
+		background: #fff;
+		color: #636366;
 
 		&:last-child{
 			border-bottom-color: transparent;
 		}
 
 		&.selected{
-			padding-left: 2rem;
-			// background-color: darken(#C1C5C8, 5%);
+			// padding-left: 2rem;
+			background-color: #E5E5EA;
 			color: $text;
-			background-image: url(../img/icons/check.svg);
-			background-position: rem(16) center;
-			background-repeat: no-repeat;
+			// background-image: url(../img/icons/check.svg);
+			// background-position: rem(16) center;
+			// background-repeat: no-repeat;
 		}
 
 		&:hover{
 			color: $text;
-			background-color: darken(#EDEDED, 5%);
+			background-color: #E5E5EA;
 			
 		}
 		

@@ -2012,31 +2012,28 @@ h2 {
 }
 .catatalog__select .fstdropdown.open > .fstlist {
   top: 0.5625rem;
-  width: 12.875rem;
+  width: 11.875rem;
   right: 1rem;
-  border-radius: 0.75rem;
 }
 .catatalog__select .fstlist > div {
-  padding: 0.6875rem 1rem;
-  font-size: 0.75rem;
-  line-height: 1.7083333333;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.4642857143;
   letter-spacing: -0.41px;
   border-bottom-color: #C1C5C8;
-  background: #EDEDED;
+  background: #fff;
+  color: #636366;
 }
 .catatalog__select .fstlist > div:last-child {
   border-bottom-color: transparent;
 }
 .catatalog__select .fstlist > div.selected {
-  padding-left: 2rem;
+  background-color: #E5E5EA;
   color: #1C1C1E;
-  background-image: url(../img/icons/check.svg);
-  background-position: 1rem center;
-  background-repeat: no-repeat;
 }
 .catatalog__select .fstlist > div:hover {
   color: #1C1C1E;
-  background-color: #e0e0e0;
+  background-color: #E5E5EA;
 }
 
 /*--------------------END catalog----------------------*/
@@ -3230,10 +3227,10 @@ h2 {
   position: absolute;
   left: 0;
   top: calc(100% + 0.0625rem);
+  top: 100%;
   background-color: gray;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.25s;
 }
 .single-dropdown li {
   list-style-type: none;
@@ -3300,6 +3297,9 @@ h2 {
 .header-nav {
   display: none;
   margin-left: 2.5rem;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
 }
 @media only screen and (min-width: 63.99875em) {
   .header-nav {
@@ -3308,10 +3308,9 @@ h2 {
 }
 
 .header-nav__list {
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-  align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   column-gap: 2rem;
@@ -3323,8 +3322,13 @@ h2 {
 }
 
 .header-nav__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
   font-size: 0.875rem;
-  line-height: 1.3571428571;
+  line-height: 58px;
   font-family: "Tilda-Sans-Medium", sans-serif;
   transition: color 0.2s ease;
   text-decoration: none;
@@ -3343,6 +3347,7 @@ h2 {
   columns-gap: 2rem;
   column-fill: auto;
   background-color: #fff;
+  border-top: 1px solid rgb(229, 229, 234);
 }
 
 .header-nav__submenu-item:not(:last-child) {
@@ -3639,7 +3644,7 @@ h2 {
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  color: #8E8E93;
+  color: #636366;
   font-family: "Tilda-Sans-Semibold", sans-serif;
   font-size: 0.875rem;
   line-height: 1.3333333333;

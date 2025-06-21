@@ -25,10 +25,11 @@
 	position: absolute;
 	left: 0;
 	top: calc(100% + rem(1px));
+	top: 100%;
 	background-color: gray;
 	visibility: hidden;
 	opacity: 0;
-	transition: all 0.25s;
+	// transition: all 0.5s;
 
 	li{
 		list-style-type: none;
