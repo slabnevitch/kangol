@@ -77,7 +77,8 @@ function singleDropdown() {
     docClick = function(e) {
       var targetEl = e.target;
       if(window.innerWidth > 960 && isMobile.any()){// определяем, что клик с тач-скрина
-        if(targetEl.hasAttribute('data-dropdown-arrow')){// убежаемся, что кликнкнули по стрелке рядом со ссылкой
+        if(targetEl.hasAttribute('data-single-dropdown-link')){// убежаемся, что кликнкнули по стрелке рядом со ссылкой
+          e.preventDefault();
           targetEl.closest('[data-single-dropdown]').classList.toggle('touch-hover');// родительскому пункту меню вешаем класс, который делает подменю открытым   
           var sibls = siblings(targetEl.closest('[data-single-dropdown]'));
           for(var i=0; i < sibls.length; i++){

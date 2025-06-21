@@ -1,0 +1,7 @@
+Карточка: https://slabnevitch.github.io/kangol/product-card
+Блог: https://slabnevitch.github.io/kangol/blog
+Оформление заказа: https://slabnevitch.github.io/kangol/checkout
+Оформление заказа - Москва: https://slabnevitch.github.io/kangol/checkout-moscow
+Оформление заказа - Санкт-Петербург: https://slabnevitch.github.io/kangol/checkout-petersburg
+Оформление заказа - ошибки: https://slabnevitch.github.io/kangol/checkout-errors
+Главная - единственный слайд: https://slabnevitch.github.io/kangol/index-single-slide
