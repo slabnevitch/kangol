@@ -17,7 +17,13 @@
 .blog-previews {
 	padding-top: rem(64px);
 }
-.blog-previews__wrapper {}
+.blog-previews__wrapper {
+	.btn-wrap{
+	 	@include min-screen($md){
+	 		margin-bottom: rem(44px);
+	 	}
+	}
+}
 .sect-title {}
 .blog-previews-grid {
 	margin-bottom: rem(32);

@@ -302,7 +302,8 @@ function ScrollToSects(opts){
       e.preventDefault();
       sects.forEach(function(sect){
       if(sect.dataset.anchorTarget ===  e.target.closest('[data-anchor]').dataset.anchor){
-        gotoBlockValue = sect.getBoundingClientRect().top + pageYOffset - pageHeader.offsetHeight + opts.offset;
+        // console.log(sects.indexOf(sect))
+        gotoBlockValue = sect.getBoundingClientRect().top + pageYOffset - pageHeader.offsetHeight + (sects.indexOf(sect) === 0 ? 0 : opts.offset);
       }
     });
 

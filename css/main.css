@@ -1400,7 +1400,7 @@ textarea {
 .btn-gray {
   background-color: #E5E5EA;
   color: #1C1C1E;
-  border-color: rgb(193, 197, 200);
+  border-color: transparent;
   color: #8E8E93;
 }
 @media (any-hover: hover) {
@@ -1832,6 +1832,12 @@ h2 {
   margin-inline: -1rem;
   padding-left: 1rem;
 }
+@media only screen and (min-width: 63.99875em) {
+  [data-simplebar-hor] {
+    margin-inline: -1.5rem;
+    padding-left: 1.5rem;
+  }
+}
 [data-simplebar-hor]:after {
   content: "";
   position: absolute;
@@ -2022,6 +2028,12 @@ h2 {
 
 .blog-previews {
   padding-top: 4rem;
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .blog-previews__wrapper .btn-wrap {
+    margin-bottom: 2.75rem;
+  }
 }
 
 .blog-previews-grid {
@@ -4615,7 +4627,11 @@ h2 {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
   height: auto;
-  aspect-ratio: 976/516;
+}
+@media only screen and (min-width: 63.99875em) {
+  .main-slider__slide:only-child {
+    aspect-ratio: 976/516;
+  }
 }
 
 .home-slider {

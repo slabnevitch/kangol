@@ -37,7 +37,10 @@
       width: 100%;
       flex-basis: auto;
       height: auto;
-      aspect-ratio: 976 / 516;
+
+       @include min-screen($md){
+          aspect-ratio: 976 / 516;
+       }
     }
 
 }

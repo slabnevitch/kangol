@@ -65,7 +65,8 @@
     &-gray{
         background-color: #E5E5EA;
         color: $text;
-        border-color: rgb(193, 197, 200);
+        // border-color: rgb(193, 197, 200);
+        border-color: transparent;
         color: #8E8E93;
         
         @media (any-hover: hover) { //только для устройств с ховером
@@ -242,6 +243,11 @@ h2{
    
    margin-inline: rem(-16);
     padding-left: rem(16px);
+
+    @include min-screen($md){
+        margin-inline: rem(-24);
+        padding-left: rem(24px);
+    }
 
     &:after{
         content: '';
