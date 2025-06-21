@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Офрмление заказа
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="favic.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header header--checkout">
+      <div class="header__wrapper"><a href="index.html" class="header__logo"><img src="img/logo.svg" alt=""></a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li data-single-dropdown="" class="header-nav__item"><a data-single-dropdown-link href="#" class="header-nav__link">Головные уборы</a>
+              <ul class="single-dropdown header-nav__submenu">
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Кепки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Бейсболки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Панамы</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Шляпы</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Береты</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Шапки</a></li>
+              </ul>
+            </li>
+            <li data-single-dropdown="" class="header-nav__item"><a data-single-dropdown-link href="#" class="header-nav__link">Одежда</a>
+              <ul class="single-dropdown header-nav__submenu">
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Куртки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Свитеры</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Водолазки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Толстовки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Олимпийки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Платья</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Рубашки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Лонгсливы</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Футболки</a></li>
+              </ul>
+            </li>
+            <li data-single-dropdown="" class="header-nav__item"><a data-single-dropdown-link href="#" class="header-nav__link">Сумки и рюкзаки</a>
+              <ul class="single-dropdown header-nav__submenu">
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Дорожные сумки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Дорожные чемоданы</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Косметички</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Органайзеры</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Рюкзаки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Сумки</a></li>
+                <li class="single-dropdown__item header-nav__submenu-item"><a href="#" class="header-nav__submenu-link">Сумки на пояс</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="mob-cart modal-icon-block footer-icon-cart">
+          <div class="ic">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_34_189)">
+                <path d="M4.98005 6H3.00005L1.00005 17C0.840051 18.2 1.79005 19 3.00005 19H17.0001C18.2101 19 19.1601 18.2 19.0001 17L17.0001 6H14.9801" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+                <path d="M11.98 6H7.97998" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+                <path d="M13.98 8V5C13.98 2.88 12.6 1 10.48 1C8.35998 1 6.97998 2.88 6.97998 5V8" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_34_189">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="checkout">
+        <div class="checkout__wrapper">
+          <form action="#" class="form checkout__container">
+            <div class="checkout__fields">
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Контакты</h2>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">ФИО</label>
+                  </div>
+                  <div class="form__error-text"></div>
+                </div>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Электронная почта</label>
+                  </div>
+                  <div class="form__error-text"></div>
+                </div>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Телефон</label>
+                  </div>
+                  <div class="form__error-text"></div>
+                </div>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Комментарий</label>
+                  </div>
+                  <div class="form__error-text"></div>
+                </div>
+                <div class="form__custom-policy">
+                  <label class="form__custom">
+                    <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
+                  </label><span class="form__policy">Позвоните мне, для подтверждения заказа</span>
+                </div>
+              </div>
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Доставка</h2>
+                <div class="form__label">
+                  <div class="form__label-inner">
+                    <input type="text" name="name" placeholder=" " class="form__input"/>
+                    <button type="button" class="inp-reset"></button>
+                    <label class="form__placeholder">Город</label>
+                  </div>
+                  <div class="form__error-text"></div>
+                </div>
+                <button type="button" class="btn btn-fw checkout__clue">Введите город, чтобы увидеть способы доставки</button>
+                <!-- .checkout__delivery-->
+                <!-- 	include _includes/checkout/delivery-->
+              </div>
+              <div class="checkout__block">
+                <h2 class="block-title block-title--semi">Оплата</h2>
+                <div class="checkout__payment payment-checkout">
+                  <label class="payment-checkout__label">
+                    <input type="radio" name="checkout-payment" checked class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Онлайн оплата</span></span>
+                  </label>
+                  <label class="payment-checkout__label">
+                    <input type="radio" name="checkout-payment" class="payment-checkout__input"><span class="payment-checkout__view"><span class="payment-checkout__point"></span><span class="payment-checkout__text">Оплата при получении</span></span>
+                  </label>
+                </div>
+              </div>
+              <div data-da=".checkout-bottom-mob, 1023,1" class="checkout__bottom-block">
+                <div class="checkout__block">
+                  <label class="form__label">
+                    <button type="button" class="btn btn-black btn-fw product-online-payment">оформить заказ</button>
+                  </label>
+                  <div class="form__text">Нажав на кнопку «Оформить заказ» Вы даёте согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>, а также с  <a href="#">Условиями продажи.</a> С правилами возврата можно ознакомиться  <a href="#">здесь</a>.</div>
+                </div>
+                <div class="checkout__footer">
+                  <div class="footer-link">
+                    <div class="link"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="link"><a href="#">Пользовательское соглашение</a></div>
+                    <div class="link"><a href="#">Оферта</a></div>
+                    <div class="link"><a href="#">Доставка и оплата</a></div>
+                    <div class="link"><a href="#">Возврат товара</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__bottom">
+              <div class="checkout__block">
+                <div class="checkout__group">
+                  <div class="checkout__compound compound-checkout">
+                    <h2 class="block-title block-title--semi">Состав заказа</h2>
+                    <div class="compound-checkout__item">
+                      <div class="compound-checkout__image-wrap">
+                        <div class="compound-checkout__count">1</div><a href="#" class="compound-checkout__image"><picture><source srcset="img/checkout-page/1.webp" type="image/webp"><img src="img/checkout-page/1.jpg" alt="alt"></picture></a>
+                      </div>
+                      <div class="compound-checkout__body"><a href="#" class="compound-checkout__title">Tropic Wide Brim Stripe Casual</a>
+                        <div class="compound-checkout__sub">NATURAL / M</div>
+                      </div>
+                      <div class="compound-checkout__price">5 720 ₽</div>
+                    </div>
+                    <div class="compound-checkout__item">
+                      <div class="compound-checkout__image-wrap">
+                        <div class="compound-checkout__count">3</div><a href="#" class="compound-checkout__image"><picture><source srcset="img/checkout-page/1.webp" type="image/webp"><img src="img/checkout-page/1.jpg" alt="alt"></picture></a>
+                      </div>
+                      <div class="compound-checkout__body"><a href="#" class="compound-checkout__title">Tropic Wide Brim Stripe Casual</a>
+                        <div class="compound-checkout__sub">NATURAL / M</div>
+                      </div>
+                      <div class="compound-checkout__price">36 720 ₽</div>
+                    </div>
+                  </div>
+                  <div class="checkout__coupon coupon-checkout">
+                    <div class="form__label">
+                      <div class="form__label-inner">
+                        <input type="text" name="name" placeholder=" " class="form__input"/>
+                        <button type="button" class="inp-reset"></button>
+                        <label class="form__placeholder">Купон или сертификат</label>
+                      </div>
+                      <div class="form__error-text">Неверный номер сертификата</div>
+                    </div>
+                    <button type="button" class="btn btn-gray coupon-checkout__use">Применить</button>
+                  </div>
+                  <div class="checkout__result result-checkout">
+                    <div class="result-checkout__content">
+                      <div class="result-checkout__key">Скидка</div>
+                      <div class="result-checkout__val">- 930 ₽</div>
+                      <div class="result-checkout__key">Заказ 4 товара</div>
+                      <div class="result-checkout__val">27 698 ₽</div>
+                      <div class="result-checkout__key">Доставка</div>
+                      <div class="result-checkout__val">650 ₽</div>
+                    </div>
+                    <div class="result-checkout__final">
+                      <div class="result-checkout__final-key">Итого </div>
+                      <div class="result-checkout__final-val">37 720 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-bottom-mob"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="mob-modal modal-menu">
+      <div class="modal-bg"></div>
+      <div class="mob-modal-box">
+        <nav class="modal-menu__nav">
+              <ul class="header-mob-menu__list">
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Кепки</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Бейсболки</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Панамы</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Береты</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Шапки</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Шляпы</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Одежда</a></li>
+                <li class="header-mob-menu__item"><a href="#" class="header-mob-menu__link">Сумки</a></li>
+              </ul><a href="#" class="modal-menu__sale">Распродажа</a>
+        </nav>
+      </div>
+      <button type="button" class="modal-close modal-menu__close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.8697 3.48792C17.0709 3.28672 17.0996 2.97056 16.8984 2.76936L15.2599 1.13081C15.0587 0.929616 14.7138 0.929614 14.5126 1.13081L8.99344 6.64993L3.44558 1.10207C3.24438 0.900872 2.95695 0.900872 2.75575 1.10207L1.11721 2.74062C0.916011 2.94181 0.887268 3.25798 1.08847 3.45918L6.63633 9.00704L1.11721 14.5262C0.916011 14.7274 0.916012 15.0723 1.11721 15.2735L2.75575 16.912C2.95695 17.1132 3.27312 17.0845 3.47432 16.8833L8.99344 11.3642L14.5408 16.9115C14.742 17.1127 15.0581 17.0839 15.2593 16.8828C15.2593 16.8828 16.6967 15.4454 16.8979 15.2442C17.0991 15.043 17.0991 14.7556 16.8979 14.5544C16.6967 14.3532 11.3505 9.00704 11.3505 9.00704L16.8697 3.48792Z" fill="#1C1C1E"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-modal modal-search">
+      <div class="modal-bg"></div>
+      <div class="mob-modal-box modal-search__box">
+        <div class="modal-search__top">
+          <div class="modal-search__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+              <path d="M12 12L19 19" stroke="#1C1C1E" stroke-width="2" stroke-miterlimit="10"></path>
+            </svg>
+          </div>
+          <div class="modal-search__label">
+            <input autocomplete="off" type="text" name="" placeholder="Введите запрос поиска" class="modal-search__input">
+            <div class="reset"></div>
+          </div>
+          <button type="button" class="modal-close modal-search__close">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.8697 3.48792C17.0709 3.28672 17.0996 2.97056 16.8984 2.76936L15.2599 1.13081C15.0587 0.929616 14.7138 0.929614 14.5126 1.13081L8.99344 6.64993L3.44558 1.10207C3.24438 0.900872 2.95695 0.900872 2.75575 1.10207L1.11721 2.74062C0.916011 2.94181 0.887268 3.25798 1.08847 3.45918L6.63633 9.00704L1.11721 14.5262C0.916011 14.7274 0.916012 15.0723 1.11721 15.2735L2.75575 16.912C2.95695 17.1132 3.27312 17.0845 3.47432 16.8833L8.99344 11.3642L14.5408 16.9115C14.742 17.1127 15.0581 17.0839 15.2593 16.8828C15.2593 16.8828 16.6967 15.4454 16.8979 15.2442C17.0991 15.043 17.0991 14.7556 16.8979 14.5544C16.6967 14.3532 11.3505 9.00704 11.3505 9.00704L16.8697 3.48792Z" fill="#1C1C1E"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-search__wrapper">
+          <div class="modal-search__body">
+            <div class="modal-search__results">
+              <div class="modal-search__category">Модель</div>
+              <ul class="modal-search__list">
+                <div class="modal-search__item"><span>Wool</span> 504</div>
+                <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
+                <div class="modal-search__item">Tropic <span>Wool</span> Brim Stripe Casual</div>
+                <div class="modal-search__item"><span>Wool</span> Flexfit Baseball</div>
+                <div class="modal-search__item"><span>Wool</span> 504</div>
+              </ul>
+            </div>
+            <div class="modal-search__cards product-cards">
+              <div class="product-card">
+                <div class="product-card__img _fit"><picture><source srcset="./img/search-cards/1.webp" type="image/webp"><img src="./img/search-cards/1.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div class="title"><a href="#">Multi Quilt Earflap Bucket</a></div>
+                <div class="price-block">
+                  <div class="price">9 750 ₽</div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img _fit"><picture><source srcset="./img/search-cards/2.webp" type="image/webp"><img src="./img/search-cards/2.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div class="title"><a href="#">Retrocore Standart Split Backpack</a></div>
+                <div class="price-block">
+                  <div class="price-old">6 500 ₽ </div>
+                  <div class="price">2 400 ₽</div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__img _fit"><picture><source srcset="./img/search-cards/3.webp" type="image/webp"><img src="./img/search-cards/3.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div class="title"><a href="#">Wool 507</a></div>
+                <div class="price-block">
+                  <div class="price">14 650 ₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-search__footer"><a href="#" class="modal-search__more">Все результаты по запросу «WOOL»</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-modal modal-cart">
+      <div class="modal-bg"></div>
+      <button type="button" class="modal-close modal-cart__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1.5L12.5 12.5M12.5 1.5L1.5 12.5" stroke="#1C1C1E" stroke-width="2"></path>
+        </svg>
+      </button>
+      <div class="mob-modal-box modal-cart__box">
+        <div class="modal-cart-title">&Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;</div>
+        <div class="modal-cart-list">
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img _prod-img"><picture><source srcset="img/cart/1.webp" type="image/webp"><img src="img/cart/1.jpg" alt="alt"></picture></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">Tropic Wide Brim Stripe Casual</div>
+              <div class="cart-product__price">3 200 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Old Gold</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">Medium</div>
+              </div>
+              <div class="cart-product__row cart-product__row--count">
+                <div class="cart-product__key">Кол-во:</div>
+              </div>
+              <div class="cart-product__row cart-product__row--counter">
+                <div class="cart-product__counter">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
+                      <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
+                      </svg></span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="16">
+                      <div class="counter__count">16</div>
+                    </div><span class="counter__button counter-plus">
+                      <svg width="8.000000" height="8.000000" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Union" d="M4.56641 0C4.70312 0 4.80078 0.0566406 4.80078 0.195312L4.80078 3.19629L7.80469 3.19629C7.94336 3.19629 8 3.29395 8 3.43018L8 4.54248C8 4.6792 7.94336 4.79639 7.80469 4.79639L4.80078 4.79639L4.80078 7.80469C4.80078 7.94287 4.70312 8 4.56641 8L3.45312 8C3.31836 8 3.20117 7.94287 3.20117 7.80469L3.20117 4.79639L0.195312 4.79639C0.0566406 4.79639 0 4.6792 0 4.54248L0 3.43018C0 3.29395 0.0566406 3.19629 0.195312 3.19629L3.20117 3.19629L3.20117 0.195312C3.20117 0.0566406 3.31836 0 3.45312 0L4.56641 0Z" clip-rule="evenodd" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                      </svg></span>
+                  </div>
+                </div>
+                <button type="button" class="cart-product__remove">Удалить</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img _prod-img"><picture><source srcset="img/cart/1.webp" type="image/webp"><img src="img/cart/1.jpg" alt="alt"></picture></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">504 Kangol Cap</div>
+              <div class="cart-product__price">15 200 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Electric Pink/Off White</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">X-Large</div>
+              </div>
+              <div class="cart-product__row cart-product__row--count">
+                <div class="cart-product__key">Кол-во:</div>
+              </div>
+              <div class="cart-product__row cart-product__row--counter">
+                <div class="cart-product__counter">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
+                      <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
+                      </svg></span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="16">
+                      <div class="counter__count">16</div>
+                    </div><span class="counter__button counter-plus">
+                      <svg width="8.000000" height="8.000000" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Union" d="M4.56641 0C4.70312 0 4.80078 0.0566406 4.80078 0.195312L4.80078 3.19629L7.80469 3.19629C7.94336 3.19629 8 3.29395 8 3.43018L8 4.54248C8 4.6792 7.94336 4.79639 7.80469 4.79639L4.80078 4.79639L4.80078 7.80469C4.80078 7.94287 4.70312 8 4.56641 8L3.45312 8C3.31836 8 3.20117 7.94287 3.20117 7.80469L3.20117 4.79639L0.195312 4.79639C0.0566406 4.79639 0 4.6792 0 4.54248L0 3.43018C0 3.29395 0.0566406 3.19629 0.195312 3.19629L3.20117 3.19629L3.20117 0.195312C3.20117 0.0566406 3.31836 0 3.45312 0L4.56641 0Z" clip-rule="evenodd" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                      </svg></span>
+                  </div>
+                </div>
+                <button type="button" class="cart-product__remove">Удалить</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-cart__product cart-product">
+            <div class="cart-product__img _prod-img"><picture><source srcset="img/cart/1.webp" type="image/webp"><img src="img/cart/1.jpg" alt="alt"></picture></div>
+            <div class="cart-product__info">
+              <div class="cart-product__title">Wool Jax Beret</div>
+              <div class="cart-product__price">5 670 ₽</div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Цвет:</div>
+                <div class="cart-product__value">Dark Blue</div>
+              </div>
+              <div class="cart-product__row">
+                <div class="cart-product__key">Размер:</div>
+                <div class="cart-product__value">Small</div>
+              </div>
+              <div class="cart-product__row cart-product__row--count">
+                <div class="cart-product__key">Кол-во:</div>
+              </div>
+              <div class="cart-product__row cart-product__row--counter">
+                <div class="cart-product__counter">
+                  <div data-min="0" data-max="17" class="counter"><span class="counter__button counter-minus">
+                      <svg width="8.000000" height="1.600098" viewBox="0 0 8 1.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="+" d="M0.19 0C0.05 0 0 0.09 0 0.23L0 1.34C0 1.48 0.05 1.6 0.19 1.6C0.33 1.6 7.66 1.6 7.8 1.6C7.94 1.6 8 1.48 8 1.34C8 1.34 8 0.37 8 0.23C8 0.09 7.94 0 7.8 0C7.66 0 0.33 0 0.19 0Z" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="nonzero"></path>
+                      </svg></span>
+                    <div class="counter__block">
+                      <input autocomplete="off" type="hidden" name="name" value="16">
+                      <div class="counter__count">16</div>
+                    </div><span class="counter__button counter-plus">
+                      <svg width="8.000000" height="8.000000" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Union" d="M4.56641 0C4.70312 0 4.80078 0.0566406 4.80078 0.195312L4.80078 3.19629L7.80469 3.19629C7.94336 3.19629 8 3.29395 8 3.43018L8 4.54248C8 4.6792 7.94336 4.79639 7.80469 4.79639L4.80078 4.79639L4.80078 7.80469C4.80078 7.94287 4.70312 8 4.56641 8L3.45312 8C3.31836 8 3.20117 7.94287 3.20117 7.80469L3.20117 4.79639L0.195312 4.79639C0.0566406 4.79639 0 4.6792 0 4.54248L0 3.43018C0 3.29395 0.0566406 3.19629 0.195312 3.19629L3.20117 3.19629L3.20117 0.195312C3.20117 0.0566406 3.31836 0 3.45312 0L4.56641 0Z" clip-rule="evenodd" fill="#1C1C1E" fill-opacity="1.000000" fill-rule="evenodd"></path>
+                      </svg></span>
+                  </div>
+                </div>
+                <button type="button" class="cart-product__remove">Удалить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-cart__footer footer-modal-cart">
+          <div class="footer-modal-cart__inner">
+            <div class="footer-modal-cart__header">
+              <div class="footer-modal-cart__label">Сумма заказа</div>
+              <div class="footer-modal-cart__price">38 790 ₽</div>
+            </div>
+            <div class="footer-modal-cart__text">
+              <p>Стоимость доставки и скидки по промокоду будут расчитаны на этапе оформления заказа</p>
+            </div>
+            <div class="block-btn"><a href="#" class="btn">&ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&softcy; &zcy;&acy;&kcy;&acy;&zcy;</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-modal modal-size">
+      <div class="modal-bg"></div>
+      <button type="button" class="modal-close modal-cart__close modal-size__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1.5L12.5 12.5M12.5 1.5L1.5 12.5" stroke="#1C1C1E" stroke-width="2"></path>
+        </svg>
+      </button>
+      <div class="mob-modal-box modal-size__box">
+        <div class="title modal-size__title">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy; ?</div>
+        <div class="modal-size__container">
+          <div class="modal-size-preview-text">
+            <p>Определить свой размер очень просто! Возьмите сантиметр и измеряйте охват вашей головы по вискам и затылку. Получившееся значение соотносите с размерами в таблице ниже.</p>
+          </div>
+          <table class="modal-size__table">
+            <thead>
+              <tr class="table-box-header">
+                <td>&Fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;</td>
+                <td>&Rcy;&acy;&zcy;&mcy;&iecy;&rcy;</td>
+                <td>&Scy;&acy;&ncy;&tcy;&icy;&mcy;&iecy;&tcy;&rcy;&ycy;</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="td-inner">S/M</span></td>
+                <td class="bordered"><span class="td-inner">S</span> <span class="td-inner">M</span></td>
+                <td class="bordered"><span class="td-inner">54-55</span> <span class="td-inner">56-57</span></td>
+              </tr>
+              <tr>
+                <td><span class="td-inner">L/XL</span></td>
+                <td class="bordered"><span class="td-inner">L</span> <span class="td-inner">XL</span></td>
+                <td class="bordered"><span class="td-inner">58-59</span> <span class="td-inner">60-61</span></td>
+              </tr>
+              <tr>
+                <td><span class="td-inner">XXL</span></td>
+                <td><span class="td-inner">XXL</span></td>
+                <td><span class="td-inner">62-63</span></td>
+              </tr>
+              <tr>
+                <td><span class="td-inner">1SFM</span></td>
+                <td><span class="td-inner">S-XXL</span></td>
+                <td><span class="td-inner">54-63</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal-size__block"><img src="./img/source/img-modal-size-head.svg" alt="" class="img-fluid lazy"></div>
+          <div class="image"></div>
+          <div class="modal-size__block">
+            <div class="modal-size__subtitle"><span>1sfm</span>Один размер </div>
+            <div class="modal-size__text">
+              <p>
+                &Tcy;&acy;&kcy; &ncy;&acy;&zcy;&ycy;&vcy;&acy;&iecy;&mcy;&ycy;&jcy; &quot;1sfm&quot;, &chcy;&tcy;&ocy; &ocy;&zcy;&ncy;&acy;&chcy;&acy;&iecy;&tcy; &quot;&ocy;&dcy;&icy;&ncy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy; &pcy;&ocy;&dcy;&khcy;&ocy;&dcy;&icy;&tcy; &vcy;&scy;&iecy;&mcy;&quot; - &icy;&mcy;&iecy;&yucy;&tcy;
+                &tcy;&iecy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ycy;&iecy; &ucy;&bcy;&ocy;&rcy;&ycy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy; &rcy;&acy;&scy;&chcy;&icy;&tcy;&acy;&ncy;&ycy; &ncy;&acy; &lcy;&yucy;&dcy;&iecy;&jcy; &scy; &acy;&bcy;&scy;&ocy;&lcy;&yucy;&tcy;&ncy;&ocy; &lcy;&yucy;&bcy;&ycy;&mcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ocy;&mcy; &gcy;&ocy;&lcy;&ocy;&vcy;&ycy;.
+              </p>
+              <p>&Kcy;&acy;&kcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&ocy; &ecy;&tcy;&ocy; &ocy;&tcy;&ncy;&ocy;&scy;&icy;&tcy;&softcy;&scy;&yacy; &kcy; &shcy;&acy;&pcy;&kcy;&acy;&mcy; &icy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy;&mcy; &scy; &rcy;&iecy;&gcy;&ucy;&lcy;&yacy;&tcy;&ocy;&rcy;&ocy;&mcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&acy;</p>
+            </div>
+          </div>
+          <div class="modal-size__block">
+            <div class="modal-size__subtitle"><img src="img/source/flexfit.svg" alt="alt">Флексфит</div>
+            <div class="modal-size__text">
+              <p>&IEcy;&scy;&lcy;&icy; &ncy;&acy; &mcy;&ocy;&dcy;&iecy;&lcy;&icy; &ucy;&kcy;&acy;&zcy;&acy;&ncy;&ycy; &pcy;&ocy;&gcy;&rcy;&acy;&ncy;&icy;&chcy;&ncy;&ycy;&iecy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ycy;, &tcy;&acy;&kcy;&icy;&iecy; &kcy;&acy;&kcy; small/medium, large/x-large - &ecy;&tcy;&ocy; &ocy;&zcy;&ncy;&acy;&chcy;&acy;&iecy;&tcy; &chcy;&tcy;&ocy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy; &scy;&ocy;&zcy;&dcy;&acy;&ncy;&acy; &pcy;&ocy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;.</p>
+              <p>&Fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy; &ecy;&tcy;&ocy; &rcy;&iecy;&zcy;&icy;&ncy;&kcy;&acy; &vcy;&shcy;&icy;&tcy;&acy;&yacy; &vcy; &ocy;&scy;&ncy;&ocy;&vcy;&acy;&ncy;&icy;&icy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ocy;&gcy;&ocy; &ucy;&bcy;&ocy;&rcy;&acy;, &kcy;&ocy;&tcy;&ocy;&rcy;&acy;&yacy; &scy;&ocy;&zcy;&dcy;&acy;&iecy;&tcy; &ocy;&dcy;&icy;&ncy;&acy;&kcy;&ocy;&vcy;&ycy;&jcy; &kcy;&ocy;&mcy;&fcy;&ocy;&rcy;&tcy; &pcy;&rcy;&icy; &ncy;&ocy;&shcy;&iecy;&ncy;&icy;&icy; &dcy;&acy;&zhcy;&iecy; &ucy; &lcy;&yucy;&dcy;&iecy;&jcy; &scy;&ocy;&vcy;&scy;&iecy;&mcy; &rcy;&acy;&zcy;&ncy;&ycy;&mcy;&icy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&acy;&mcy;&icy; &gcy;&ocy;&lcy;&ocy;&vcy;&ycy;.</p>
+            </div>
+          </div>
+          <div class="modal-size__block">
+            <div class="modal-size__text modal-size__text--final">
+              <p>&Tcy;&acy;&kcy; &icy;&lcy;&icy; &icy;&ncy;&acy;&chcy;&iecy;, &iecy;&scy;&lcy;&icy; &vcy;&ycy; &ocy;&shcy;&icy;&bcy;&iecy;&tcy;&iecy;&scy;&softcy; &scy; &vcy;&ycy;&bcy;&ocy;&rcy;&ocy;&mcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;&acy; - &ecy;&tcy;&ocy; &ncy;&iecy; &bcy;&ucy;&dcy;&iecy;&tcy; &bcy;&ocy;&lcy;&softcy;&shcy;&ocy;&jcy; &ncy;&iecy;&pcy;&rcy;&icy;&yacy;&tcy;&ncy;&ocy;&scy;&tcy;&softcy;&yucy;. &Vcy;&iecy;&dcy;&softcy; &vcy; &ncy;&acy;&shcy;&iecy;&mcy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&iecy; &vcy;&ycy; &vcy;&scy;&iecy;&gcy;&dcy;&acy; &scy;&mcy;&ocy;&zhcy;&iecy;&tcy;&iecy; &scy;&dcy;&iecy;&lcy;&acy;&tcy;&softcy; &ocy;&bcy;&mcy;&iecy;&ncy; &ncy;&acy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&jcy;!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

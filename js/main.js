@@ -18,13 +18,13 @@
 //- SERVIVE FUNCTIONS==================
 
 //- remove-class--------------------------
-// require ('~/app/libs-vanilla/service-functions/ibg-class.js');
+// require ('~/app/js/vendor/service-functions/ibg-class.js');
 
 //- remove-class--------------------------
-// import {removeClass} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {removeClass} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- siblings--------------------------
-// import {siblings} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {siblings} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- fadeIn--------------------------
 // import {fadeIn} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -62,7 +62,7 @@
 // require('~/app/libs-vanilla/multilevel-panel/multilevel-panel.js')
 
 //- isMobile--------------------------
-// import {isMobile} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {isMobile} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- scrollDisable(надежное отключение скролла на ios--------------------------
 // import scrollDisabler from '~/app/libs-vanilla/service-functions/scrollDisable.js'
@@ -71,7 +71,7 @@
 // require ('~/app/libs-vanilla/service-functions/scrollWidth.js');
 
 //- scroll-to-sects--------------------------
-// import {ScrollToSects} from '~/app/libs-vanilla/service-functions/all-functions.js';
+import {ScrollToSects} from '~/app/js/vendor/service-functions/all-functions.js';
 
 //- ScrollTabs (прокрутка длинных табов на моббильных экранах)-------------------------- 
 // import {ScrollTabs} from '~/app/libs-vanilla/service-functions/all-functions.js';
@@ -83,10 +83,10 @@
 // }
 
 //- singleDropdown--------------------------
-// import {singleDropdown} from '~/app/libs-vanilla/service-functions/all-functions.js';
-// if(document.querySelectorAll('[data-single-dropdown]') != null){
-// 	singleDropdown();
-// }
+import {singleDropdown} from '~/app/js/vendor/service-functions/all-functions.js';
+if(document.querySelectorAll('[data-single-dropdown]') != null){
+	singleDropdown();
+}
 
 
 //- WITH JQUERY===================================
@@ -116,7 +116,7 @@ require('./vendor/slick/slick.min.js')
 
 //- VANILLA JS===================================
 //- dynamic-adaptive--------------------------
-// require('~/app/libs-vanilla/dynamic-adaptive/da(es6).js')
+require('~/app/js/vendor/dynamic-adaptive/da(es6).js')
 	
 //- slideout--------------------------
 // var Slideout = require('~/app/libs-vanilla/slideout/slideout.js')
@@ -131,7 +131,7 @@ require('./vendor/slick/slick.min.js')
 // require('~/app/libs-vanilla/accordion/vanilla-accordion.js')
 
 //- spoilers-------------------------
-// require('~/app/libs-vanilla/spoilers/spoilers.js')
+require('~/app/js/vendor/spoilers/spoilers.js')
 	
 //- tabs--------------------------
 // require('~/app/libs-vanilla/tabs/tabs-pure.js')
@@ -217,9 +217,18 @@ require('~/app/js/source/lazy_load/jquery.lazy.min.js')
 
 import {mobFooterMenu} from '~/app/js/source/mob-footer-menu.js';
 import {mobCommon} from '~/app/js/source/mob-common.js';
+import {availabilityBooking, sizeChecking} from '~/app/js/components/product-card.js';
+import {checkoutLabels} from '~/app/js/components/checkout.js';
+import {inputReset} from '~/app/js/components/form.js';
+import {mainSliderInit} from '~/app/js/components/main-slider.js';
 
 mobFooterMenu();
 mobCommon();
+availabilityBooking();
+sizeChecking();
+checkoutLabels();
+inputReset();
+mainSliderInit();
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -236,20 +245,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	// открытие фильтра на стр. листинга
-	if(document.getElementById('cards-filter-open') !== null && document.getElementById('cards-filter-select') !== null){
-		document.getElementById('cards-filter-open').onclick = () => {
-			document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
-			document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
-		}		
-		
-		document.documentElement.addEventListener('click', docClick);
-		function docClick(e) {
-			console.log(e.target.closest('#cards-filter-open'));
-			if (e.target.closest('#cards-filter-open') === null){
-				document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
-				document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+	if(!isMobile.any()){
+		if(document.getElementById('cards-filter-open') !== null && document.getElementById('cards-filter-select') !== null){
+			document.getElementById('cards-filter-open').onclick = () => {
+				document.querySelector(".catatalog__select .fstdiv").classList.toggle('open');
+				document.querySelector(".catatalog__select .fstdropdown").classList.toggle('open');
+			}		
+			
+			document.documentElement.addEventListener('click', docClick);
+			function docClick(e) {
+				console.log(e.target.closest('#cards-filter-open'));
+				if (e.target.closest('#cards-filter-open') === null){
+					document.querySelector(".catatalog__select .fstdiv").classList.remove('open');
+					document.querySelector(".catatalog__select .fstdropdown").classList.remove('open');
+				}
 			}
 		}
+	}else{
+		if(document.querySelector('.catatalog__header') !== null){
+			document.querySelector('.catatalog__header')
+				.classList.add('select-native');
+			
+		}
+
 	}
 	//END открытие фильтра на стр. листинга
 
@@ -261,6 +279,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 	//END scroll наверх страницы
+
+	if(document.querySelector('.view-product__thumbs') !== null && document.querySelector('.view-product__images') !== null){
+		console.log('if!!')
+		new ScrollToSects({
+		    linksContainer: '.view-product__thumbs', //контейнер, в котором лежат кнопки навигации. Если контейнеров несколько, перечислить ч/з запятую.
+		    // offsetTopCountdownElem: '.view-product__thumbs', // елемент, по которому отсчитывается отступ от верхнего края экрана (в случае, если отсчитывается не от 'header')
+		    offset: document.querySelector('.view-product__image').offsetHeight / 3, //отступ от верха экрана при прокрутке (если нужен)
+		    sectsSelector: '[data-anchor-target]', //селектор секций, default - "section"
+		     // delay: 300, //задержка перед прокруткой. Может понадобится, елсли перед прокруткой нужно время на анимацию закрытия моб. меню, например
+		     // anchorSpy: false, //добавление активного класса ссылке при скролле, если соответствующая ей секция попадает в экран
+		     // activeClassAdding: false, //добавление классов активным ссылкам
+		    // afterNavClick: function(){
+		    //   // выполнится после нажатия на любою кнопку навигации, перед задержкой, если она задана
+
+		    // }
+		});
+	}
 	
 	// document.querySelector('.fstdropdown-select').onchange = (e)=> console.log(e.target.value);
 }); //DOMContentLoaded
