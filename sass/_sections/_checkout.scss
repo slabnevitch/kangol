@@ -80,6 +80,17 @@
 		}
 		
 	}
+
+	&--location{
+		&:last-child{
+			.payment-checkout__view{
+				border-top-color: transparent;
+				border-radius: 0;
+
+			}
+		
+		}
+	}
 	@media (any-hover: hover) { //только для устройств с ховером
 			cursor: pointer;
 			&:hover{
@@ -121,20 +132,32 @@
 	align-items: center;
 	column-gap: rem(10px);
 	border: 1px solid rgb(193, 197, 200);
+	transition: background-color .15s;
+   	
+   	@media (any-hover: hover) { //только для устройств с ховером
 
-
+   			&:hover{
+   				background-color: rgba(0, 0, 0, .04);
+   			}
+   		}
 }
 .payment-checkout__point {
 	width: rem(18px);
 	height: rem(18px);
 	border: 1px solid rgb(193, 197, 200);
 	border-radius: 50%;
+	background-color: #fff;
 
 }
 .payment-checkout__text {
 	font-family: $tildaMed;
 	font-size: rem(14px);
 	line-height: math.div(16,14);
+
+	i{
+		font-style: normal;
+		color: #8E8E93;
+	}
 }
 .checkout__group{
 	position: relative;

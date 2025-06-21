@@ -2118,6 +2118,10 @@ h2 {
   border-top-color: transparent;
   border-radius: 0px 0px 0.5rem 0.5rem;
 }
+.payment-checkout__label--location:last-child .payment-checkout__view {
+  border-top-color: transparent;
+  border-radius: 0;
+}
 @media (any-hover: hover) {
   .payment-checkout__label {
     cursor: pointer;
@@ -2173,6 +2177,12 @@ h2 {
   align-items: center;
   column-gap: 0.625rem;
   border: 1px solid rgb(193, 197, 200);
+  transition: background-color 0.15s;
+}
+@media (any-hover: hover) {
+  .payment-checkout__view:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
 }
 
 .payment-checkout__point {
@@ -2180,12 +2190,17 @@ h2 {
   height: 1.125rem;
   border: 1px solid rgb(193, 197, 200);
   border-radius: 50%;
+  background-color: #fff;
 }
 
 .payment-checkout__text {
   font-family: "Tilda-Sans-Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.1428571429;
+}
+.payment-checkout__text i {
+  font-style: normal;
+  color: #8E8E93;
 }
 
 .checkout__group {

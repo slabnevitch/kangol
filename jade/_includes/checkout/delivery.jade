@@ -18,7 +18,7 @@
 			.checkout__block
 				h2.block-title.block-title--semi Пункт самовывоза
 				.delivery-checkout__point
-					label.payment-checkout__label
+					label.payment-checkout__label.payment-checkout__label--location
 							input( type="radio" name="checkout-delivery-point" class="payment-checkout__input" checked)
 							span.payment-checkout__view
 								span.payment-checkout__point
@@ -28,15 +28,15 @@
 								span.payment-checkout__row м. Охотный ряд
 								span.payment-checkout__row Время работы с 12:00 до 21:00, без выходных
 
-						label.payment-checkout__label
-							input( type="radio" name="checkout-delivery-point" class="payment-checkout__input")
-							span.payment-checkout__view
-								span.payment-checkout__point
-								span.payment-checkout__text Большая Новодмитровская, 36
-							
-							//- span.payment-checkout__content
-							//- 	span.payment-checkout__row м. Охотный ряд
-							//- 	span.payment-checkout__row Время работы с 12:00 до 21:00, без выходных
+					label.payment-checkout__label.payment-checkout__label--location
+						input( type="radio" name="checkout-delivery-point" class="payment-checkout__input")
+						span.payment-checkout__view
+							span.payment-checkout__point
+							span.payment-checkout__text Большая Новодмитровская, 36 #[i Дизайн завод]
+						
+						span.payment-checkout__content
+							span.payment-checkout__row м. Дмитровская
+							span.payment-checkout__row Время работы с 12:00 до 21:00, без выходных
 	
 	.delivery-checkout__fields
 		- var data = ['Улица, дом', 'Подьезд', 'Этаж', 'Квартира'];
