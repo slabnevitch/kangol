@@ -160,8 +160,8 @@
 }
 .colors-product__item {
 	position: relative;
-	flex: 0 0 rem(48px);
-	height: rem(48px);
+	// flex: 0 0 rem(48px);
+	// height: rem(48px);
 }
 .colors-product__input {
 	@include checkbox();
@@ -199,6 +199,34 @@
 .list-size {}
 .list-size__label {
 	position: relative;
+
+
+	.list-size &{
+		@include min-screen($md){
+			margin-left: rem(4);
+			margin-right: rem(4);
+			width: calc(20% - 0.5rem);
+		}
+
+	}
+
+	&--link{
+		margin-left: auto;
+		text-align-last: left;
+
+		.list-size &{
+			margin-left: auto;
+
+			@include min-screen($md){
+				width: 100%;
+				margin-left: rem(8px);
+			}
+		}
+
+		.list-size__item{
+			align-items: flex-start;
+		}
+	}
 	@media (any-hover: hover) { //только для устройств с ховером
 			cursor: pointer;
 			&:hover{
@@ -220,7 +248,7 @@
 .active {}
 .list-size__item-action {
 	font-family: $tildaBold;
-	font-size: rem(11px);
+	font-size: rem(13px);
 	line-height: 1;
 	letter-spacing: 0.06px;
 }

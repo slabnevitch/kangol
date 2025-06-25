@@ -40,7 +40,7 @@
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width: calc(100% + rem(20px));
+		width: 100%;
 		height: rem(1px);
 		background-color: #E5E5EA;
 	}
@@ -73,7 +73,7 @@
 /*--------------------cart-modal----------------------*/
 .modal-cart{}
 .modal-cart__close{
-	top:0;
+	top:rem(1);
 	right: 0;
 }
 .mob-modal .modal-cart__box{
@@ -93,8 +93,8 @@
 
 	.modal-cart-title{
 		flex: 0 0 auto;
-		padding-top: rem(6);
-		padding-bottom: rem(16px);
+		padding-top: rem(2);
+		padding-bottom: rem(20px);
 		position: relative;
 
 		&:after{
@@ -148,7 +148,7 @@
 .cart-product__price {
 	margin-bottom: rem(8px);
 	font-size: rem(14);
-	font-weight: $tildaMed;
+	font-family: $tildaMed;
 	line-height: math.div(12,14);
 	letter-spacing: 0.25px;
 	color: #8E8E93;
@@ -219,7 +219,7 @@
 
 }
 .footer-modal-cart__price {
-	font-family: $tildaMed;
+	font-family: $tildaSemi;
 }
 .footer-modal-cart__text {
 	margin-bottom: rem(24);

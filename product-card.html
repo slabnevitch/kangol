@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Карточка товара</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" href="favicon.ico" sizes="16x16">
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
@@ -230,7 +230,9 @@
                 <label class="list-size__label">
                   <input type="radio" name="prod-size" class="list-size__radio"><span class="list-size__item"><span class="list-size__item-name">xxl</span><span class="list-size__item-value">62/63</span></span>
                 </label>
-                <div class="list-size__item list-size__item--link js-modal-size"><a href="#" class="list-size__item-action">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;</a></div>
+                <label class="list-size__label list-size__label--link">
+                  <div class="list-size__item list-size__item--link js-modal-size"><a href="#" class="list-size__item-action">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;</a></div>
+                </label>
               </div>
             </div>
             <div class="product__block product__to-cart">
@@ -513,8 +515,9 @@
                 <div class="reset"></div>
               </div>
             </div>
-            <div class="form-group"><span class="btn btn-primary">
-                <input type="submit" value="подписаться"></span></div>
+            <div class="form-group">
+              <button type="submit" class="btn">подписаться</button>
+            </div>
           </form>
           <div class="footer-acc">
             <div class="accordion-item">
