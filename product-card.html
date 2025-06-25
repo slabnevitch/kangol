@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Карточка товара</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" href="favicon.ico" sizes="16x16">
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
@@ -99,7 +99,23 @@
       <div class="product">
         <div class="product__wrapper">
           <div class="product__view view-product">
-            <div class="view-product__thumbs"><a href="#" data-anchor="product-image0" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/1.webp" type="image/webp"><img src="img/product-page/slider/previews/1.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image1" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/2.webp" type="image/webp"><img src="img/product-page/slider/previews/2.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image2" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/3.webp" type="image/webp"><img src="img/product-page/slider/previews/3.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image3" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/4.webp" type="image/webp"><img src="img/product-page/slider/previews/4.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image4" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/5.webp" type="image/webp"><img src="img/product-page/slider/previews/5.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image5" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/6.webp" type="image/webp"><img src="img/product-page/slider/previews/6.jpg" alt="alt"></picture></a>
+            <div class="view-product__container">
+              <div class="view-product__thumbs-wrapper">
+                <div class="view-product__thumbs"><a href="#" data-anchor="product-image0" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/1.webp" type="image/webp"><img src="img/product-page/slider/previews/1.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image1" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/2.webp" type="image/webp"><img src="img/product-page/slider/previews/2.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image2" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/3.webp" type="image/webp"><img src="img/product-page/slider/previews/3.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image3" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/4.webp" type="image/webp"><img src="img/product-page/slider/previews/4.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image4" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/5.webp" type="image/webp"><img src="img/product-page/slider/previews/5.jpg" alt="alt"></picture></a><a href="#" data-anchor="product-image5" class="view-product__thumb"><picture><source srcset="img/product-page/slider/previews/6.webp" type="image/webp"><img src="img/product-page/slider/previews/6.jpg" alt="alt"></picture></a>
+                </div>
+              </div>
+              <div class="view-product__images">
+                <div data-anchor-target="product-image0" class="view-product__image view-product__image--video _fit">
+                  <video type="video/mp4" autoplay preload="none" muted="" playsinline="" loop="" width="306px" height="306px" class="_fit-img">
+                    <source src="https://cdn.kangolstore.ru/upload/iblock/58e/0290bc_grey_1.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div data-anchor-target="product-image1" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/1.webp" type="image/webp"><img src="/img/product-page/slider/1.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div data-anchor-target="product-image2" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/2.webp" type="image/webp"><img src="/img/product-page/slider/2.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div data-anchor-target="product-image3" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/3.webp" type="image/webp"><img src="/img/product-page/slider/3.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div data-anchor-target="product-image4" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/4.webp" type="image/webp"><img src="/img/product-page/slider/4.jpg" alt="alt" class="_fit-img"></picture></div>
+                <div data-anchor-target="product-image5" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/5.webp" type="image/webp"><img src="/img/product-page/slider/5.jpg" alt="alt" class="_fit-img"></picture></div>
+              </div>
             </div>
             <div class="view-product__slider slider slider-product">
               <div class="slide slider-product__slide">
@@ -117,18 +133,6 @@
               <div class="slide slider-product__slide">
                 <div class="slider-product__img _fit"><img data-lazy="./img/product-page/slider/5.jpg" alt="" class="_fit-img"></div>
               </div>
-            </div>
-            <div class="view-product__images">
-              <div data-anchor-target="product-image0" class="view-product__image view-product__image--video _fit">
-                <video type="video/mp4" autoplay preload="none" muted="" playsinline="" loop="" width="306px" height="306px" class="_fit-img">
-                  <source src="https://cdn.kangolstore.ru/upload/iblock/58e/0290bc_grey_1.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div data-anchor-target="product-image1" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/1.webp" type="image/webp"><img src="/img/product-page/slider/1.jpg" alt="alt" class="_fit-img"></picture></div>
-              <div data-anchor-target="product-image2" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/2.webp" type="image/webp"><img src="/img/product-page/slider/2.jpg" alt="alt" class="_fit-img"></picture></div>
-              <div data-anchor-target="product-image3" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/3.webp" type="image/webp"><img src="/img/product-page/slider/3.jpg" alt="alt" class="_fit-img"></picture></div>
-              <div data-anchor-target="product-image4" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/4.webp" type="image/webp"><img src="/img/product-page/slider/4.jpg" alt="alt" class="_fit-img"></picture></div>
-              <div data-anchor-target="product-image5" class="view-product__image _fit"><picture><source srcset="/img/product-page/slider/5.webp" type="image/webp"><img src="/img/product-page/slider/5.jpg" alt="alt" class="_fit-img"></picture></div>
             </div>
           </div>
           <form action="#" class="form product__info">
@@ -230,7 +234,9 @@
                 <label class="list-size__label">
                   <input type="radio" name="prod-size" class="list-size__radio"><span class="list-size__item"><span class="list-size__item-name">xxl</span><span class="list-size__item-value">62/63</span></span>
                 </label>
-                <div class="list-size__item list-size__item--link js-modal-size"><a href="#" class="list-size__item-action">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;</a></div>
+                <label class="list-size__label list-size__label--link">
+                  <div class="list-size__item list-size__item--link js-modal-size"><a href="#" class="list-size__item-action">&Kcy;&acy;&kcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy;</a></div>
+                </label>
               </div>
             </div>
             <div class="product__block product__to-cart">
@@ -513,8 +519,9 @@
                 <div class="reset"></div>
               </div>
             </div>
-            <div class="form-group"><span class="btn btn-primary">
-                <input type="submit" value="подписаться"></span></div>
+            <div class="form-group">
+              <button type="submit" class="btn">подписаться</button>
+            </div>
           </form>
           <div class="footer-acc">
             <div class="accordion-item">
