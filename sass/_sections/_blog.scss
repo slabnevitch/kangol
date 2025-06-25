@@ -33,7 +33,7 @@
 	row-gap: rem(32px);
 
 	@include min-screen($md){
-		
+		grid-template-columns: repeat(3, 1fr);
 		margin-bottom: rem(40);
 	}
 }
@@ -45,6 +45,12 @@
 	&--full{
 		.blog-preview__footer {
 			display: flex;
+		}
+		.blog-preview__content{
+			background-color: #F2F2F5;
+			@include min-screen($md){
+				padding-top: rem(24px);
+			}
 		}
 	}
 }
@@ -76,11 +82,7 @@
 	padding: rem(16px) rem(16px) rem(16px) rem(16px);
 	flex: 1 1 auto;
 	border-radius: 0 0 rem(16px) rem(16px);
-	background-color: #F2F2F5;
 
-	@include min-screen($md){
-		padding-top: rem(24px);
-	}
 }
 .blog-preview__title {
 	margin-bottom: rem(8);

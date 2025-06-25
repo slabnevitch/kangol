@@ -54,28 +54,28 @@ block content
 										
 									//- .ic-block
 									//- 	.ic-fav
-										
-									.title
-										a(href='#')= prod.name
-										.text &Dcy;&iecy;&mcy;&icy;&scy;&iecy;&zcy;&ocy;&ncy;&ncy;&acy;&yacy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy; &ncy;&acy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;&iecy;
-									.price-block
-										if prod.old
-											.price-old= prod.old
+									.product-card__text
+										.title
+											a(href='#')= prod.name
+											.text &Dcy;&iecy;&mcy;&icy;&scy;&iecy;&zcy;&ocy;&ncy;&ncy;&acy;&yacy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy; &ncy;&acy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;&iecy;
+										.price-block
+											if prod.old
+												.price-old= prod.old
 
-										.price= prod.price
-									
-									.product__colors
-										if !i % 2
-											.product-color-list
-												- for (var n=0;  n< 5; n++)
-													button(type="button").product__color.color
-														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
-											.product__color-num +25
-										else
-											.product-color-list
-												- for (var n=0;  n< 3; n++)
-													button(type="button").product__color.color
-														img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+											.price= prod.price
+										
+										.product__colors
+											if !i % 2
+												.product-color-list
+													- for (var n=0;  n< 5; n++)
+														button(type="button").product__color.color
+															img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+												.product__color-num +25
+											else
+												.product-color-list
+													- for (var n=0;  n< 3; n++)
+														button(type="button").product__color.color
+															img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
 					.btn-wrap
 						a(href="#").btn.btn-righted загрузить ещё
 

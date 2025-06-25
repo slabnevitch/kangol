@@ -28,7 +28,11 @@
 	}
 }
 .checkout__bottom {
-	flex: 0 0 rem(416px);
+
+	@include min-screen($md){
+		flex: 0 0 rem(416px);
+		background-color: #F2F2F5;	
+	}
 }
 .checkout__bottom-block{
 	.checkout__block{

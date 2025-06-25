@@ -26,6 +26,10 @@
 	display: flex;
 	column-gap: rem(8px);
 	// overflow-x: scroll;
+	@include min-screen($md){
+		
+		column-gap: rem(16px);
+	}
 }
 .bestsellers__item {
 	// width: rem(200);

@@ -52,6 +52,9 @@
 .product-card__img{
     @extend .slider-product__img;
 }
+.product-card__text {
+    padding-inline: rem(16px);
+}
 .product-card__title {
     margin-bottom: rem(16);
     font-size: rem(15);

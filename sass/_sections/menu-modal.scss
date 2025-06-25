@@ -279,6 +279,7 @@
 	right: 0;
 
 	@include min-screen($md){
+		max-height: rem(426px);
 		max-width: none;
 		padding-top: 0;
 	}
@@ -321,7 +322,7 @@
 		bottom: 0;
 		width: calc(100% + rem(32));
 		height: 1px;
-		background-color: #F2F2F5;
+		background-color: #E5E5EA;
 
 		@include max-screen($md){
 			left: 0;
