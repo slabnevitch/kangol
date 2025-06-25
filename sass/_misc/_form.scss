@@ -85,6 +85,9 @@
 .form__check {
 	@include checkbox;
 	&:checked + .form__custom-chek {
+		background-color: #013F7D;
+		border-color: #013F7D;
+		
 		&:before{
 			display: block;
 		}
@@ -95,9 +98,9 @@
 	position: relative;
 	width: rem(20);
 	height: rem(20);
-	// border: 1px solid #000;
+	border: rem(1px) solid #C1C5C8;
 	border-radius: rem(4);
-	background-color: #013F7D;
+	background-color: transparent;
 
 	@media (any-hover: hover) { //только для устройств с ховером
 				&:hover{

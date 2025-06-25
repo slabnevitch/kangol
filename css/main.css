@@ -1183,6 +1183,10 @@ textarea {
   padding: 0;
   opacity: 0;
 }
+.form__check:checked + .form__custom-chek {
+  background-color: #013F7D;
+  border-color: #013F7D;
+}
 .form__check:checked + .form__custom-chek:before {
   display: block;
 }
@@ -1192,8 +1196,9 @@ textarea {
   position: relative;
   width: 1.25rem;
   height: 1.25rem;
+  border: 0.0625rem solid #C1C5C8;
   border-radius: 0.25rem;
-  background-color: #013F7D;
+  background-color: transparent;
 }
 @media (any-hover: hover) {
   .form__custom-chek:hover {
@@ -2110,6 +2115,7 @@ h2 {
 }
 .payment-checkout__label:first-child .payment-checkout__view {
   border-radius: 0.5rem 0.5rem 0px 0px;
+  border-bottom: none;
 }
 .payment-checkout__label:last-child .payment-checkout__view {
   border-top-color: transparent;
@@ -2117,7 +2123,9 @@ h2 {
 }
 .payment-checkout__label--location:last-child .payment-checkout__view {
   border-top-color: transparent;
-  border-radius: 0;
+}
+.payment-checkout__label--location:last-child .payment-checkout__content {
+  border-radius: 0px 0px 0.5rem 0.5rem;
 }
 @media (any-hover: hover) {
   .payment-checkout__label {
@@ -2144,6 +2152,7 @@ h2 {
   background-color: rgb(242, 248, 254);
   border-color: rgb(31, 101, 172);
   border-top-color: rgb(31, 101, 172);
+  border-bottom: 1px solid rgb(31, 101, 172);
 }
 .payment-checkout__input:checked + .payment-checkout__view .payment-checkout__point {
   position: relative;
@@ -2164,6 +2173,9 @@ h2 {
   height: 0.5rem;
   border-radius: 50%;
   background-color: #fff;
+}
+.payment-checkout__label--location:last-child .payment-checkout__input:checked + .payment-checkout__view {
+  border-radius: 0;
 }
 
 .payment-checkout__view {
@@ -2224,6 +2236,11 @@ h2 {
   height: 100%;
   width: 1.5rem;
   background-color: inherit;
+}
+@media only screen and (max-width: 63.99875em) {
+  .checkout__group:after {
+    display: none;
+  }
 }
 @media only screen and (min-width: 117em) {
   .checkout__group:after {
@@ -2325,6 +2342,9 @@ h2 {
   -ms-flex-align: start;
   align-items: start;
   column-gap: 0.5rem;
+}
+.checkout__coupon .form__input {
+  text-transform: uppercase;
 }
 
 .coupon-checkout__input {
@@ -6124,7 +6144,6 @@ input.form-control {
 /*--------------------END cart-modal----------------------*/
 /*--------------------modal-search----------------------*/
 .mob-modal .modal-search__box {
-  max-width: 22.5rem;
   width: 100%;
   left: auto;
   right: 0;
