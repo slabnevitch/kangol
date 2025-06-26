@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Fix height: 100% screen scroll problem on Safari ios
 	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
-	if($('selector').length < 0){
+	if($('.mob-modal-box').length < 0){
 		if(screen.width <= 991 && isMobile.iOS()){
 			window.addEventListener('resize', () => {
 				document.querySelector('.mob-modal-box').style.setProperty('--height', `${window.innerHeight}px`);
