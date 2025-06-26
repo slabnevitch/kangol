@@ -235,9 +235,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Fix height: 100% screen scroll problem on Safari ios
 	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
 	if($('.mob-modal-box').length > 0){
-		if(screen.width <= 991 && isMobile.iOS()){
+		if(isMobile.iOS()){
+			alert(document.querySelectorAll('.mob-modal-box').length)
 			window.addEventListener('resize', () => {
-				document.querySelectorAll('.mob-modal-box').each((item) => {
+				console.log('resize')
+				document.querySelectorAll('.mob-modal-box').forEach((item) => {
 					item.style.setProperty('--height', `${window.innerHeight}px`);
 				});
 			});
