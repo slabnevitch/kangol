@@ -236,9 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
 	if($('.mob-modal-box').length > 0){
 		if(isMobile.iOS()){
-			alert(document.querySelectorAll('.mob-modal-box').length)
+			// alert(document.querySelectorAll('.mob-modal-box').length)
 			window.addEventListener('resize', () => {
-				alert('resize')
+				// alert('resize')
 				document.querySelectorAll('.mob-modal-box').forEach((item) => {
 					item.style.setProperty('--height', `${window.innerHeight}px`);
 				});
