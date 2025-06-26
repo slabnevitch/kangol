@@ -217,7 +217,7 @@ require('~/app/js/source/lazy_load/jquery.lazy.min.js')
 
 import {mobFooterMenu} from '~/app/js/source/mob-footer-menu.js';
 import {mobCommon} from '~/app/js/source/mob-common.js';
-import {availabilityBooking, sizeChecking, footerObserver} from '~/app/js/components/product-card.js';
+import {availabilityBooking, sizeChecking} from '~/app/js/components/product-card.js';
 import {checkoutLabels} from '~/app/js/components/checkout.js';
 import {inputReset} from '~/app/js/components/form.js';
 import {mainSliderInit} from '~/app/js/components/main-slider.js';
@@ -229,9 +229,24 @@ sizeChecking();
 checkoutLabels();
 inputReset();
 mainSliderInit();
-// footerObserver();
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	// Fix height: 100% screen scroll problem on Safari ios
+	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
+	if($('.mob-modal-box').length > 0){
+		if(isMobile.iOS()){
+			// alert(document.querySelectorAll('.mob-modal-box').length)
+			window.addEventListener('resize', () => {
+				// alert('resize')
+				document.querySelectorAll('.mob-modal-box').forEach((item) => {
+					item.style.setProperty('--height', `${window.innerHeight}px`);
+				});
+			});
+		}
+
+	}
+	// END Fix height: 100% screen scroll problem on Safari ios
 
 	$('.announcement-header__close').on('click', function(){
 		$(this).closest('.header__announcement').remove();
