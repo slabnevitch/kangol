@@ -231,13 +231,19 @@ inputReset();
 mainSliderInit();
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Решение проблемы высоты полноэкранного блока высотой 100vh
-	// Источник: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblpBVkszUjJhTk10YXAwQUtpWnYyd045bkRkd3xBQ3Jtc0trS25FOHFRTk5JZHVJU2RwM3NzcHdhd1N0MVFmVHZ2OFY4d3hUbnVaN2tnN0xZZ083bVVMRmdSM0FMa2xuLVcwemNiMEo0NmViUFozNHBvOE8wTHJBMUl0QkllNEhuRjRhcmNmREZCUWVNMlVpa1ZPSQ&q=https%3A%2F%2Fgithub.com%2Fmaxdenaro%2Fmaxgraph-youtube-source%2Ftree%2Fmaster%2FJS-%25D1%2580%25D0%25B5%25D1%2588%25D0%25B5%25D0%25BD%25D0%25B8%25D1%258F%2520%25E2%2584%259618.%2520%25D0%2598%25D1%2581%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25BB%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25B5%2520%25D0%25BF%25D0%25BE%25D0%25BB%25D0%25BD%25D0%25BE%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25BD%25D0%25BE%25D0%25B3%25D0%25BE%2520%25D0%25B1%25D0%25BB%25D0%25BE%25D0%25BA%25D0%25B0%2520%25D0%25BD%25D0%25B0%2520%25D0%25BC%25D0%25BE%25D0%25B1%25D0%25B8%25D0%25BB%25D0%25BA%25D0%25B5&v=72r8GoG4isM
-	function setViewportVH() {
-		document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');
+
+	// Fix height: 100% screen scroll problem on Safari ios
+	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
+	if($('selector').length < 0){
+		if(screen.width <= 991 && isMobile.iOS()){
+			window.addEventListener('resize', () => {
+				document.querySelector('.mob-modal-box').style.setProperty('--height', `${window.innerHeight}px`);
+			});
+
+		}
+
 	}
-	setViewportVH();
-	window.addEventListener('resize', setViewportVH);
+	// END Fix height: 100% screen scroll problem on Safari ios
 
 	$('.announcement-header__close').on('click', function(){
 		$(this).closest('.header__announcement').remove();
