@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if(isMobile.iOS()){
 			alert(document.querySelectorAll('.mob-modal-box').length)
 			window.addEventListener('resize', () => {
-				console.log('resize')
+				alert('resize')
 				document.querySelectorAll('.mob-modal-box').forEach((item) => {
 					item.style.setProperty('--height', `${window.innerHeight}px`);
 				});
