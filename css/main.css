@@ -3392,7 +3392,9 @@ h2 {
 }
 @media (any-hover: hover) {
   .header-nav__submenu-link:hover {
-    color: #636366;
+    text-decoration: underline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 }
 
@@ -4695,6 +4697,17 @@ h2 {
 }
 .product__booking .form__label:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.product__spoilers .product__block:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 63.99875em) {
+  .product-online-payment {
+    height: 54px;
+    font-size: 15px;
+  }
 }
 
 /*===================== end Product======================*/

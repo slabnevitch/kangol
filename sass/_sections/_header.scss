@@ -101,7 +101,10 @@
 	@media (any-hover: hover) { //только для устройств с ховером
 
 			&:hover{
-				color: $textLight;
+				text-decoration: underline;
+				text-decoration: underline;
+				text-underline-offset: 4px;
+				// color: $textLight;
 			}
 		}
 }

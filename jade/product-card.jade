@@ -138,58 +138,58 @@ block content
 					//-  data-minimizeSiblings - при наличии этого атрибута при раскрытии одного спойлера все его соседи будут сворачиваться
 					
 					.product__spoilers
-						.product__block
-							div(data-spoilers)
-								details(data-spoiler-item)
-									summary(data-spoiler-title='') подробнее
-									div(data-spoiler-content='')
-										- var more = [{key:'Производство', val:'Вьетнам'}, {key:'Артикул', val:'K4366'}, {key:'Уход', val:'Химчистка'}];
+						
+						div(data-spoilers)
+							details(data-spoiler-item)
+								summary(data-spoiler-title='') подробнее
+								div(data-spoiler-content='')
+									- var more = [{key:'Производство', val:'Вьетнам'}, {key:'Артикул', val:'K4366'}, {key:'Уход', val:'Химчистка'}];
 
-										each item in more
-											.mob-card-availability-list__item
-												.mob-card-availability-list__item-name= item.key
-												.mob-card-availability-list__item-data
-													.mob-card-availability-list__item-value= item.val
-
+									each item in more
 										.mob-card-availability-list__item
-											.mob-card-availability-list__item-name Состав
+											.mob-card-availability-list__item-name= item.key
 											.mob-card-availability-list__item-data
-												.mob-card-availability-list__contain
-													.mob-card-availability-list__col
-														.mob-card-availability-list__item-value Полиэстер
-													.mob-card-availability-list__col
-														.mob-card-availability-list__item-value 100%
+												.mob-card-availability-list__item-value= item.val
 
-												.mob-card-availability-list__contain
-													.mob-card-availability-list__col
-														.mob-card-availability-list__item-value Эластан
-													.mob-card-availability-list__col
-														.mob-card-availability-list__item-value 8%
+									.mob-card-availability-list__item
+										.mob-card-availability-list__item-name Состав
+										.mob-card-availability-list__item-data
+											.mob-card-availability-list__contain
+												.mob-card-availability-list__col
+													.mob-card-availability-list__item-value Полиэстер
+												.mob-card-availability-list__col
+													.mob-card-availability-list__item-value 100%
 
-								details(data-spoiler-item open=i<1?true:false)
-									summary(data-spoiler-title='') доставка и оплата
-									div(data-spoiler-content='')
-										.product__block
-											.product__text-block
-												h4.product__subtitle Оплата
-												.product__text
-													p Оплата курьеру наличными при получении заказа на территории РФ.
-													p Вы можете оплатить заказ наложенным платежом при получении на почте.
-													p При покупках в наших розничных магазинах вы можете оплатить как наличными, так и банковской картой.
-													p Для заказов из стран СНГ — 100% оплата перед отправкой, так как курьерская служба не оказывает услуги наложенного платежа при доставках в другие страны. Примерка перед оплатой товара — невозможна, так как курьерская служба не оказывает данную услугу.
+											.mob-card-availability-list__contain
+												.mob-card-availability-list__col
+													.mob-card-availability-list__item-value Эластан
+												.mob-card-availability-list__col
+													.mob-card-availability-list__item-value 8%
 
-										.product__block
-											.product__text-block
-												h4.product__subtitle Обмен / Возврат
-												.product__text
-													p Вы можете обменять или вернуть любой купленный у нас в товар в течении 14 дней со дня получения своего заказа - при отсутствии следов эксплуатации, сохранении товарного вида, всех заводских бирок и упаковки. Доставка возвратов до нас – оплачивается покупателем. Возврат денежных средств осуществляется без стоимости доставки.
+							details(data-spoiler-item open=i<1?true:false)
+								summary(data-spoiler-title='') доставка и оплата
+								div(data-spoiler-content='')
+									.product__block
+										.product__text-block
+											h4.product__subtitle Оплата
+											.product__text
+												p Оплата курьеру наличными при получении заказа на территории РФ.
+												p Вы можете оплатить заказ наложенным платежом при получении на почте.
+												p При покупках в наших розничных магазинах вы можете оплатить как наличными, так и банковской картой.
+												p Для заказов из стран СНГ — 100% оплата перед отправкой, так как курьерская служба не оказывает услуги наложенного платежа при доставках в другие страны. Примерка перед оплатой товара — невозможна, так как курьерская служба не оказывает данную услугу.
 
-										.product__block
-											.product__text-block
-												h4.product__subtitle Доставка
-												.product__text
-													p Мы доставим товар самым быстрым и удобным для вас способом или же вы можете забрать свой заказ в любом из наших магазинов в Москве.
-													p Курьером по Москве на следующий день после заказа, курьером в регионы до двери, или терминала, почтой по территории РФ, службами доставки в СНГ - выбирать вам, свяжитесь с нами для уточнения сроков доставки.
+									.product__block
+										.product__text-block
+											h4.product__subtitle Обмен / Возврат
+											.product__text
+												p Вы можете обменять или вернуть любой купленный у нас в товар в течении 14 дней со дня получения своего заказа - при отсутствии следов эксплуатации, сохранении товарного вида, всех заводских бирок и упаковки. Доставка возвратов до нас – оплачивается покупателем. Возврат денежных средств осуществляется без стоимости доставки.
+
+									.product__block
+										.product__text-block
+											h4.product__subtitle Доставка
+											.product__text
+												p Мы доставим товар самым быстрым и удобным для вас способом или же вы можете забрать свой заказ в любом из наших магазинов в Москве.
+												p Курьером по Москве на следующий день после заказа, курьером в регионы до двери, или терминала, почтой по территории РФ, службами доставки в СНГ - выбирать вам, свяжитесь с нами для уточнения сроков доставки.
 
 		button.btn.btn-gray.btn-fw.to-top-btn(type="button") НАВЕРХ
 		//- include _sections/blog

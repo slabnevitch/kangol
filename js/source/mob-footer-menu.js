@@ -3,6 +3,11 @@ window.jQuery = $;
 window.$ = $;
 
 export const mobFooterMenu = () => {
+		function bodyLock(isLock){
+	        if(isLock) $('html').addClass('lock');
+	        else $('html').removeClass('lock');
+	    }
+
 		 $(".mob-menu-trigger").click(function(e){
 	        e.stopPropagation();
 
@@ -12,6 +17,7 @@ export const mobFooterMenu = () => {
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");
 	            $(".modal-menu").hide();
+	            bodyLock(false);
 	        } else {
 	            $(".modal-size").hide();
 	            $(".modal-shops").hide();
@@ -22,11 +28,13 @@ export const mobFooterMenu = () => {
 
 	            // $(this).addClass("active");
 	            $(".modal-menu").show();
+	            bodyLock(true);
 	        }
 	    });
 
 	  	$(".modal-menu__close").click(function(e){
             $(".modal-menu").hide();
+            bodyLock(false);
 		});
 
 	    $(".btn-list-auth .btn-1").click(function(e){
@@ -55,6 +63,7 @@ export const mobFooterMenu = () => {
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");
 	            $(".modal-cart").hide();
+	            bodyLock(false);
 	        } else {
 	            $(".mob-menu-trigger").removeClass("active");
 	            $(".modal-menu").hide();
@@ -70,12 +79,14 @@ export const mobFooterMenu = () => {
 
 	            $(this).addClass("active");
 	            $(".modal-cart").show();
+	            bodyLock(true);
 	        }
 	    });
 
 	     $(".modal-cart__close").click(function(e){
 	     	$(".modal-cart").hide();
 	     	$(".footer-icon-cart").removeClass("active");
+	     	bodyLock(false);
 	     });
 
 	    $(".mob-search").click(function(e){
@@ -87,6 +98,7 @@ export const mobFooterMenu = () => {
 	        if($(this).hasClass("active")){
 	            $(this).removeClass("active");
 	            $(".modal-search").hide();
+	            bodyLock(false);
 	        } else {
 	            $(".mob-menu-trigger").removeClass("active");
 	            $(".modal-menu").hide();
@@ -102,13 +114,15 @@ export const mobFooterMenu = () => {
 
 	            $(this).addClass("active");
 	            $(".modal-search").show();
+	             bodyLock(true);
 	        }
 	    });
 
 	    $(".modal-search__close").click(function(e){
 	        e.stopPropagation();
 	        $(".modal-search").hide();
-	         $(".mob-search").removeClass("active");
+	        $(".mob-search").removeClass("active");
+	        bodyLock(false);
 	    });
 
 	    $(".footer-icon-fav").click(function(e){

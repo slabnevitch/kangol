@@ -1,7 +1,11 @@
 export const mobCommon = () => {
 	$(function () {
 
-
+    function bodyLock(isLock){
+        if(isLock) $('html').addClass('lock');
+        else $('html').removeClass('lock');
+    }
+    
     $('.lazy').lazy();
 
     if($(this).scrollTop() > 170) {
@@ -129,6 +133,7 @@ export const mobCommon = () => {
         if($(this).hasClass("active")){
             $(this).removeClass("active");
             $(".modal-size").hide();
+            bodyLock(false);
         } else {
             $(".mob-menu-trigger").removeClass("active");
             $(".modal-menu").hide();
@@ -145,12 +150,14 @@ export const mobCommon = () => {
 
             $(this).addClass("active");
             $(".modal-size").show();
+            bodyLock(true);
         }
     });
 
     $('.modal-cart__close').on('click', function() {
         $(".js-modal-size").removeClass("active");
         $(".modal-size").hide();
+        bodyLock(false);
     });
 });
 }
