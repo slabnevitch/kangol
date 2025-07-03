@@ -1,7 +1,13 @@
-- var tops = ['ФИО', 'Электронная почта', 'Телефон', 'Комментарий'];
+- var tops = ['ФИО', 'Электронная почта', 'Телефон'];
 
 each item in tops
 	+ inpBlock(item)
+
+div(class="form__label")
+	.form__label-inner
+		textarea(class="form__input form__area" name='name' placeholder=" ")
+		button.inp-reset(type="button")
+		label.form__placeholder Комментарий
 
 .form__custom-policy
 	label.form__custom

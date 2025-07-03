@@ -24,6 +24,7 @@
 	position: relative;
 }
 .form__input {
+	// width: 100%;
 	height: rem(48);
 	padding-left: rem(16);
 	padding-right: rem(16);
@@ -50,6 +51,20 @@
 			top: rem(11);
 			transform: translateY(0);
 			font-size: rem(12px);
+		}
+	}
+}
+.form__area {
+	width: 100%;
+	resize: none;
+	&:focus, &:not(:placeholder-shown){
+		padding-block: 11px;
+
+		& ~ .form__placeholder{
+			top: rem(11);
+			transform: translateY(0);
+			font-size: rem(12px);
+			visibility: hidden;
 		}
 	}
 }
@@ -119,17 +134,17 @@
 		background-repeat: no-repeat;
 	}
 }
-.form__area{
-	width: 100%;
-	height: rem(100);
-	padding:rem(20);
-    resize: none;
-	border: none;
-	background: #fff;
-	padding-left: rem(20);
-	color: #222222;
-	font-family: inherit;
-}
+// .form__area{
+// 	width: 100%;
+// 	height: rem(100);
+// 	padding:rem(20);
+//     resize: none;
+// 	border: none;
+// 	background: #fff;
+// 	padding-left: rem(20);
+// 	color: #222222;
+// 	font-family: inherit;
+// }
 .form__policy {
 	font-size: 14px;
 	line-height: math.div(10,14);

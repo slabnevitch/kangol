@@ -1134,6 +1134,21 @@ textarea {
   font-size: 0.75rem;
 }
 
+.form__area {
+  width: 100%;
+  resize: none;
+}
+.form__area:focus, .form__area:not(:placeholder-shown) {
+  padding-block: 11px;
+}
+.form__area:focus ~ .form__placeholder, .form__area:not(:placeholder-shown) ~ .form__placeholder {
+  top: 0.6875rem;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  font-size: 0.75rem;
+  visibility: hidden;
+}
+
 .form__placeholder {
   position: absolute;
   top: 50%;
@@ -1220,18 +1235,6 @@ textarea {
   background-image: url(../img/icons/policy-check.svg);
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.form__area {
-  width: 100%;
-  height: 6.25rem;
-  padding: 1.25rem;
-  resize: none;
-  border: none;
-  background: #fff;
-  padding-left: 1.25rem;
-  color: #222222;
-  font-family: inherit;
 }
 
 .form__policy {
@@ -2125,7 +2128,7 @@ h2 {
   border-bottom: none;
 }
 .payment-checkout__label:last-child .payment-checkout__view {
-  border-top-color: transparent;
+  border-top: none;
   border-radius: 0px 0px 0.5rem 0.5rem;
 }
 .payment-checkout__label--location:last-child .payment-checkout__view {
@@ -2158,7 +2161,7 @@ h2 {
 .payment-checkout__input:checked + .payment-checkout__view {
   background-color: rgb(242, 248, 254);
   border-color: rgb(31, 101, 172);
-  border-top-color: rgb(31, 101, 172);
+  border-top: 1px solid rgb(31, 101, 172);
   border-bottom: 1px solid rgb(31, 101, 172);
 }
 .payment-checkout__input:checked + .payment-checkout__view .payment-checkout__point {

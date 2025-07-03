@@ -78,7 +78,7 @@
 	&:last-child{
 		.payment-checkout__view{
 			// border-top-width: 0;
-			border-top-color: transparent;
+			border-top: none;
 			border-radius: 0px 0px rem(8px) rem(8px);
 
 			// &--location{
@@ -118,7 +118,7 @@
 	&:checked + .payment-checkout__view  {
 		background-color: rgb(242, 248, 254);
 		border-color: rgb(31, 101, 172);
-		border-top-color:rgb(31, 101, 172);
+		border-top: 1px solid rgb(31, 101, 172);
 		border-bottom: 1px solid rgb(31, 101, 172);
 
 		
