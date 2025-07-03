@@ -297,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	//END scroll наверх страницы
 
 	if(document.querySelector('.view-product__thumbs') !== null && document.querySelector('.view-product__images') !== null){
-		console.log('if!!')
 		new ScrollToSects({
 		    linksContainer: '.view-product__thumbs', //контейнер, в котором лежат кнопки навигации. Если контейнеров несколько, перечислить ч/з запятую.
 		    // offsetTopCountdownElem: '.view-product__thumbs', // елемент, по которому отсчитывается отступ от верхнего края экрана (в случае, если отсчитывается не от 'header')
