@@ -1,7 +1,12 @@
-- var tops = ['ФИО', 'Электронная почта', 'Телефон'];
+- var tops = ['ФИО', 'Электронная почта'];
 
 each item in tops
 	+ inpBlock(item)
+.form__label
+	.form__label-inner
+		input.form__input(type='tel', name='name', placeholder=' ')
+		button.inp-reset(type='button')
+		label.form__placeholder Телефон
 
 div(class="form__label")
 	.form__label-inner
