@@ -153,7 +153,7 @@ export const mobFooterMenu = () => {
 	        $(".mob-search").removeClass("active");
 	        $(".modal-icon-block").removeClass("active");
 	        $(".mob-modal").hide();
-
+	        bodyLock(false);
 	    });
 
 	    $(".footer-icon-account").click(function(e){
