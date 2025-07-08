@@ -1089,11 +1089,24 @@ textarea {
 .form__label-inner {
   position: relative;
 }
+.form__label-inner--area:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 2px;
+  height: 19px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.form__label-inner--area .form__placeholder {
+  z-index: 2;
+}
 
 .form__input {
   height: 3rem;
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   border: 1px solid rgb(193, 197, 200);
   background: #fff;
   border-radius: 0.5rem;
@@ -1138,15 +1151,11 @@ textarea {
   width: 100%;
   resize: none;
 }
-.form__area:focus, .form__area:not(:placeholder-shown) {
-  padding-block: 11px;
-}
 .form__area:focus ~ .form__placeholder, .form__area:not(:placeholder-shown) ~ .form__placeholder {
   top: 0.6875rem;
   -ms-transform: translateY(0);
   transform: translateY(0);
   font-size: 0.75rem;
-  visibility: hidden;
 }
 
 .form__placeholder {

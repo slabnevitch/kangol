@@ -22,12 +22,29 @@
 }
 .form__label-inner{
 	position: relative;
+
+	&--area{
+		&:after{
+			content: '';
+			position: absolute;
+			left: 1px;
+			right: 1px;
+			top: 2px;
+			height: 19px;
+			background-color: #fff;
+			border-radius: 8px;
+		}
+
+		.form__placeholder{
+			z-index: 2;
+		}
+	}
 }
 .form__input {
 	// width: 100%;
 	height: rem(48);
 	padding-left: rem(16);
-	padding-right: rem(16);
+	padding-right: rem(32);
 	border: 1px solid rgb(193, 197, 200);
 	background: #fff ;
 	border-radius: rem(8);
@@ -58,13 +75,13 @@
 	width: 100%;
 	resize: none;
 	&:focus, &:not(:placeholder-shown){
-		padding-block: 11px;
+		// padding-block: 11px;
 
 		& ~ .form__placeholder{
 			top: rem(11);
 			transform: translateY(0);
 			font-size: rem(12px);
-			visibility: hidden;
+			// visibility: hidden;
 		}
 	}
 }
