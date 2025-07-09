@@ -234,18 +234,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Fix height: 100% screen scroll problem on Safari ios
 	// !Нужно подключить js/libs/service-functions/mobileDetect.js!
-	if($('.mob-modal-box').length > 0){
-		if(isMobile.iOS()){
-			// alert(document.querySelectorAll('.mob-modal-box').length)
-			window.addEventListener('resize', () => {
-				// alert('resize')
-				document.querySelectorAll('.mob-modal-box').forEach((item) => {
-					item.style.setProperty('--height', `${window.innerHeight}px`);
-				});
-			});
-		}
+	// if($('.mob-modal-box').length > 0){
+	// 	if(isMobile.iOS()){
+	// 		// alert(document.querySelectorAll('.mob-modal-box').length)
+	// 		window.addEventListener('resize', () => {
+	// 			// alert('resize')
+	// 			document.querySelectorAll('.mob-modal-box').forEach((item) => {
+	// 				item.style.setProperty('--height', `${window.innerHeight}px`);
+	// 			});
+	// 		});
+	// 	}
 
-	}
+	// }
 	// END Fix height: 100% screen scroll problem on Safari ios
 
 	$('.announcement-header__close').on('click', function(){

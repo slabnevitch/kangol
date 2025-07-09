@@ -1089,11 +1089,24 @@ textarea {
 .form__label-inner {
   position: relative;
 }
+.form__label-inner--area:after {
+  content: "";
+  position: absolute;
+  left: 0.0625rem;
+  right: 0.0625rem;
+  top: 0.125rem;
+  height: 1.1875rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.form__label-inner--area .form__placeholder {
+  z-index: 2;
+}
 
 .form__input {
   height: 3rem;
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   border: 0.0625rem solid rgb(193, 197, 200);
   background: #fff;
   border-radius: 0.5rem;
@@ -1138,15 +1151,11 @@ textarea {
   width: 100%;
   resize: none;
 }
-.form__area:focus, .form__area:not(:placeholder-shown) {
-  padding-block: 0.6875rem;
-}
 .form__area:focus ~ .form__placeholder, .form__area:not(:placeholder-shown) ~ .form__placeholder {
   top: 0.6875rem;
   -ms-transform: translateY(0);
   transform: translateY(0);
   font-size: 0.75rem;
-  visibility: hidden;
 }
 
 .form__placeholder {
@@ -4707,6 +4716,7 @@ h2 {
   .product-online-payment {
     height: 3.375rem;
     font-size: 0.9375rem;
+    font-family: "Tilda-Sans-Bold", sans-serif;
   }
 }
 
@@ -5979,7 +5989,7 @@ input.form-control {
 
 .modal-cart__box, .modal-size__box {
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
