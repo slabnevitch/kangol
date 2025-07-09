@@ -116,6 +116,8 @@
 .img-fluid {}
 .product__info {
 	@include min-screen($md){
+		position: sticky;
+		top: 131px;
 		flex: 0 0 rem(360);
 		padding: rem(48px) rem(24px);
 		border-radius: rem(10px);
