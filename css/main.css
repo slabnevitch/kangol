@@ -5989,7 +5989,7 @@ input.form-control {
 
 .modal-cart__box, .modal-size__box {
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
