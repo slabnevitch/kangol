@@ -30,6 +30,42 @@ block content
 				.catatalog__content
 					- var prods = [{name: 'Massive Trapper', price: '1 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '11 750 ₽', old: '11 750 '}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Wool Spitfire', price: '11 750 ₽'}, {name: 'Wool Flexfit Baseball', price: '21 300 ₽'}, {name: 'Tropic Wide Brim Stripe Casual', price: '4 800 ₽', old: '11 750 '}];
 					.product-cards
+						.product-card		
+							.slider.slider-product
+								.slide
+									.product-card__img._fit
+										img._fit-img(data-lazy='./img/pack/1.jpg', alt='')
+									
+									// img.img-fluid(data-lazy='./img/source/temp/p-4.png', alt='')
+								.slide
+									.product-card__img._fit
+										img._fit-img(data-lazy='./img/pack/2.jpg', alt='')
+									// img.img-fluid(data-lazy='./img/source/temp/p-2.jpg', alt='')
+								.slide
+									.product-card__img._fit
+										img._fit-img(data-lazy='./img/pack/3.jpg', alt='')
+									// img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+								.slide
+									.product-card__img._fit
+										img._fit-img(data-lazy='./img/pack/4.jpg', alt='')
+									// img.img-fluid(data-lazy='./img/source/temp/p-3.jpg', alt='')
+								
+							//- .ic-block
+							//- 	.ic-fav
+							.product-card__text
+								.title
+									a(href='#') Massive Trapper
+									.text &Dcy;&iecy;&mcy;&icy;&scy;&iecy;&zcy;&ocy;&ncy;&ncy;&acy;&yacy; &bcy;&iecy;&jcy;&scy;&bcy;&ocy;&lcy;&kcy;&acy; &ncy;&acy; &fcy;&lcy;&iecy;&kcy;&scy;&fcy;&icy;&tcy;&iecy;
+								.price-block
+									.price 1 300 ₽
+								
+								.product__colors
+									.product-color-list
+										- for (var n=0;  n< 5; n++)
+											button(type="button").product__color.color
+												img.img-fluid.lazy(src='./img/source/c-'+(n+1)+'.png', alt='')
+									.product__color-num +25
+
 						- for (var i=0; i <2 ; i++)
 							each prod, m in prods
 								.product-card
